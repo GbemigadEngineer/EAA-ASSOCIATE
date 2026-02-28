@@ -1,0 +1,20 @@
+{
+  "name": "eaa-associate",
+  "version": "1.0.0",
+  "description": "EAA associates website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GbemigadEngineer/EAA-ASSOCIATE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GbemigadEngineer/EAA-ASSOCIATE/issues"
+  },
+  "homepage": "https://github.com/GbemigadEngineer/EAA-ASSOCIATE#readme"
+}
