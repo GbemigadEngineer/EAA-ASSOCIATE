@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EAA Associates</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       SITE HEADER — Primary + Secondary Nav
+  ================================================= -->
+  <header class="site-header">
+
+    <!-- ── PRIMARY NAV ─────────────────────────── -->
+    <nav class="nav-primary" aria-label="Primary navigation">
+      <div class="nav-primary__inner">
+
+        <!-- Logo (extreme left) -->
+        <a href="index.html" class="nav-logo" aria-label="EAA Associates home">
+          <div class="nav-logo__mark">EAA</div>
+          <div class="nav-logo__text">
+            <span class="nav-logo__name">EAA Associates</span>
+            <span class="nav-logo__tagline">Excellence · Analysis · Action</span>
+          </div>
+        </a>
+
+        <!-- Centre Nav Links -->
+        <ul class="nav-primary__links" id="primaryLinks">
+
+          <li>
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+
+          <!-- About — with dropdown -->
+          <li class="has-dropdown">
+            <a href="pages/about.html" class="nav-link">
+              About
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown">
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><a href="#">Who We Are</a></li>
+                <li class="dropdown__item"><a href="#">Our Team</a></li>
+                <li class="dropdown__item"><a href="#">Our Mission</a></li>
+                <li class="dropdown__item"><a href="#">History</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Services — with dropdown -->
+          <li class="has-dropdown">
+            <a href="pages/services.html" class="nav-link">
+              Services
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown">
+              <ul class="dropdown__list">
+                <li class="dropdown__item"><a href="#">Consulting</a></li>
+                <li class="dropdown__item"><a href="#">Research & Analysis</a></li>
+                <li class="dropdown__item"><a href="#">Strategy</a></li>
+                <li class="dropdown__item"><a href="#">Advisory</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link">Industries</a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link">Projects</a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link">Insights</a>
+          </li>
+
+          <li>
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- CTA Button (extreme right) -->
+        <a href="#" class="btn-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Book Consultation
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </nav>
+    <!-- ── END PRIMARY NAV ─────────────────────── -->
+
+
+    <!-- ── SECONDARY NAV ──────────────────────── -->
+    <nav class="nav-secondary" aria-label="Secondary navigation">
+      <div class="nav-secondary__inner">
+
+        <!-- Secondary Links — all pushed right via CSS -->
+        <ul class="nav-secondary__links">
+
+          <!-- Language Switcher -->
+          <li>
+            <a href="#" class="nav-link-sm">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              English
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </li>
+
+          <li><div class="nav-divider"></div></li>
+
+          <li><a href="#" class="nav-link-sm">Blog &amp; News</a></li>
+          <li><a href="#" class="nav-link-sm">Impact</a></li>
+          <li><a href="#" class="nav-link-sm">Solutions</a></li>
+          <li><a href="#" class="nav-link-sm">Careers</a></li>
+          <li><a href="#" class="nav-link-sm">Partner</a></li>
+          <li><a href="#" class="nav-link-sm">Our Work</a></li>
+
+          <li><div class="nav-divider"></div></li>
+
+          <!-- Take Action — same style as other links -->
+          <li>
+            <a href="#" class="btn-take-action">
+              Take Action
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </li>
+
+          <li><div class="nav-divider"></div></li>
+
+          <!-- Inline Search -->
+          <li>
+            <div class="nav-search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="text"
+                class="nav-search__input"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </nav>
+    <!-- ── END SECONDARY NAV ───────────────────── -->
+
+  </header>
+  <!-- END SITE HEADER -->
+
+
+  <!-- ================================================
+       PLACEHOLDER CONTENT (remove when building pages)
+  ================================================= -->
+  <main style="padding: 4rem 2rem; text-align: center; color: #6B7280;">
+    <h1 style="font-family:'Playfair Display',serif; font-size:2.5rem; color:#0B2545; margin-bottom:1rem;">
+      EAA Associates
+    </h1>
+    <p style="font-size:1rem;">
+      Page content goes here. The navigation above is fully functional.
+    </p>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
