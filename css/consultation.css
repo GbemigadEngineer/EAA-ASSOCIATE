@@ -1,0 +1,488 @@
+/* =============================================
+   EAA CONSULTATION PAGE — consultation.css
+   Doc specs: inputs 60px height, no border-radius,
+   border #DADADA, green focus, red error 14px,
+   section padding 100px desktop / 80px tablet / 50px mobile
+   ============================================= */
+
+/* ── active Book Consultation button in nav ── */
+.nav-active-btn {
+  background: var(--green-dark) !important;
+  outline: 2px solid rgba(255,255,255,0.3);
+  outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────
+   HERO — full-width image, 280px
+───────────────────────────────────────── */
+.consult-hero {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+.consult-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  display: block;
+}
+.consult-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.28));
+}
+
+/* ─────────────────────────────────────────
+   CONSULTATION INTRO
+   Doc: section padding 100px top/bottom desktop
+───────────────────────────────────────── */
+.consult-intro {
+  background: var(--off-white);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.consult-intro h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--green-dark);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+.consult-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  /* Doc: heading to paragraph 16px */
+}
+.consult-body {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  /* Doc: paragraph to element 24px → 32px for button */
+}
+.consult-cta {
+  /* Doc: Primary Button — height 60px, no radius */
+  height: 60px;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+/* ─────────────────────────────────────────
+   MAIN 2-COLUMN GRID
+   Doc: section padding 100px desktop
+───────────────────────────────────────── */
+.consult-main {
+  background: var(--off-white);
+  padding: 0 0 100px;
+}
+.consult-main-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   LEFT COLUMN
+───────────────────────────────────────── */
+.consult-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* What To Expect card */
+.expect-card {
+  background: var(--white);
+  padding: 32px;          /* Doc: card padding 32px */
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Doc card shadow */
+}
+.expect-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  /* Doc: heading to paragraph 16px */
+  text-align: center;
+}
+.expect-intro {
+  font-size: 15px;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.expect-list {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.expect-list li {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+/* FAQ Sidebar box — dark green */
+.faq-sidebar-box {
+  background: var(--green-dark);
+  padding: 32px;
+  color: #fff;
+  border-radius: 0;
+}
+.faq-sidebar-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.faq-sidebar-box p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 22px;
+}
+.sidebar-faq-btn {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+  border-radius: 0;
+}
+
+/* Why Work With EAA */
+.why-sidebar-card {
+  background: var(--white);
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.why-sidebar-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.why-list {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.why-list li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+/* Ready to Move Forward box — light green bg */
+.move-forward-box {
+  background: var(--green-light);
+  padding: 32px;
+  border-radius: 0;
+}
+.move-forward-box h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.move-forward-box p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 20px;
+}
+.move-btn {
+  height: 52px;
+  padding: 0 28px;
+  font-size: 14px;
+  background: var(--green-dark);
+  border-radius: 0;
+}
+.move-btn:hover { background: #0f2b1f; }
+
+/* ─────────────────────────────────────────
+   RIGHT COLUMN — FORM
+   Doc: form inputs 60px height, no radius,
+   border #DADADA, focus green border + shadow,
+   error red border + 14px text
+───────────────────────────────────────── */
+.consult-form-wrap {
+  background: var(--white);
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.cform-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.cform-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.65;
+  text-align: center;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fieldset reset */
+.cform-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+.cform-legend {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+/* Form groups */
+.cform-group {
+  margin-bottom: 18px;
+}
+.cform-group label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  /* Doc: forms must include labels */
+}
+
+/* Text / email / tel inputs — Doc: height 60px, no radius, border #DADADA */
+.cform input[type="text"],
+.cform input[type="email"],
+.cform input[type="tel"] {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #DADADA;
+  border-radius: 0;
+  padding: 0 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: var(--text-dark);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none;
+}
+/* Doc: focus = green border + subtle shadow */
+.cform input[type="text"]:focus,
+.cform input[type="email"]:focus,
+.cform input[type="tel"]:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.1);
+}
+/* Doc: error = red border */
+.cform input.has-error,
+.cform select.has-error {
+  border-color: #e03e3e;
+}
+
+/* Select wrapper */
+.cform-select-wrap {
+  position: relative;
+}
+.cform-select-wrap select {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #DADADA;
+  border-radius: 0;
+  padding: 0 40px 0 16px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: var(--text-mid);
+  background: #fff;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.cform-select-wrap select:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45,106,79,0.1);
+}
+.cform-chevron {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* File upload row */
+.cform-file-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.cform-file-display {
+  flex: 1;
+  height: 60px !important;
+  border-right: none !important;
+  color: var(--text-light) !important;
+  cursor: default !important;
+  background: #fafafa !important;
+}
+.cform-file-display:focus {
+  border-color: #DADADA !important;
+  box-shadow: none !important;
+}
+.cform-file-btn {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #DADADA;
+  border-left: none;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  color: var(--text-mid);
+}
+.cform-file-btn:hover { background: #eaeaea; color: var(--green-dark); }
+
+/* Error text — Doc: 14px red */
+.cform-error {
+  display: none;
+  font-size: 14px;
+  color: #e03e3e;
+  margin-top: 6px;
+}
+.cform-error.visible { display: block; }
+
+/* Checkboxes */
+.cform-checks {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.cform-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cform-checkbox-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--green-mid);
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1.5px solid #DADADA;
+}
+.cform-checkbox-row label {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.55;
+  cursor: pointer;
+}
+.checkbox-err { margin-top: -8px; }
+
+/* Submit button — Doc: height 60px, no radius, weight 500 */
+.btn-consult-submit {
+  width: 100%;
+  height: 60px;
+  background: var(--green-mid);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  /* Doc: hover #163E25, transition 0.3s */
+  transition: background 0.3s;
+  letter-spacing: 0.2px;
+}
+.btn-consult-submit:hover { background: var(--green-dark); }
+.btn-consult-submit:disabled { background: #a0c4ae; cursor: not-allowed; }
+.btn-consult-submit:focus-visible {
+  outline: 3px solid var(--green-light);
+  outline-offset: 2px;
+}
+
+/* Success message */
+.cform-success {
+  display: none;
+  margin-top: 20px;
+  padding: 18px 22px;
+  background: rgba(61,175,108,0.1);
+  border: 1px solid var(--green-light);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green-dark);
+  line-height: 1.6;
+  text-align: center;
+}
+.cform-success.visible { display: block; }
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+   Doc: tablet 768–991px, mobile 320–767px
+───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .consult-main-grid {
+    grid-template-columns: 360px 1fr;
+    gap: 28px;
+  }
+}
+
+/* Doc: tablet padding 80px */
+@media (max-width: 991px) {
+  .consult-main-grid { grid-template-columns: 1fr; }
+  .consult-main { padding-bottom: 80px; }
+  .consult-hero { height: 200px; }
+  .consult-form-wrap { padding: 28px 20px; }
+}
+
+/* Doc: mobile padding 50px, buttons full width */
+@media (max-width: 767px) {
+  .consult-intro { padding: 60px 0 40px; }
+  .consult-intro h1 { font-size: 28px; }
+  .consult-sub { font-size: 17px; }
+  .consult-body { font-size: 15px; }
+  .consult-cta { width: 100%; justify-content: center; }
+  .consult-main { padding-bottom: 50px; }
+  .expect-card,
+  .faq-sidebar-box,
+  .why-sidebar-card,
+  .move-forward-box { padding: 24px 20px; }
+}

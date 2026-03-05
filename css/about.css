@@ -1,0 +1,875 @@
+/* =============================================
+   EAA ABOUT PAGE — about.css
+   Doc: max-width 1400px, padding 80px sides,
+   sections 100px desktop / 80px tablet / 50px mobile
+   H1 56px w700, H2 40px w600, H3 28px w500
+   Body Large 20px lh1.7, Body Regular 16px lh1.7
+   Colors: #0F3D2E primary, #3DAF6C accent, #F6F8F5 bg
+   ============================================= */
+
+/* Active nav link */
+.nav-link-active {
+  color: var(--green-mid) !important;
+}
+.nav-link-active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--green-mid);
+  margin-top: 2px;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 1 — ABOUT HERO
+   No hero image — starts with centered title
+   then 2-col: text left / image right
+───────────────────────────────────────── */
+.about-hero {
+  background: var(--off-white);
+  /* Doc: section padding 100px top/bottom desktop */
+  padding: 80px 0 100px;
+}
+
+/* Doc: H1 56px weight 700 */
+.about-hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--green-dark);
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-bottom: 64px;
+  line-height: 1.15;
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Doc: H2 40px lh1.3 w600 */
+.about-intro-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.3;
+  /* Doc: heading to paragraph 16px */
+  margin-bottom: 16px;
+}
+
+/* Doc: Body Regular 16px lh1.7 */
+.about-intro-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  /* Doc: paragraph to element 24px */
+  margin-bottom: 32px;
+}
+
+.about-intro-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Doc: Primary button height 60px, no radius */
+.about-intro-btns .btn {
+  height: 60px;
+  padding: 0 32px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+.about-intro-img-wrap img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 2 — WHO WE ARE
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.who-section {
+  background: #fff;
+  padding: 100px 0;
+}
+
+/* Doc: H2 40px lh1.3 w600 */
+.who-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+/* Doc: Body Large 20px lh1.7 */
+.who-body {
+  max-width: 860px;
+  margin: 0 auto 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Doc: paragraph spacing 24px */
+}
+
+.who-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+}
+
+.who-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 3 — OUR JOURNEY
+   White bg, centered, full container width
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.journey-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+
+/* Doc: H2 40px lh1.3 w600 */
+.journey-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.journey-body {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.journey-body p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+}
+
+/* ─────────────────────────────────────────
+   SECTION 4 — MISSION / VISION + CORE VALUES
+   2-column: left = stacked dark+light green cards
+             right = values list
+   Doc: card padding 32px, radius 8px, shadow
+───────────────────────────────────────── */
+.mission-values-section {
+  background: var(--off-white);
+  padding: 0 0 100px;
+}
+
+.mission-values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Mission card — dark green */
+.mission-card {
+  background: var(--green-dark);
+  padding: 48px 40px;
+  /* Doc: card radius 8px — Figma shows no visible radius, keeping 0 */
+  border-radius: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.mission-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.mission-card p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+}
+
+/* Vision card — bright green */
+.vision-card {
+  background: var(--green-light);
+  padding: 48px 40px;
+  border-radius: 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.vision-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.vision-card p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+  text-align: center;
+}
+
+.mission-vision-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Core Values — right column */
+/* Doc: H2 40px lh1.3 w600 */
+.core-values-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.value-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.value-item:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+/* Doc: H4 20px w500 */
+.value-item h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.value-item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+
+/* ─────────────────────────────────────────
+   SECTION 5 — OUR APPROACH
+   2-column: left text / right colourful image
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.approach-section {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Doc: H2 40px lh1.3 w600 */
+.approach-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.approach-intro {
+  font-size: 16px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.approach-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.step-num {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green-dark);
+  flex-shrink: 0;
+  width: 28px;
+  padding-top: 2px;
+}
+
+/* Doc: H4 20px w500 */
+.approach-step h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.approach-step p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+
+.approach-close {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  font-style: italic;
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.approach-image img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 6 — EXPERIENCE & IMPACT SNAPSHOT
+   2-col: image left / content right
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.impact-snapshot {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.snapshot-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Doc: H2 40px lh1.3 w600 — Figma shows allcaps + large */
+.snapshot-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.snapshot-content > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+}
+
+/* Doc: Body Regular 16px lh1.7 */
+.snapshot-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.snapshot-list li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.snapshot-list li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green-mid);
+  flex-shrink: 0;
+}
+
+.snapshot-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+/* Doc: Primary button height 60px */
+.snapshot-btn {
+  height: 60px;
+  padding: 0 36px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 7 — INDUSTRIES WE SERVE
+   2-col: text left / image right
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.about-industries {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.about-industries-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Doc: H2 40px uppercase */
+.about-industries-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.industries-intro {
+  font-size: 16px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.industries-list {
+  padding-left: 20px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  /* Doc: paragraph spacing 24px */
+  gap: 14px;
+}
+
+.industries-list li {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+
+/* Doc: Primary button height 60px, no radius */
+.industries-btn {
+  height: 60px;
+  padding: 0 36px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.about-industries-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 8 — GOVERNANCE & COMPLIANCE
+   Full width, centred title + body
+   Doc: section padding 100px
+───────────────────────────────────────── */
+.governance-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+
+.governance-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--green-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.2;
+  /* Doc: heading to paragraph 16px */
+  margin-bottom: 28px;
+}
+
+/* Doc: Body Large 20px lh1.7 */
+.governance-body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ─────────────────────────────────────────
+   SECTION 9 — LEADERSHIP
+   Centred title, 2-col: large photo left / info right
+   Doc: section padding 100px, card shadow
+───────────────────────────────────────── */
+.leadership-section {
+  background: #fff;
+  padding: 100px 0;
+}
+
+.leadership-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 56px;
+  line-height: 1.2;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  /* Doc: card shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.leader-photo img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.leader-info {
+  padding: 48px 48px 48px 0;
+}
+
+/* Doc: Small Text 14px */
+.leader-role {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Doc: H3 28px lh1.4 w500 */
+.leader-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Doc: Body Regular 16px lh1.7 */
+.leader-bio {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: 32px;
+}
+
+/* Doc: Primary button height 60px, no radius */
+.leader-btn {
+  height: 60px;
+  padding: 0 32px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+   Doc: tablet 768–991px pad 80px, mobile 320–767px pad 50px
+───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .about-intro-grid,
+  .approach-grid,
+  .snapshot-grid,
+  .about-industries-grid {
+    gap: 48px;
+  }
+
+  .mission-values-grid {
+    gap: 32px;
+  }
+}
+
+/* Doc: tablet 80px section padding */
+@media (max-width: 991px) {
+  .about-hero {
+    padding: 60px 0 80px;
+  }
+  .who-section,
+  .journey-section,
+  .mission-values-section,
+  .approach-section,
+  .impact-snapshot,
+  .about-industries,
+  .governance-section,
+  .leadership-section {
+    padding: 80px 0;
+  }
+
+  .about-intro-grid,
+  .approach-grid,
+  .snapshot-grid,
+  .about-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-intro-img-wrap img,
+  .approach-image img {
+    height: 300px;
+  }
+
+  .mission-values-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .leader-info {
+    padding: 32px;
+  }
+  .leader-photo img {
+    height: 360px;
+  }
+}
+
+/* Doc: mobile 50px section padding, buttons full-width */
+@media (max-width: 767px) {
+  .about-hero {
+    padding: 40px 0 50px;
+  }
+  .about-hero-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .who-section,
+  .journey-section,
+  .mission-values-section,
+  .approach-section,
+  .impact-snapshot,
+  .about-industries,
+  .governance-section,
+  .leadership-section {
+    padding: 50px 0;
+  }
+
+  .who-title {
+    font-size: 28px;
+  }
+  .journey-title {
+    font-size: 24px;
+  }
+  .core-values-title {
+    font-size: 24px;
+  }
+  .snapshot-content h2 {
+    font-size: 24px;
+  }
+  .about-industries-content h2 {
+    font-size: 24px;
+  }
+  .governance-title {
+    font-size: 22px;
+  }
+  .leadership-title {
+    font-size: 26px;
+  }
+
+  /* Doc: buttons full width on mobile */
+  .about-intro-btns {
+    flex-direction: column;
+  }
+  .about-intro-btns .btn,
+  .snapshot-btn,
+  .industries-btn,
+  .leader-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .approach-image img {
+    height: 260px;
+  }
+  .snapshot-image img {
+    height: 300px;
+  }
+  .about-industries-image img {
+    height: 280px;
+  }
+  .who-image img {
+    height: 240px;
+  }
+  .leader-photo img {
+    height: 280px;
+  }
+  .leader-info {
+    padding: 24px 20px;
+  }
+}
+
+/* ─────────────────────────────────────────
+   SECTION 10 — MEET OUR COMPANY TEAM
+───────────────────────────────────────── */
+.team-section {
+  background: var(--off-white);
+  padding: 100px 0;
+}
+.team-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--green-dark);
+  text-align: center;
+  margin-bottom: 56px;
+  line-height: 1.2;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+.team-card {
+  background: var(--white);
+  border-radius: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+.team-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+.team-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.team-card:hover .team-card-img-wrap img {
+  transform: scale(1.04);
+}
+.team-card-body {
+  padding: 20px 24px 24px;
+}
+.team-role {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.team-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+.team-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive additions for team */
+@media (max-width: 991px) {
+  .team-section {
+    padding: 80px 0;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .team-section {
+    padding: 50px 0;
+  }
+  .team-title {
+    font-size: 26px;
+    margin-bottom: 36px;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

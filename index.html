@@ -3,202 +3,794 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EAA Associates</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <title>EAA Associates Ltd – Environmental & Climate Advisory</title>
+  <meta name="description" content="EAA Associates Ltd provides environmental impact assessment, climate risk advisory, biodiversity conservation, and regulatory compliance services." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ================================================
-       SITE HEADER — Primary + Secondary Nav
-  ================================================= -->
-  <header class="site-header">
-
-    <!-- ── PRIMARY NAV ─────────────────────────── -->
-    <nav class="nav-primary" aria-label="Primary navigation">
-      <div class="nav-primary__inner">
-
-        <!-- Logo (extreme left) -->
-        <a href="index.html" class="nav-logo" aria-label="EAA Associates home">
-          <div class="nav-logo__mark">EAA</div>
-          <div class="nav-logo__text">
-            <span class="nav-logo__name">EAA Associates</span>
-            <span class="nav-logo__tagline">Excellence · Analysis · Action</span>
-          </div>
-        </a>
-
-        <!-- Centre Nav Links -->
-        <ul class="nav-primary__links" id="primaryLinks">
-
-          <li>
-            <a href="index.html" class="nav-link active">Home</a>
-          </li>
-
-          <!-- About — with dropdown -->
-          <li class="has-dropdown">
-            <a href="pages/about.html" class="nav-link">
-              About
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <div class="dropdown">
-              <ul class="dropdown__list">
-                <li class="dropdown__item"><a href="#">Who We Are</a></li>
-                <li class="dropdown__item"><a href="#">Our Team</a></li>
-                <li class="dropdown__item"><a href="#">Our Mission</a></li>
-                <li class="dropdown__item"><a href="#">History</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Services — with dropdown -->
-          <li class="has-dropdown">
-            <a href="pages/services.html" class="nav-link">
-              Services
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-            <div class="dropdown">
-              <ul class="dropdown__list">
-                <li class="dropdown__item"><a href="#">Consulting</a></li>
-                <li class="dropdown__item"><a href="#">Research & Analysis</a></li>
-                <li class="dropdown__item"><a href="#">Strategy</a></li>
-                <li class="dropdown__item"><a href="#">Advisory</a></li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <a href="#" class="nav-link">Industries</a>
-          </li>
-
-          <li>
-            <a href="#" class="nav-link">Projects</a>
-          </li>
-
-          <li>
-            <a href="#" class="nav-link">Insights</a>
-          </li>
-
-          <li>
-            <a href="#" class="nav-link">Contact</a>
-          </li>
-
-        </ul>
-
-        <!-- CTA Button (extreme right) -->
-        <a href="#" class="btn-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
+  <!-- ════════════════════════════════════════
+       NAVIGATION — TOP BAR
+  ════════════════════════════════════════ -->
+  <header>
+    <nav class="navbar-top" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#" class="nav-logo" aria-label="EAA Associates Home">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Google_Images_2015_logo.svg/1200px-Google_Images_2015_logo.svg.png"
+            alt="EAA Logo"
+            onerror="this.style.display='none'"
+          />
+          <!-- Fallback SVG globe logo -->
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="#1B4332" stroke-width="2" fill="#F4F6F1"/>
+            <ellipse cx="24" cy="24" rx="10" ry="22" stroke="#1B4332" stroke-width="1.5" fill="none"/>
+            <path d="M2 24 Q14 20 24 24 Q34 28 46 24" stroke="#1B4332" stroke-width="1.5" fill="none"/>
+            <path d="M5 15 Q16 12 24 15 Q32 18 43 15" stroke="#1B4332" stroke-width="1" fill="none"/>
+            <path d="M5 33 Q16 30 24 33 Q32 36 43 33" stroke="#1B4332" stroke-width="1" fill="none"/>
+            <path d="M20 4 Q16 14 16 24 Q16 34 20 44" stroke="#3DAF6C" stroke-width="1.5" fill="none"/>
+            <text x="8" y="47" font-size="6" font-family="Montserrat,sans-serif" font-weight="700" fill="#1B4332">EAA</text>
           </svg>
-          Book Consultation
+          <span class="nav-logo-text">Environmental<br>Action Alliance</span>
         </a>
 
-        <!-- Mobile Hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
-    </nav>
-    <!-- ── END PRIMARY NAV ─────────────────────── -->
-
-
-    <!-- ── SECONDARY NAV ──────────────────────── -->
-    <nav class="nav-secondary" aria-label="Secondary navigation">
-      <div class="nav-secondary__inner">
-
-        <!-- Secondary Links — all pushed right via CSS -->
-        <ul class="nav-secondary__links">
-
-          <!-- Language Switcher -->
-          <li>
-            <a href="#" class="nav-link-sm">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              English
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-          </li>
-
-          <li><div class="nav-divider"></div></li>
-
-          <li><a href="#" class="nav-link-sm">Blog &amp; News</a></li>
-          <li><a href="#" class="nav-link-sm">Impact</a></li>
-          <li><a href="#" class="nav-link-sm">Solutions</a></li>
-          <li><a href="#" class="nav-link-sm">Careers</a></li>
-          <li><a href="#" class="nav-link-sm">Partner</a></li>
-          <li><a href="#" class="nav-link-sm">Our Work</a></li>
-
-          <li><div class="nav-divider"></div></li>
-
-          <!-- Take Action — same style as other links -->
-          <li>
-            <a href="#" class="btn-take-action">
-              Take Action
-              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
-          </li>
-
-          <li><div class="nav-divider"></div></li>
-
-          <!-- Inline Search -->
-          <li>
-            <div class="nav-search">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-              <input
-                type="text"
-                class="nav-search__input"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </div>
-          </li>
-
+        <!-- Desktop menu -->
+        <ul class="nav-menu" role="list">
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li class="has-dropdown"><a href="#who-we-are">About <span class="chevron">▾</span></a></li>
+          <li class="has-dropdown"><a href="#our-services">Services <span class="chevron">▾</span></a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#selected-projects">Projects</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#faq">Contact</a></li>
+          <li><a href="#cta" class="btn btn-dark">Book Consultation</a></li>
         </ul>
 
+        <!-- Mobile hamburger -->
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
-    <!-- ── END SECONDARY NAV ───────────────────── -->
 
+    <!-- Secondary dark green bar -->
+    <div class="nav-bar-secondary" role="navigation" aria-label="Secondary navigation">
+      <div class="container">
+        <ul class="nav-secondary-links" role="list">
+          <li><a href="#">English <span>▾</span></a></li>
+          <li><a href="#insights">Blogs &amp; News</a></li>
+          <li><a href="#impact-section">Impact</a></li>
+          <li><a href="#our-services">Solution</a></li>
+          <li><a href="#cta">Careers</a></li>
+          <li><a href="#cta">Partner</a></li>
+          <li><a href="#selected-projects">Our Work</a></li>
+          <li><a href="#cta">Take Action <span>▾</span></a></li>
+        </ul>
+        <button class="nav-search" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile menu">
+      <a href="#">Home</a>
+      <a href="#who-we-are">About</a>
+      <a href="#our-services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#selected-projects">Projects</a>
+      <a href="#insights">Insights</a>
+      <a href="#faq">Contact</a>
+      <a href="#cta" class="btn btn-dark" style="margin-top:8px;width:100%;justify-content:center;">Book Consultation</a>
+    </div>
   </header>
-  <!-- END SITE HEADER -->
 
+  <main>
 
-  <!-- ================================================
-       PLACEHOLDER CONTENT (remove when building pages)
-  ================================================= -->
-  <main style="padding: 4rem 2rem; text-align: center; color: #6B7280;">
-    <h1 style="font-family:'Playfair Display',serif; font-size:2.5rem; color:#0B2545; margin-bottom:1rem;">
-      EAA Associates
-    </h1>
-    <p style="font-size:1rem;">
-      Page content goes here. The navigation above is fully functional.
-    </p>
+    <!-- ════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content fade-up">
+          <p class="hero-label">Environmental &amp; Climate Advisory</p>
+          <h1 id="hero-heading">Delivering Environmental Intelligence for Sustainable Development</h1>
+          <p>We provide environmental impact assessment, climate risk advisory, biodiversity conservation, and regulatory compliance services for governments, institutions, and infrastructure developers.</p>
+          <div class="hero-buttons">
+            <a href="#cta" class="btn btn-dark">Request Consultation</a>
+            <a href="#who-we-are" class="btn btn-green">Download Company Profile</a>
+          </div>
+        </div>
+
+        <!-- Right: 2-column image grid -->
+        <div class="hero-images fade-up" style="transition-delay:0.15s;" aria-hidden="true">
+          <img
+            class="hero-img-main"
+            src="https://images.unsplash.com/photo-1570126618953-d437176e8c79?w=700&q=80"
+            alt="Sustainable urban development with green spaces"
+            loading="eager"
+          />
+          <img
+            class="hero-img-top"
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&q=80"
+            alt="Misty mountain forest"
+            loading="eager"
+          />
+          <img
+            class="hero-img-bottom"
+            src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500&q=80"
+            alt="Climate change contrast — tree"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         TRUSTED BY
+    ════════════════════════════════════════ -->
+    <section class="trusted-by fade-up" aria-label="Trusted by partners">
+      <div class="container">
+        <h2>TRUSTED BY</h2>
+        <p>Working with public institutions, development agencies, and private sector partners.</p>
+        <div class="logo-strip">
+          <div class="logo-strip-item"><span>World Bank</span></div>
+          <div class="logo-strip-item"><span>UNDP</span></div>
+          <div class="logo-strip-item"><span>IUCN</span></div>
+          <div class="logo-strip-item"><span>African Union</span></div>
+          <div class="logo-strip-item"><span>GIZ</span></div>
+          <div class="logo-strip-item"><span>USAID</span></div>
+          <div class="logo-strip-item"><span>IFC</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         WHO WE ARE
+    ════════════════════════════════════════ -->
+    <section class="who-we-are" id="who-we-are" aria-labelledby="who-heading">
+      <div class="container">
+        <!-- Left: mosaic of images -->
+        <div class="who-images fade-up">
+          <img class="who-img-large"
+            src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80"
+            alt="Field team planting trees"
+            loading="lazy"
+          />
+          <img class="who-img-sm1"
+            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&q=80"
+            alt="Close-up of hands in soil"
+            loading="lazy"
+          />
+          <img class="who-img-sm2"
+            src="https://images.unsplash.com/photo-1542601906897-ecd9b0d9c93e?w=400&q=80"
+            alt="Community environmental work"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Right: content -->
+        <div class="who-content fade-up" style="transition-delay:0.15s;">
+          <h2 id="who-heading">WHO WE ARE</h2>
+          <p>We are a professional environmental consultancy providing environmental impact assessment, climate advisory, biodiversity conservation, and regulatory compliance services.</p>
+          <p>Our work supports governments, infrastructure developers, and institutions in delivering projects that meet environmental standards while ensuring long-term sustainability.</p>
+          <p>With a multidisciplinary team and field-based expertise, we combine scientific analysis, regulatory knowledge, and practical implementation to deliver measurable results.</p>
+          <a href="#our-services" class="btn btn-outline">Learn More ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         OUR EXPERTISE / GOAL / OBJECTIVE
+    ════════════════════════════════════════ -->
+    <section class="expertise-section" aria-label="Expertise, Goal and Objective">
+      <div class="container">
+        <div class="expertise-grid fade-up">
+          <div class="expertise-col">
+            <h3>Our Expertise</h3>
+            <p>Environmental impact assessment, climate risk advisory, biodiversity conservation, and regulatory compliance services delivered through scientific and policy-based methodologies.</p>
+          </div>
+          <div class="expertise-col">
+            <h3>Our Goal</h3>
+            <p>To ensure infrastructure and development projects align with environmental standards while promoting long-term sustainability.</p>
+          </div>
+          <div class="expertise-col">
+            <h3>Our Objective</h3>
+            <p>To provide independent, data-driven environmental advisory that supports responsible decision-making and regulatory compliance.</p>
+          </div>
+        </div>
+
+        <div class="expertise-grid-2 fade-up" style="transition-delay:0.1s;">
+          <div class="expertise-col-2">
+            <h3>How We Help Client</h3>
+            <p>We provide structured environmental and climate advisory services that help institutions manage risk, ensure regulatory compliance, and implement sustainable development strategies.</p>
+          </div>
+          <div class="expertise-col-2">
+            <h3>Where We Operate</h3>
+            <p>Delivering services across regional and national jurisdictions, supporting both public and private sector institutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         OUR SERVICES
+    ════════════════════════════════════════ -->
+    <section class="our-services" id="our-services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="services-heading">Our Services</h2>
+          <p>We provide integrated environmental, climate, and sustainability services that support responsible infrastructure development, regulatory compliance, and long-term ecological resilience.</p>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="services-grid fade-up">
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&q=80"
+              alt="Environmental Impact Assessment"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Environmental Impact Assessment</h3>
+              <p>We conduct structured environmental impact assessments that align projects with national regulations and international sustainability standards, supporting informed and compliant decision-making.</p>
+              <button class="btn-explore" aria-label="Explore Environmental Impact Assessment">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80"
+              alt="Climate Risk and Climate Proofing"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Climate Risk &amp; Climate Proofing</h3>
+              <p>We design climate adaptation and mitigation strategies that strengthen infrastructure resilience against floods, heatwaves, and environmental shocks.</p>
+              <button class="btn-explore" aria-label="Explore Climate Risk">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600&q=80"
+              alt="ESG and Sustainability Advisory"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>ESG &amp; Sustainability Advisory</h3>
+              <p>Our ESG advisory services integrate policy, climate intelligence, and environmental governance to help institutions manage risk and strengthen sustainability performance.</p>
+              <button class="btn-explore" aria-label="Explore ESG Advisory">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80"
+              alt="Carbon Auditing and Emissions Assessment"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Carbon Auditing &amp; Emissions Assessment</h3>
+              <p>We identify emissions hotspots, evaluate carbon exposure, and deliver actionable strategies that improve environmental performance and ESG credibility.</p>
+              <button class="btn-explore" aria-label="Explore Carbon Auditing">Explore</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="services-grid fade-up" style="margin-top:24px;transition-delay:0.1s;">
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80"
+              alt="Reforestation"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Reforestation</h3>
+              <p>We implement reforestation, afforestation, and ecosystem restoration initiatives that protect biodiversity and promote long-term environmental resilience.</p>
+              <button class="btn-explore" aria-label="Explore Reforestation">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80"
+              alt="Renewable Energy and Solar Solutions"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Renewable Energy &amp; Solar Solutions</h3>
+              <p>We support renewable energy integration through solar development initiatives that contribute to equitable energy access and sustainable growth.</p>
+              <button class="btn-explore" aria-label="Explore Renewable Energy">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80"
+              alt="Landscape Design"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Land Scape Design</h3>
+              <p>We deliver strategic landscape design solutions that integrate infrastructure with the natural environment, reduce visual and ecological impact, and create functional, sustainable outdoor spaces.</p>
+              <button class="btn-explore" aria-label="Explore Landscape Design">Explore</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img class="service-card-img"
+              src="https://images.unsplash.com/photo-1564419320461-6870880221ad?w=600&q=80"
+              alt="Ecological Restoration"
+              loading="lazy"
+            />
+            <div class="service-card-body">
+              <h3>Ecological Restoration</h3>
+              <p>We deliver structured ecological restoration initiatives that rehabilitate degraded environments, enhance biodiversity, and promote sustainable land use.</p>
+              <button class="btn-explore" aria-label="Explore Ecological Restoration">Explore</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         HOW WE WORK
+    ════════════════════════════════════════ -->
+    <section class="how-we-work" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="process-heading">How We Work</h2>
+          <p>A structured approach to environmental and climate advisory.</p>
+        </div>
+
+        <div class="process-layout">
+          <div class="process-list fade-up">
+            <h3>The Process</h3>
+
+            <div class="process-item">
+              <h4>01 — Assessment &amp; Scoping</h4>
+              <p>We begin with a comprehensive environmental and regulatory assessment to understand project scope, risks, compliance requirements, and sustainability objectives.</p>
+            </div>
+
+            <div class="process-item">
+              <h4>02 — Analysis &amp; Strategy Development</h4>
+              <p>Our team conducts scientific analysis, climate risk evaluation, and stakeholder review to develop structured mitigation and sustainability strategies.</p>
+            </div>
+
+            <div class="process-item">
+              <h4>03 — Implementation Support</h4>
+              <p>We provide advisory oversight, environmental management planning, and technical guidance to ensure effective implementation aligned with regulatory standards.</p>
+            </div>
+
+            <div class="process-item">
+              <h4>04 — Monitoring &amp; Reporting</h4>
+              <p>We deliver structured reporting, performance tracking, and compliance documentation to ensure measurable environmental outcomes and continuous improvement.</p>
+            </div>
+          </div>
+
+          <div class="process-image fade-up" style="transition-delay:0.15s;">
+            <img
+              src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=80"
+              alt="Aerial view of lush green forest with road"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         IMPACT STATS
+    ════════════════════════════════════════ -->
+    <section class="impact-section" id="impact-section" aria-labelledby="impact-heading">
+      <div class="container">
+        <!-- Left: stats grid -->
+        <div class="impact-stats fade-up">
+          <div class="stat-box">
+            <span class="num">500+</span>
+            <span class="lbl">Jobs Created</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">2000+</span>
+            <span class="lbl">Workers Trained</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">10+</span>
+            <span class="lbl">Climate Risk Assessment</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">300+</span>
+            <span class="lbl">Acres Restored</span>
+          </div>
+          <div class="stat-box" style="grid-column:1">
+            <span class="num">40+</span>
+            <span class="lbl">Projects</span>
+          </div>
+          <div class="stat-box">
+            <span class="num">15+</span>
+            <span class="lbl">Environmental Impact Assessment</span>
+          </div>
+          <div class="stat-box" style="grid-column:2">
+            <span class="num">1st</span>
+            <span class="lbl">Indoor Butterfly Garden Initiative in Africa</span>
+          </div>
+        </div>
+
+        <!-- Right: content -->
+        <div class="impact-content fade-up" style="transition-delay:0.15s;">
+          <h2>Delivering Measurable Environmental Impact</h2>
+          <p>At EAA Associates Ltd, impact is defined by structured outcomes and sustainable results. From restoring degraded ecosystems and strengthening climate resilience to supporting compliant infrastructure development, our work advances environmental integrity and long-term community stability.</p>
+          <p>Every project we undertake contributes to safer environments, stronger institutions, and sustainable economic growth.</p>
+          <a href="#selected-projects" class="btn btn-green">Check Out Our Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         SELECTED PROJECTS
+    ════════════════════════════════════════ -->
+    <section class="selected-projects" id="selected-projects" aria-labelledby="projects-main-heading">
+      <div class="container">
+        <div class="projects-intro fade-up">
+          <h2 id="projects-main-heading">Delivering Environmental Solutions Across Sectors</h2>
+          <blockquote>"Our projects demonstrate practical implementation of environmental restoration, climate resilience, and sustainable infrastructure advisory."</blockquote>
+          <a href="#" class="btn btn-dark">View All Projects</a>
+        </div>
+
+        <h3 class="projects-grid-label fade-up">Selected Projects</h3>
+
+        <div class="projects-grid fade-up" style="transition-delay:0.1s;">
+          <article class="project-card">
+            <img class="project-card-img"
+              src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=700&q=80"
+              alt="Butterfly Garden and Conservation Initiative"
+              loading="lazy"
+            />
+            <div class="project-card-overlay">
+              <h3>Butterfly Garden &amp; Conservation Initiative</h3>
+              <p class="industry">Industry: Conservation Initiative</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card-img"
+              src="https://images.unsplash.com/photo-1583345237708-add35a664d45?w=700&q=80"
+              alt="Eco-Friendly Flood Prevention"
+              loading="lazy"
+            />
+            <div class="project-card-overlay">
+              <h3>Eco-Friendly Flood Prevention</h3>
+              <p class="industry">Industry: Health</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-card-img"
+              src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
+              alt="Ecological Restoration – 300 Acres"
+              loading="lazy"
+            />
+            <div class="project-card-overlay">
+              <h3>Ecological Restoration – 300 Acres</h3>
+              <p class="industry">Industry: Conservation Initiative</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         INDUSTRIES WE SERVE
+    ════════════════════════════════════════ -->
+    <section class="industries" id="industries" aria-labelledby="industries-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="industries-heading">Industries We Serve</h2>
+          <p>We support public institutions, private enterprises, and development partners with regulatory-compliant, sustainable environmental advisory and implementation services.</p>
+        </div>
+
+        <div class="industries-layout">
+          <div class="industries-image fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1583345237708-add35a664d45?w=800&q=80"
+              alt="Aerial view of flood-affected urban area"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="industries-list fade-up" style="transition-delay:0.15s;">
+            <div class="industry-item">
+              <h3>01 — Government &amp; Public Sector</h3>
+              <p>Environmental compliance advisory, ecological restoration, infrastructure sustainability planning, and policy-aligned impact assessment.</p>
+            </div>
+            <div class="industry-item">
+              <h3>02 — Healthcare &amp; Public Infrastructure</h3>
+              <p>Climate-resilient design, flood mitigation strategy, and sustainable site planning for hospitals and civic facilities.</p>
+            </div>
+            <div class="industry-item">
+              <h3>03 — Real Estate &amp; Urban Development</h3>
+              <p>Environmental impact assessment, land restoration planning, and sustainable development advisory for residential and commercial projects.</p>
+            </div>
+            <div class="industry-item">
+              <h3>04 — Oil, Gas &amp; Energy</h3>
+              <p>Environmental risk assessment, regulatory compliance, and biodiversity conservation strategy.</p>
+            </div>
+            <div class="industry-item">
+              <h3>05 — Agriculture &amp; Forestry</h3>
+              <p>Rehabilitation, ecological restoration, and biodiversity management for sustainable agricultural ecosystems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         WHY CHOOSE EAA
+    ════════════════════════════════════════ -->
+    <section class="why-eaa" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="why-eaa-left fade-up">
+          <h2 id="why-heading">Why Organization Choose EAA</h2>
+          <!-- World map SVG placeholder -->
+          <svg class="world-map-bg" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="900" height="500" fill="none"/>
+            <!-- Simple world map silhouette using paths -->
+            <path fill="#1B4332" d="M150,180 Q170,160 200,170 Q230,165 250,180 Q270,190 260,210 Q245,230 220,225 Q190,220 170,210 Q145,200 150,180Z"/>
+            <path fill="#1B4332" d="M280,160 Q320,140 380,150 Q440,145 480,170 Q520,185 510,210 Q495,235 460,245 Q420,250 380,240 Q340,235 310,215 Q275,195 280,160Z"/>
+            <path fill="#1B4332" d="M500,150 Q540,130 600,145 Q660,150 700,175 Q730,195 720,220 Q700,245 660,250 Q610,255 570,240 Q525,225 510,200 Q490,175 500,150Z"/>
+            <path fill="#1B4332" d="M720,160 Q760,145 810,160 Q850,175 860,200 Q855,225 820,230 Q770,235 740,215 Q710,195 720,160Z"/>
+            <path fill="#1B4332" d="M320,260 Q360,255 390,275 Q415,295 400,320 Q380,345 345,340 Q310,335 295,310 Q285,285 320,260Z"/>
+            <path fill="#1B4332" d="M550,270 Q590,265 620,285 Q650,305 640,335 Q620,360 580,355 Q545,350 530,320 Q515,290 550,270Z"/>
+            <path fill="#1B4332" d="M700,270 Q740,260 780,280 Q810,300 800,330 Q780,355 745,350 Q710,345 695,320 Q680,295 700,270Z"/>
+            <path fill="#1B4332" d="M180,280 Q220,275 250,295 Q275,315 265,340 Q245,360 210,355 Q175,350 162,320 Q150,295 180,280Z"/>
+            <path fill="#1B4332" d="M370,350 Q400,345 420,365 Q438,385 425,405 Q405,420 380,415 Q355,410 345,390 Q335,368 370,350Z"/>
+            <path fill="#1B4332" d="M600,360 Q630,355 650,375 Q665,395 650,415 Q630,430 605,425 Q580,415 572,395 Q565,372 600,360Z"/>
+          </svg>
+        </div>
+        <div class="why-eaa-right fade-up" style="transition-delay:0.15s;">
+          <p>Organisations choose EAA Associates Ltd because we combine regulatory expertise, field experience, and data-driven environmental analysis to deliver sustainable and measurable outcomes. Our team understands national and international compliance frameworks and ensures that every project aligns with statutory requirements, environmental standards, and long-term development goals.</p>
+          <p>With proven experience in ecological restoration, flood mitigation planning, environmental impact assessment, and sustainability advisory, we move beyond theoretical recommendations to practical, on-site implementation. Our solutions are designed not only to solve immediate environmental challenges but to strengthen resilience, protect biodiversity, and support responsible infrastructure development.</p>
+          <p>Across government institutions, private-sector developments, conservation programs, and public infrastructure projects, we operate as a strategic partner — committed to transparency, technical excellence, and long-term environmental and economic viability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         INSIGHTS & RESOURCES
+    ════════════════════════════════════════ -->
+    <section class="insights" id="insights" aria-labelledby="insights-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="insights-heading">INSIGHTS &amp; RESOURCES</h2>
+          <p>We share industry insights, policy updates, research findings, and environmental thought leadership to support informed decision-making across sectors.</p>
+        </div>
+
+        <div class="insights-layout">
+          <!-- Left: article list -->
+          <div class="insights-list fade-up">
+            <div class="insight-item">
+              <p class="insight-tag">Climate</p>
+              <h3>Climate &amp; Sustainability Insights</h3>
+              <p>Perspectives on climate adaptation, biodiversity conservation, carbon reduction strategies, and sustainable development practices.</p>
+              <div class="insight-footer">
+                <button class="btn-read" aria-label="Read Climate article">Read Article</button>
+                <span class="insight-date">07 March 2025</span>
+              </div>
+            </div>
+
+            <div class="insight-item">
+              <p class="insight-tag">Project Case Study</p>
+              <h3>Project Case Study</h3>
+              <p>Restoring 300 Acres of Degraded Forest Land — A structured approach to ecological rehabilitation and biodiversity recovery.</p>
+              <div class="insight-footer">
+                <button class="btn-read" aria-label="View case study">View Case Study</button>
+                <span class="insight-date">07 March 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: featured + restoration -->
+          <div class="insights-featured fade-up" style="transition-delay:0.15s;">
+            <img
+              src="https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=800&q=80"
+              alt="Environmental law and compliance — gavel on leaves"
+              loading="lazy"
+            />
+            <p class="insight-tag">Restoration</p>
+            <h3>Environmental Policy &amp; Compliance</h3>
+            <p>Updates on regulatory frameworks, environmental laws, and compliance strategies affecting public and private sector projects.</p>
+            <a href="#" class="btn-insight-explore">Explore Insight →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         FAQ
+    ════════════════════════════════════════ -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <h2 id="faq-heading">FAQ</h2>
+        </div>
+
+        <div class="faq-list fade-up">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What types of environmental services does EAA Associates Ltd provide?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              EAA Associates Ltd provides a full suite of environmental services including Environmental Impact Assessment (EIA), Climate Risk &amp; Climate Proofing, ESG &amp; Sustainability Advisory, Carbon Auditing &amp; Emissions Assessment, Reforestation, Renewable Energy &amp; Solar Solutions, Landscape Design, and Ecological Restoration.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do I need an Environmental Impact Assessment (EIA) for my project?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Most infrastructure, real estate, industrial, and public sector projects require an EIA under national and international regulations. Our team can assess your project scope and advise on the appropriate level of assessment required for regulatory compliance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Which industries do you work with?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We work across Government &amp; Public Sector, Healthcare &amp; Public Infrastructure, Real Estate &amp; Urban Development, Oil, Gas &amp; Energy, and Agriculture &amp; Forestry sectors.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How does EAA ensure regulatory compliance for projects?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              We maintain deep knowledge of national and international environmental regulations, conducting thorough assessments and providing compliance documentation throughout the project lifecycle — from scoping through to monitoring and reporting.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How can I request a consultation or start a project with EAA?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              You can request a consultation by clicking "Book Consultation" in the navigation menu, or by reaching out via our contact details. Our team responds to all enquiries within two business days.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         CTA + NEWSLETTER
+    ════════════════════════════════════════ -->
+    <section class="cta-newsletter" id="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-left fade-up">
+          <h2 id="cta-heading">Ready to Strengthen Your Environmental Strategy?</h2>
+          <p>Partner with EAA Associates to develop resilient, compliant, and sustainable environmental solutions.</p>
+          <div class="cta-buttons">
+            <a href="#" class="btn btn-dark">Contact Our Team</a>
+            <a href="#" class="btn btn-outline-white">Request Consultation</a>
+            <a href="#faq" class="btn btn-green">FAQ</a>
+          </div>
+        </div>
+
+        <div class="cta-right fade-up" style="transition-delay:0.15s;">
+          <h3>Stay Informed</h3>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <input class="newsletter-input" type="email" placeholder="Enter Email" aria-label="Email address" required />
+            <button class="newsletter-submit" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand / Logo -->
+        <div class="footer-brand">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="EAA Associates logo">
+            <circle cx="50" cy="50" r="46" stroke="#1B4332" stroke-width="3" fill="#F4F6F1"/>
+            <circle cx="50" cy="50" r="46" stroke="#1B4332" stroke-width="3" fill="none"/>
+            <ellipse cx="50" cy="50" rx="20" ry="46" stroke="#1B4332" stroke-width="2" fill="none"/>
+            <path d="M4 50 Q26 44 50 50 Q74 56 96 50" stroke="#1B4332" stroke-width="2" fill="none"/>
+            <path d="M10 32 Q30 27 50 32 Q70 37 90 32" stroke="#1B4332" stroke-width="1.5" fill="none"/>
+            <path d="M10 68 Q30 63 50 68 Q70 73 90 68" stroke="#1B4332" stroke-width="1.5" fill="none"/>
+            <path fill="#3DAF6C" d="M38 22 Q34 36 34 50 Q34 64 38 78 Q42 64 42 50 Q42 36 38 22Z"/>
+            <text x="20" y="94" font-size="10" font-family="Montserrat,sans-serif" font-weight="800" fill="#1B4332">EAA</text>
+          </svg>
+        </div>
+
+        <!-- About -->
+        <div class="footer-col">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#who-we-are">Who We Are?</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#impact-section">Impacts</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#our-services">Climate and Resilience</a></li>
+            <li><a href="#our-services">Environmental Compliance</a></li>
+            <li><a href="#our-services">Biodiversity</a></li>
+            <li><a href="#our-services">Sustainable Infrastructure</a></li>
+          </ul>
+        </div>
+
+        <!-- Industries -->
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="#industries">Government</a></li>
+            <li><a href="#industries">NGOs</a></li>
+            <li><a href="#industries">Corporate Developers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#">Address</a></li>
+            <li><a href="#">Phone</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 EAA Associates Ltd</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
