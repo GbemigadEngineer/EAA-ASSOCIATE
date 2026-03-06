@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Projects – EAA Associates Ltd</title>
+    <title>Environmental Impact Assessment (EIA) – EAA Associates Ltd</title>
     <meta
       name="description"
-      content="Explore EAA Associates Ltd's portfolio of environmental projects across conservation, infrastructure, health, and ecological restoration sectors."
+      content="EAA Associates Ltd provides structured, regulatory-aligned Environmental Impact Assessment (EIA) services for infrastructure development, industrial projects, and major public works."
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/projects.css" />
+    <link rel="stylesheet" href="../css/service-detail.css" />
   </head>
   <body>
     <!-- ══════════════════════════════════════
-       NAVIGATION
+       NAVIGATION (shared)
   ══════════════════════════════════════ -->
     <header>
       <nav class="navbar-top" role="navigation" aria-label="Main navigation">
         <div class="container">
           <a
-            href="../index.html"
+            href="index.html"
             class="nav-logo"
             aria-label="EAA Associates Home"
           >
@@ -86,28 +86,28 @@
               >Environmental<br />Action Alliance</span
             >
           </a>
+
           <ul class="nav-menu" role="list">
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="has-dropdown">
-              <a href="../about.html">About <span class="chevron">▾</span></a>
+              <a href="about.html">About <span class="chevron">▾</span></a>
             </li>
             <li class="has-dropdown">
-              <a href="../services.html"
+              <a href="services.html" class="nav-link-active"
                 >Services <span class="chevron">▾</span></a
               >
             </li>
-            <li><a href="industries.html">Industries</a></li>
-            <li>
-              <a href="projects.html" class="nav-link-active">Projects</a>
-            </li>
+            <li><a href="#">Industries</a></li>
+            <li><a href="#">Projects</a></li>
             <li><a href="#">Insights</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
-              <a href="../consultation.html" class="btn btn-dark"
+              <a href="consultation.html" class="btn btn-dark"
                 >Book Consultation</a
               >
             </li>
           </ul>
+
           <button
             class="nav-hamburger"
             id="hamburger"
@@ -118,6 +118,7 @@
           </button>
         </div>
       </nav>
+
       <div class="nav-bar-secondary">
         <div class="container">
           <ul class="nav-secondary-links" role="list">
@@ -151,21 +152,22 @@
           </button>
         </div>
       </div>
+
       <div
         class="mobile-drawer"
         id="mobileDrawer"
         role="dialog"
         aria-label="Mobile menu"
       >
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../services.html">Services</a>
-        <a href="industries.html">Industries</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#">Industries</a>
+        <a href="#">Projects</a>
         <a href="#">Insights</a>
-        <a href="../contact.html">Contact</a>
+        <a href="contact.html">Contact</a>
         <a
-          href="../consultation.html"
+          href="consultation.html"
           class="btn btn-dark"
           style="margin-top: 8px; width: 100%; justify-content: center"
           >Book Consultation</a
@@ -175,262 +177,240 @@
 
     <main>
       <!-- ══════════════════════════════════════
-         INTRO — centered, off-white bg
+         HERO — waste collection / field workers image
+         Doc: hero height 550px, bg image with dark overlay
     ══════════════════════════════════════ -->
-      <section class="proj-intro fade-up" aria-labelledby="proj-heading">
-        <div class="container">
-          <h1 id="proj-heading">Our Projects</h1>
-          <p>
-            Our projects reflect our commitment to regulatory precision,
-            environmental sustainability, and sector-specific advisory
-            excellence. We work across diverse industries, supporting
-            institutions in managing environmental risk, achieving compliance,
-            and integrating sustainable development strategies into their
-            operations.
-          </p>
-          <p>
-            Each project demonstrates our structured approach from assessment
-            and documentation to implementation oversight and long-term impact
-            planning.
-          </p>
-          <div class="proj-intro-btns">
-            <a href="../consultation.html" class="btn btn-dark"
-              >Request Consultation</a
-            >
-            <a href="../services.html" class="btn btn-green-solid"
-              >Explore Services</a
-            >
-          </div>
-        </div>
+      <section
+        class="sd-hero"
+        aria-label="Environmental Impact Assessment service hero"
+      >
+        <img
+          class="sd-hero-img"
+          src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=1600&q=80"
+          alt="Environmental field workers collecting waste — EIA service"
+          loading="eager"
+        />
+        <div class="sd-hero-overlay"></div>
       </section>
 
       <!-- ══════════════════════════════════════
-         FILTER + PROJECT GRID
+         SERVICE OVERVIEW — 2-col: heading left / body right
+         Doc: section padding 100px, H2 40px w600 lh1.3
     ══════════════════════════════════════ -->
-      <section class="proj-listing" aria-label="Project listing">
+      <section class="sd-overview" aria-labelledby="sd-heading">
         <div class="container">
-          <!-- Filter bar -->
-          <div class="proj-filter" role="search" aria-label="Filter projects">
-            <span class="proj-filter-label">Filter :</span>
-            <div class="proj-filter-fields">
-              <input
-                type="text"
-                placeholder="Location"
-                aria-label="Filter by location"
-                id="filterLocation"
-              />
-              <input
-                type="text"
-                placeholder="Industries"
-                aria-label="Filter by industry"
-                id="filterIndustry"
-              />
-              <div class="proj-search-wrap">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  aria-label="Search projects"
-                  id="filterSearch"
-                />
-              </div>
+          <div class="sd-overview-grid">
+            <div class="sd-overview-left fade-up">
+              <h1 id="sd-heading">Environmental Impact Assessment (EIA)</h1>
+            </div>
+
+            <div
+              class="sd-overview-right fade-up"
+              style="transition-delay: 0.1s"
+            >
+              <p>
+                Environmental Impact Assessment (EIA) is a critical requirement
+                for infrastructure development, industrial projects, land-use
+                transformation, and major public works. At EAA Associates Ltd,
+                we provide structured, regulatory-aligned EIA services designed
+                to identify environmental risks, ensure statutory compliance,
+                and support responsible project approval processes.
+              </p>
+              <p>
+                Our approach integrates scientific analysis, stakeholder
+                engagement, and regulatory documentation to ensure projects meet
+                national environmental standards while aligning with sustainable
+                development objectives.
+              </p>
+              <p>
+                We work closely with institutions and developers to ensure
+                environmental considerations are integrated early in the
+                planning process — reducing delays, regulatory risks, and
+                long-term environmental liabilities.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Projects grid — 3 columns -->
-          <div class="proj-grid" id="projectsGrid">
-            <!-- Row 1 -->
-            <article
-              class="proj-card"
-              data-industry="Conservation Initiative"
-              data-location="Emerald Forest, Africa"
-            >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
-                  alt="Butterfly Garden & Conservation Initiative"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Butterfly Garden &amp; Conservation Initiative</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Emerald Forest, Africa</p>
-              </div>
-            </article>
+      <!-- ══════════════════════════════════════
+         SCOPE + METHODOLOGY — 2-col
+         Doc: section padding 100px, lists 16px lh1.7
+    ══════════════════════════════════════ -->
+      <section class="sd-details" aria-label="Scope of work and methodology">
+        <div class="container">
+          <div class="sd-details-grid">
+            <!-- LEFT: Scope of Work -->
+            <div class="sd-detail-block fade-up">
+              <h2>Scope of Work</h2>
+              <p class="sd-detail-intro">Our EIA services include:</p>
+              <ul class="sd-plain-list">
+                <li>Environmental baseline studies</li>
+                <li>Site and ecological assessment</li>
+                <li>Identification and evaluation of potential impacts</li>
+                <li>Risk mitigation strategy development</li>
+                <li>Regulatory documentation preparation</li>
+                <li>Stakeholder consultation support</li>
+                <li>Environmental Management Plan (EMP) development</li>
+                <li>Compliance advisory during project approval</li>
+              </ul>
+            </div>
 
-            <article
-              class="proj-card"
-              data-industry="Health"
-              data-location="Ibeju-Lekki General Hospital"
+            <!-- RIGHT: Our Methodology -->
+            <div
+              class="sd-detail-block fade-up"
+              style="transition-delay: 0.12s"
             >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
-                  alt="Eco-Friendly Flood Prevention Design"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Eco-Friendly Flood Prevention Design</h3>
-                <p>Industry: Health</p>
-                <p>Location: Ibeju-Lekki General Hospital</p>
-              </div>
-            </article>
-
-            <article
-              class="proj-card"
-              data-industry="Conservation Initiative"
-              data-location="Osun State, Nigeria"
-            >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
-                  alt="Ecological Restoration – 300 Acres"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Ecological Restoration – 300 Acres</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Osun State, Nigeria</p>
-              </div>
-            </article>
-
-            <!-- Row 2 -->
-            <article
-              class="proj-card"
-              data-industry="Conservation Initiative"
-              data-location="Emerald Forest, Africa"
-            >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
-                  alt="Butterfly Garden & Conservation Initiative"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Butterfly Garden &amp; Conservation Initiative</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Emerald Forest, Africa</p>
-              </div>
-            </article>
-
-            <article
-              class="proj-card"
-              data-industry="Health"
-              data-location="Ibeju-Lekki General Hospital"
-            >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
-                  alt="Eco-Friendly Flood Prevention Design"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Eco-Friendly Flood Prevention Design</h3>
-                <p>Industry: Health</p>
-                <p>Location: Ibeju-Lekki General Hospital</p>
-              </div>
-            </article>
-
-            <article
-              class="proj-card"
-              data-industry="Conservation Initiative"
-              data-location="Osun State, Nigeria"
-            >
-              <div class="proj-card-img">
-                <img
-                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
-                  alt="Ecological Restoration – 300 Acres"
-                  loading="lazy"
-                />
-              </div>
-              <div class="proj-card-info">
-                <h3>Ecological Restoration – 300 Acres</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Osun State, Nigeria</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Load More -->
-          <div class="proj-load-more">
-            <button
-              class="btn-load-more"
-              id="loadMoreBtn"
-              aria-label="Load more projects"
-            >
-              Load More
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-                <path d="M7 17L17 7M17 7H7M17 7v10" />
-              </svg>
-            </button>
+              <h2>Our Methodology</h2>
+              <p class="sd-detail-intro">
+                Our Environmental Impact Assessment process follows a structured
+                framework:
+              </p>
+              <ol class="sd-numbered-list">
+                <li>Preliminary Screening &amp; Scoping</li>
+                <li>Baseline Environmental Study</li>
+                <li>Impact Identification &amp; Risk Analysis</li>
+                <li>Mitigation &amp; Environmental Management Planning</li>
+                <li>Regulatory Documentation &amp; Submission Support</li>
+                <li>Monitoring &amp; Advisory During Implementation</li>
+              </ol>
+              <p class="sd-detail-close">
+                This disciplined approach ensures regulatory precision and
+                practical feasibility.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ══════════════════════════════════════
-         HOW CAN WE HELP — full-width bg image
-         with dark overlay, text + CTA left-aligned
+         WHO + WHY — 2-col
+         Doc: section padding 100px
     ══════════════════════════════════════ -->
-      <section class="proj-help" aria-label="How can we help">
-        <img
-          class="proj-help-img"
-          src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1600&q=80"
-          alt="Lush botanical garden corridor — how can we help"
-          loading="lazy"
-        />
-        <div class="proj-help-overlay"></div>
-        <div class="proj-help-content">
-          <h2>How Can we Help ?</h2>
-          <p>Contact us so that we can help your Organization</p>
-          <a href="../contact.html" class="proj-help-btn">Contact Us</a>
+      <section
+        class="sd-who-why"
+        aria-label="Who this service is for and why work with EAA"
+      >
+        <div class="container">
+          <div class="sd-details-grid">
+            <!-- LEFT: Who This Service Is For -->
+            <div class="sd-detail-block fade-up">
+              <h2>Who This Service Is For</h2>
+              <ul class="sd-plain-list">
+                <li>Government ministries and agencies</li>
+                <li>Infrastructure developers</li>
+                <li>Oil, gas, and energy operators</li>
+                <li>Real estate and urban development firms</li>
+                <li>Industrial and manufacturing organizations</li>
+              </ul>
+            </div>
+
+            <!-- RIGHT: Why Work With EAA -->
+            <div
+              class="sd-detail-block fade-up"
+              style="transition-delay: 0.12s"
+            >
+              <h2>Why Work With EAA</h2>
+              <ul class="sd-plain-list">
+                <li>
+                  Deep understanding of environmental compliance frameworks
+                </li>
+                <li>
+                  Structured documentation aligned with statutory standards
+                </li>
+                <li>Practical advisory beyond theoretical reporting</li>
+                <li>Risk-focused approach to avoid project delays</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════
+         SELECTED PROJECTS
+         Doc: section padding 100px, 3-col card grid
+         card shadow, hover translateY -6px
+    ══════════════════════════════════════ -->
+      <section class="sd-projects" aria-labelledby="sd-projects-heading">
+        <div class="container">
+          <h2 id="sd-projects-heading" class="sd-projects-title fade-up">
+            Selected Projects
+          </h2>
+
+          <div class="sd-projects-grid fade-up">
+            <!-- Project 1 -->
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                  alt="Butterfly Garden & Conservation Initiative — monarch butterflies on flowers"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Butterfly Garden &amp; Conservation Initiative</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Emerald Forest, Africa</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
+                  alt="Eco-Friendly Flood Prevention Design — urban waterway"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Eco-Friendly Flood Prevention Design</h3>
+                  <p>Industry: Urban Infrastructure</p>
+                  <p>Location: Lagos, Nigeria</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
+                  alt="Ecological Restoration – 300 Acres — lush green forest"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Ecological Restoration – 300 Acres</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Osun State, Nigeria</p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- ══════════════════════════════════════
        UNIFIED DARK FOOTER
+       CTA row + divider + links grid + copyright
+       ALL on one solid black background
   ══════════════════════════════════════ -->
     <footer class="site-footer" role="contentinfo">
       <div class="container">
+        <!-- CTA ROW -->
         <div class="sf-cta-row">
           <div class="sf-cta-left">
-            <h2>Restore ecosystems responsibly and sustainably.</h2>
+            <h2>Discuss Your Environmental Requirements</h2>
             <p>
               Our team is prepared to support your institution with structured
               advisory and implementation services.
             </p>
             <div class="sf-cta-btns">
-              <a href="../contact.html" class="sf-btn-solid"
-                >Contact Our Team</a
-              >
-              <a href="../consultation.html" class="sf-btn-outline"
+              <a href="contact.html" class="sf-btn-solid">Contact Our Team</a>
+              <a href="consultation.html" class="sf-btn-outline"
                 >Request Consultation</a
               >
-              <a href="../index.html#faq" class="sf-btn-green">FAQ</a>
+              <a href="index.html#faq" class="sf-btn-green">FAQ</a>
             </div>
           </div>
           <div class="sf-cta-right">
@@ -447,8 +427,10 @@
           </div>
         </div>
 
+        <!-- DIVIDER -->
         <hr class="sf-divider" />
 
+        <!-- LINKS GRID -->
         <div class="sf-links-grid">
           <div class="sf-brand">
             <svg
@@ -509,15 +491,17 @@
               </text>
             </svg>
           </div>
+
           <div class="sf-col">
             <h4>About</h4>
             <ul>
-              <li><a href="../about.html">Who We Are?</a></li>
-              <li><a href="../about.html#leadership-heading">Leadership</a></li>
+              <li><a href="about.html">Who We Are?</a></li>
+              <li><a href="about.html#leadership-heading">Leadership</a></li>
               <li><a href="#">Impacts</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
           </div>
+
           <div class="sf-col">
             <h4>Services</h4>
             <ul>
@@ -527,6 +511,7 @@
               <li><a href="#">Sustainable Infrastructure</a></li>
             </ul>
           </div>
+
           <div class="sf-col">
             <h4>Industries</h4>
             <ul>
@@ -537,12 +522,13 @@
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>
+
           <div class="sf-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="../contact.html">Address</a></li>
-              <li><a href="../contact.html">phone</a></li>
-              <li><a href="../contact.html">Email</a></li>
+              <li><a href="contact.html">Address</a></li>
+              <li><a href="contact.html">phone</a></li>
+              <li><a href="contact.html">Email</a></li>
             </ul>
             <div class="sf-socials">
               <a href="#" aria-label="Instagram">
@@ -603,6 +589,7 @@
           </div>
         </div>
 
+        <!-- COPYRIGHT -->
         <div class="sf-copyright">
           <p>© 2026 EAA Associates Ltd</p>
         </div>
@@ -610,6 +597,5 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/projects.js"></script>
   </body>
 </html>

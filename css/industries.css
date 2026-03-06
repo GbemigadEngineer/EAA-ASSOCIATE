@@ -1,0 +1,309 @@
+/* =============================================
+   INDUSTRIES PAGE — industries.css
+   Reuses: service-detail.css project card styles
+   Additional: sector alternating 2-col layout
+   Doc: section padding 100px / 80px / 50px
+   ============================================= */
+
+/* Pull in the dark footer + project cards from service-detail */
+@import url("service-detail.css");
+
+/* Active nav */
+.nav-link-active {
+  color: var(--green-mid) !important;
+}
+.nav-link-active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: var(--green-mid);
+  margin-top: 2px;
+}
+
+/* ─────────────────────────────────────────
+   INTRO — centered, off-white bg
+───────────────────────────────────────── */
+.ind-intro {
+  background: var(--off-white);
+  padding: 80px 0 50px;
+  text-align: center;
+}
+.ind-intro h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--green-dark);
+  margin-bottom: 16px;
+}
+.ind-intro p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 680px;
+  margin: 0 auto 32px;
+}
+.ind-intro-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-green-solid {
+  height: 60px;
+  padding: 0 32px;
+  background: #3daf6c;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+.btn-green-solid:hover {
+  background: #2d8a52;
+}
+
+/* ─────────────────────────────────────────
+   HERO IMAGE — full-width oil pump below intro
+───────────────────────────────────────── */
+.ind-hero-img-wrap {
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+}
+.ind-hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   OVERVIEW — centered text block
+───────────────────────────────────────── */
+.ind-overview {
+  background: var(--off-white);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+.ind-overview h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+.ind-overview p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 780px;
+  margin: 0 auto 18px;
+}
+
+/* ─────────────────────────────────────────
+   SECTOR SECTIONS — alternating 2-col
+   Standard: content left, image right
+   Alt (.ind-sector-alt): image left, content right
+───────────────────────────────────────── */
+.ind-sector {
+  background: var(--off-white);
+  padding: 70px 0;
+  border-top: 1px solid var(--border);
+}
+
+.ind-sector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Content block */
+.ind-sector-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--green-dark);
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.ind-sector-content > p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+}
+
+/* "We Support:" / "Our Services:" sub-headings */
+.ind-sector-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  margin-top: 24px;
+}
+.ind-sector-content h3:first-of-type {
+  margin-top: 0;
+}
+
+/* Plain list */
+.ind-plain-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ind-plain-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-mid);
+}
+
+/* Image block */
+.ind-sector-img img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Alt variant: swap column order visually */
+.ind-sector-alt .ind-sector-grid {
+  /* image is first in DOM for alt rows, natural order works */
+}
+
+/* ─────────────────────────────────────────
+   WHY INDUSTRY EXPERTISE MATTERS — centered
+───────────────────────────────────────── */
+.ind-why {
+  background: var(--off-white);
+  padding: 80px 0 60px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.ind-why h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+.ind-why p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  max-width: 780px;
+  margin: 0 auto 18px;
+}
+
+/* ─────────────────────────────────────────
+   SELECTED PROJECTS — reuse sd-project-card
+───────────────────────────────────────── */
+.ind-projects {
+  background: var(--off-white);
+  padding: 0 0 100px;
+  border-top: 1px solid var(--border);
+}
+.ind-projects-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+.ind-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1199px) {
+  .ind-sector-grid {
+    gap: 48px;
+  }
+  .ind-sector-img img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .ind-intro {
+    padding: 60px 0 40px;
+  }
+  .ind-hero-img-wrap {
+    height: 240px;
+  }
+  .ind-overview {
+    padding: 60px 0 40px;
+  }
+  .ind-sector {
+    padding: 50px 0;
+  }
+  .ind-sector-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* On tablet/mobile, always show image after content for alt rows */
+  .ind-sector-alt .ind-sector-img {
+    order: 2;
+  }
+  .ind-sector-alt .ind-sector-content {
+    order: 1;
+  }
+
+  .ind-sector-img img {
+    height: 280px;
+  }
+  .ind-projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .ind-intro h1 {
+    font-size: 28px;
+  }
+  .ind-intro-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ind-intro-btns .btn,
+  .ind-intro-btns .btn-green-solid {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ind-hero-img-wrap {
+    height: 180px;
+  }
+  .ind-overview {
+    padding: 50px 0 30px;
+  }
+  .ind-sector {
+    padding: 40px 0;
+  }
+  .ind-why {
+    padding: 50px 0 40px;
+  }
+  .ind-projects {
+    padding-bottom: 50px;
+  }
+  .ind-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
