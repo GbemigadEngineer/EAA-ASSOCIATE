@@ -12,99 +12,101 @@
     <link rel="stylesheet" href="../css/consultation.css" />
   </head>
   <body>
-    <!-- ════════════════════════════════════
-       NAVIGATION (shared)
-  ════════════════════════════════════ -->
+    <!-- ════════════════════════════════════════
+       NAVIGATION (matches index.html exactly)
+  ════════════════════════════════════════ -->
     <header>
       <nav class="navbar-top" role="navigation" aria-label="Main navigation">
         <div class="container">
           <a
-            href="index.html"
+            href="../index.html"
             class="nav-logo"
             aria-label="EAA Associates Home"
           >
-            <svg
-              width="48"
-              height="48"
-              viewBox="0 0 48 48"
-              fill="none"
-              aria-hidden="true"
-            >
-              <circle
-                cx="24"
-                cy="24"
-                r="22"
-                stroke="#1B4332"
-                stroke-width="2"
-                fill="#F4F6F1"
-              />
-              <ellipse
-                cx="24"
-                cy="24"
-                rx="10"
-                ry="22"
-                stroke="#1B4332"
-                stroke-width="1.5"
-                fill="none"
-              />
-              <path
-                d="M2 24 Q14 20 24 24 Q34 28 46 24"
-                stroke="#1B4332"
-                stroke-width="1.5"
-                fill="none"
-              />
-              <path
-                d="M5 15 Q16 12 24 15 Q32 18 43 15"
-                stroke="#1B4332"
-                stroke-width="1"
-                fill="none"
-              />
-              <path
-                d="M5 33 Q16 30 24 33 Q32 36 43 33"
-                stroke="#1B4332"
-                stroke-width="1"
-                fill="none"
-              />
-              <path
-                d="M20 4 Q16 14 16 24 Q16 34 20 44"
-                stroke="#3DAF6C"
-                stroke-width="1.5"
-                fill="none"
-              />
-              <text
-                x="8"
-                y="47"
-                font-size="6"
-                font-family="Montserrat,sans-serif"
-                font-weight="700"
-                fill="#1B4332"
-              >
-                EAA
-              </text>
-            </svg>
-            <span class="nav-logo-text"
-              >Environmental<br />Action Alliance</span
-            >
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA – Environment Afforestation Agroforestry logo"
+              class="nav-logo-img"
+            />
           </a>
 
           <ul class="nav-menu" role="list">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
+
             <li class="has-dropdown">
-              <a href="#">About <span class="chevron">▾</span></a>
-            </li>
-            <li class="has-dropdown">
-              <a href="#">Services <span class="chevron">▾</span></a>
-            </li>
-            <li><a href="#">Industries</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li>
-              <a href="consultation.html" class="btn btn-dark nav-active-btn"
-                >Book Consultation</a
+              <a href="about.html" class="nav-link-label">About</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open About menu"
               >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#who-we-are">Who We Are</a></li>
+                <li>
+                  <a href="../index.html#how-we-work-anchor">How We Work</a>
+                </li>
+                <li>
+                  <a href="../index.html#industries">Industries We Serve</a>
+                </li>
+              </ul>
             </li>
+
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link-label">Services</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Services menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li>
+                  <a href="services.html#eia"
+                    >Environmental Impact Assessment</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#climate-risk"
+                    >Climate Risk &amp; Climate Proofing</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#esg"
+                    >ESG &amp; Sustainability Advisory</a
+                  >
+                </li>
+                <li>
+                  <a href="services.html#carbon"
+                    >Carbon Auditing &amp; Emissions Assessment</a
+                  >
+                </li>
+                <li><a href="services.html#reforestation">Reforestation</a></li>
+                <li>
+                  <a href="services.html#renewable"
+                    >Renewable Energy &amp; Solar Solutions</a
+                  >
+                </li>
+                <li><a href="services.html#landscape">Landscape Design</a></li>
+                <li>
+                  <a href="services.html#ecological">Ecological Restoration</a>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="../index.html#industries">Industries</a></li>
+            <li><a href="../index.html#selected-projects">Projects</a></li>
+            <li><a href="../index.html#insights">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
+
+          <a
+            href="consultation.html"
+            class="btn btn-dark nav-cta nav-active-btn"
+            >Book Consultation</a
+          >
 
           <button
             class="nav-hamburger"
@@ -117,37 +119,60 @@
         </div>
       </nav>
 
-      <div class="nav-bar-secondary">
+      <div
+        class="nav-bar-secondary"
+        role="navigation"
+        aria-label="Secondary navigation"
+      >
         <div class="container">
           <ul class="nav-secondary-links" role="list">
             <li>
               <a href="#">English <span>▾</span></a>
             </li>
-            <li><a href="#">Blogs &amp; News</a></li>
-            <li><a href="#">Impact</a></li>
-            <li><a href="#">Solution</a></li>
+            <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+            <li><a href="../index.html#impact-section">Impact</a></li>
+            <li><a href="services.html">Solution</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Partner</a></li>
-            <li><a href="#">Our Work</a></li>
+            <li><a href="../index.html#selected-projects">Our Work</a></li>
             <li>
-              <a href="#">Take Action <span>▾</span></a>
+              <a href="consultation.html">Take Action <span>▾</span></a>
             </li>
           </ul>
-          <button class="nav-search" aria-label="Search">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
+          <div class="nav-search-wrap">
+            <form
+              class="nav-search-form"
+              role="search"
+              onsubmit="handleNavSearch(event)"
             >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            Search
-          </button>
+              <input
+                class="nav-search-input"
+                type="search"
+                id="navSearchInput"
+                placeholder="Search..."
+                aria-label="Search site"
+                autocomplete="off"
+              />
+              <button
+                class="nav-search-btn"
+                type="submit"
+                aria-label="Submit search"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -157,12 +182,12 @@
         role="dialog"
         aria-label="Mobile menu"
       >
-        <a href="index.html">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Industries</a>
-        <a href="#">Projects</a>
-        <a href="#">Insights</a>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="../index.html#industries">Industries</a>
+        <a href="../index.html#selected-projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
         <a href="contact.html">Contact</a>
         <a
           href="consultation.html"
@@ -174,9 +199,9 @@
     </header>
 
     <main>
-      <!-- ════════════════════════════════════
-         HERO — solar panel facility image
-    ════════════════════════════════════ -->
+      <!-- ════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════ -->
       <section class="consult-hero" aria-label="Consultation page hero">
         <img
           class="consult-hero-img"
@@ -187,9 +212,9 @@
         <div class="consult-hero-overlay"></div>
       </section>
 
-      <!-- ════════════════════════════════════
+      <!-- ════════════════════════════════════════
          CONSULTATION INTRO
-    ════════════════════════════════════ -->
+    ════════════════════════════════════════ -->
       <section class="consult-intro fade-up" aria-labelledby="consult-heading">
         <div class="container">
           <h1 id="consult-heading">CONSULTATION</h1>
@@ -207,9 +232,9 @@
         </div>
       </section>
 
-      <!-- ════════════════════════════════════
-         WHAT TO EXPECT  +  SUBMIT FORM
-    ════════════════════════════════════ -->
+      <!-- ════════════════════════════════════════
+         WHAT TO EXPECT + FORM
+    ════════════════════════════════════════ -->
       <section
         class="consult-main"
         id="consult-form"
@@ -219,7 +244,6 @@
           <div class="consult-main-grid">
             <!-- ── LEFT COLUMN ── -->
             <div class="consult-left fade-up">
-              <!-- What To Expect card -->
               <div class="expect-card">
                 <h2 class="expect-title">What To Expect</h2>
                 <p class="expect-intro">
@@ -234,7 +258,6 @@
                 </ol>
               </div>
 
-              <!-- Have Questions? CTA -->
               <div class="faq-sidebar-box">
                 <h3>Have Questions?</h3>
                 <p>
@@ -242,12 +265,13 @@
                   Questions page. If not, please contact us and a team member
                   will get back to you.
                 </p>
-                <a href="index.html#faq" class="btn btn-green sidebar-faq-btn"
+                <a
+                  href="../index.html#faq"
+                  class="btn btn-green sidebar-faq-btn"
                   >View Our FAQ</a
                 >
               </div>
 
-              <!-- Why Work With EAA? -->
               <div class="why-sidebar-card">
                 <h3>Why Work With EAA?</h3>
                 <ol class="why-list">
@@ -259,7 +283,6 @@
                 </ol>
               </div>
 
-              <!-- Ready to Move Forward? -->
               <div class="move-forward-box">
                 <h3>Ready to Move Forward?</h3>
                 <p>
@@ -272,7 +295,7 @@
               </div>
             </div>
 
-            <!-- ── RIGHT COLUMN: FORM ── -->
+            <!-- ── RIGHT COLUMN: NETLIFY FORM ── -->
             <div
               class="consult-form-wrap fade-up"
               style="transition-delay: 0.15s"
@@ -284,7 +307,18 @@
                 days.
               </p>
 
-              <form id="consultForm" class="cform" novalidate>
+              <form
+                id="consultForm"
+                class="cform"
+                name="consultation"
+                method="POST"
+                netlify
+                data-netlify="true"
+                enctype="multipart/form-data"
+                novalidate
+              >
+                <input type="hidden" name="form-name" value="consultation" />
+
                 <!-- ── BASIC INFORMATION ── -->
                 <fieldset class="cform-fieldset">
                   <legend class="cform-legend">Basic Information</legend>
@@ -320,7 +354,7 @@
                       type="text"
                       id="cf-position"
                       name="position"
-                      placeholder="Enter Email"
+                      placeholder="Enter Position / Title"
                     />
                   </div>
 
@@ -443,7 +477,6 @@
                       <input
                         type="text"
                         id="cf-document"
-                        name="documentName"
                         readonly
                         placeholder="Project brief, concept note, or environmental report"
                         class="cform-file-display"
@@ -494,7 +527,6 @@
                       submitted on behalf of my organisation.</label
                     >
                   </div>
-
                   <div class="cform-checkbox-row">
                     <input
                       type="checkbox"
@@ -532,142 +564,124 @@
                 </div>
               </form>
             </div>
-            <!-- end right column -->
           </div>
         </div>
       </section>
+    </main>
 
-      <!-- ════════════════════════════════════
-         CTA + NEWSLETTER (shared)
-    ════════════════════════════════════ -->
-      <section class="cta-newsletter" aria-labelledby="cta-consult-heading">
-        <div class="container">
-          <div class="cta-left fade-up">
-            <h2 id="cta-consult-heading">
-              Ready to Strengthen Your Environmental Strategy?
+    <!-- ════════════════════════════════════════
+       FOOTER (matches index.html exactly)
+  ════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <!-- CTA Row -->
+        <div class="footer-cta fade-up">
+          <div class="footer-cta-left">
+            <h2>
+              Strengthen environmental governance within your organization
             </h2>
             <p>
-              Partner with EAA Associates to develop resilient, compliant, and
-              sustainable environmental solutions.
+              Our team is prepared to support your institution with structured
+              advisory and implementation services.
             </p>
             <div class="cta-buttons">
-              <a href="contact.html" class="btn btn-dark">Contact Our Team</a>
+              <a href="contact.html" class="btn btn-dark-outline"
+                >Contact Our Team</a
+              >
               <a href="consultation.html" class="btn btn-outline-white"
                 >Request Consultation</a
               >
-              <a href="index.html#faq" class="btn btn-green">FAQ</a>
+              <a href="../index.html#faq" class="btn btn-green">FAQ</a>
             </div>
           </div>
-          <div class="cta-right fade-up" style="transition-delay: 0.15s">
+
+          <div class="footer-cta-right">
             <h3>Stay Informed</h3>
-            <form class="newsletter-form" id="newsletterForm" novalidate>
+            <form
+              class="newsletter-form"
+              id="newsletterForm"
+              name="newsletter"
+              method="POST"
+              netlify
+              data-netlify="true"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="newsletter" />
               <input
                 class="newsletter-input"
                 type="email"
+                name="email"
                 placeholder="Enter Email"
                 aria-label="Email address"
                 required
               />
               <button class="newsletter-submit" type="submit">Submit</button>
             </form>
+            <div
+              class="form-success newsletter-success"
+              style="
+                display: none;
+                margin-top: 12px;
+                color: #3daf6c;
+                font-family: &quot;Montserrat&quot;, sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+              "
+            >
+              ✓ Thank you! You've been subscribed.
+            </div>
           </div>
         </div>
-      </section>
-    </main>
 
-    <!-- ════════════════════════════════════
-       FOOTER (shared)
-  ════════════════════════════════════ -->
-    <footer class="footer" role="contentinfo">
-      <div class="container">
+        <hr class="sf-divider" />
+
+        <!-- Footer links grid -->
         <div class="footer-grid">
           <div class="footer-brand">
-            <svg
-              width="100"
-              height="100"
-              viewBox="0 0 100 100"
-              fill="none"
-              aria-label="EAA Associates logo"
-            >
-              <circle
-                cx="50"
-                cy="50"
-                r="46"
-                stroke="#1B4332"
-                stroke-width="3"
-                fill="#F4F6F1"
-              />
-              <ellipse
-                cx="50"
-                cy="50"
-                rx="20"
-                ry="46"
-                stroke="#1B4332"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M4 50 Q26 44 50 50 Q74 56 96 50"
-                stroke="#1B4332"
-                stroke-width="2"
-                fill="none"
-              />
-              <path
-                d="M10 32 Q30 27 50 32 Q70 37 90 32"
-                stroke="#1B4332"
-                stroke-width="1.5"
-                fill="none"
-              />
-              <path
-                d="M10 68 Q30 63 50 68 Q70 73 90 68"
-                stroke="#1B4332"
-                stroke-width="1.5"
-                fill="none"
-              />
-              <path
-                fill="#3DAF6C"
-                d="M38 22 Q34 36 34 50 Q34 64 38 78 Q42 64 42 50 Q42 36 38 22Z"
-              />
-              <text
-                x="20"
-                y="94"
-                font-size="10"
-                font-family="Montserrat,sans-serif"
-                font-weight="800"
-                fill="#1B4332"
-              >
-                EAA
-              </text>
-            </svg>
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA – Environment Afforestation Agroforestry logo"
+              class="footer-logo-img"
+            />
           </div>
+
           <div class="footer-col">
             <h4>About</h4>
             <ul>
-              <li><a href="#">Who We Are?</a></li>
+              <li><a href="../index.html#who-we-are">Who We Are?</a></li>
               <li><a href="#">Leadership</a></li>
-              <li><a href="#">Impacts</a></li>
+              <li><a href="../index.html#impact-section">Impacts</a></li>
               <li><a href="#">Careers</a></li>
             </ul>
           </div>
+
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">Climate and Resilience</a></li>
-              <li><a href="#">Environmental Compliance</a></li>
-              <li><a href="#">Biodiversity</a></li>
-              <li><a href="#">Sustainable Infrastructure</a></li>
+              <li>
+                <a href="services.html#climate-risk">Climate and Resilience</a>
+              </li>
+              <li><a href="services.html#eia">Environmental Compliance</a></li>
+              <li><a href="services.html#ecological">Biodiversity</a></li>
+              <li>
+                <a href="services.html#landscape">Sustainable Infrastructure</a>
+              </li>
             </ul>
           </div>
+
           <div class="footer-col">
             <h4>Industries</h4>
             <ul>
-              <li><a href="#">Government</a></li>
-              <li><a href="#">NGOs</a></li>
-              <li><a href="#">Corporate Developers</a></li>
+              <li><a href="../index.html#industries">Government</a></li>
+              <li><a href="../index.html#industries">NGOs</a></li>
+              <li>
+                <a href="../index.html#industries">Corporate Developers</a>
+              </li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>
+
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
@@ -675,7 +689,7 @@
               <li><a href="#">Phone</a></li>
               <li><a href="#">Email</a></li>
             </ul>
-            <div class="footer-socials">
+            <div class="footer-socials" aria-label="Social media links">
               <a href="#" aria-label="Instagram">
                 <svg
                   width="16"
@@ -684,6 +698,7 @@
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
                 >
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <circle cx="12" cy="12" r="4" />
@@ -704,6 +719,7 @@
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
                 >
                   <path
                     d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
@@ -725,6 +741,7 @@
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
+                  aria-hidden="true"
                 >
                   <path d="M18 6L6 18M6 6l12 12" />
                 </svg>
@@ -732,13 +749,86 @@
             </div>
           </div>
         </div>
+
         <div class="footer-bottom">
-          <p>© 2026 EAA Associates Ltd</p>
+          <p>
+            © 2026
+            <a
+              href="https://techsonunicore.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-credit-link"
+              >Techson Unicore</a
+            >
+          </p>
         </div>
       </div>
     </footer>
 
     <script src="../js/main.js"></script>
     <script src="../js/consultation.js"></script>
+    <script>
+      /* ── DROPDOWN MENUS ── */
+      document.querySelectorAll(".has-dropdown").forEach((item) => {
+        const chevronBtn = item.querySelector(".nav-chevron-btn");
+        const dropdown = item.querySelector(".dropdown-menu");
+        if (!chevronBtn || !dropdown) return;
+        chevronBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = item.classList.contains("dropdown-open");
+          document.querySelectorAll(".has-dropdown").forEach((d) => {
+            d.classList.remove("dropdown-open");
+            d.querySelector(".nav-chevron-btn")?.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          });
+          if (!isOpen) {
+            item.classList.add("dropdown-open");
+            chevronBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".has-dropdown").forEach((d) => {
+          d.classList.remove("dropdown-open");
+          d.querySelector(".nav-chevron-btn")?.setAttribute(
+            "aria-expanded",
+            "false",
+          );
+        });
+      });
+
+      /* ── NETLIFY NEWSLETTER FORM ── */
+      const newsletterForm = document.getElementById("newsletterForm");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(newsletterForm);
+          try {
+            await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            });
+          } catch (_) {}
+          newsletterForm.style.display = "none";
+          const success = newsletterForm.nextElementSibling;
+          if (success && success.classList.contains("newsletter-success")) {
+            success.style.display = "block";
+          }
+        });
+      }
+
+      /* ── NAV SEARCH ── */
+      function handleNavSearch(e) {
+        e.preventDefault();
+        const input = document.getElementById("navSearchInput");
+        input.placeholder = "Try searching on the home page";
+        setTimeout(() => {
+          input.placeholder = "Search...";
+        }, 2500);
+      }
+    </script>
   </body>
 </html>
