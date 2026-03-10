@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ── CONTACT FORM VALIDATION & NETLIFY SUBMIT ── */
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
-  const successMsg = document.getElementById("formSuccess");
   const privacyErr = document.getElementById("privacyError");
 
   if (!form) return;
@@ -18,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const err = field.closest(".form-group")?.querySelector(".form-error");
       if (err) err.classList.remove("visible");
     });
-    field.addEventListener("change", () => {
-      field.classList.remove("has-error");
-    });
+    field.addEventListener("change", () => field.classList.remove("has-error"));
   });
 
   form.addEventListener("submit", async (e) => {
@@ -65,36 +62,53 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Privacy policy checkbox */
     const checkbox = form.querySelector("#privacyPolicy");
     if (checkbox && !checkbox.checked) {
-      privacyErr.textContent = "You must agree to the privacy policy.";
-      privacyErr.classList.add("visible");
+      if (privacyErr) {
+        privacyErr.textContent = "You must agree to the privacy policy.";
+        privacyErr.classList.add("visible");
+      }
       valid = false;
     } else if (privacyErr) {
       privacyErr.textContent = "";
       privacyErr.classList.remove("visible");
     }
 
-    if (!valid) return;
+    if (!valid) {
+      const firstErr = form.querySelector(".has-error, .form-error.visible");
+      if (firstErr)
+        firstErr.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
 
     /* Submit to Netlify */
     submitBtn.textContent = "Sending…";
     submitBtn.disabled = true;
 
+    let submitted = false;
     try {
-      const formData = new FormData(form);
-      await fetch("/", {
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(new FormData(form)).toString(),
       });
+      submitted = res.ok;
     } catch (_) {
-      // Netlify will have captured it regardless
+      submitted = false;
     }
 
-    form.reset();
     submitBtn.textContent = "Send Message";
     submitBtn.disabled = false;
-    successMsg.classList.add("visible");
-    successMsg.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    setTimeout(() => successMsg.classList.remove("visible"), 6000);
+
+    if (submitted) {
+      form.reset();
+      EAAModal.success(
+        "Message Sent!",
+        "Thank you for reaching out. A member of our team will get back to you within 1–2 business days.",
+      );
+    } else {
+      EAAModal.error(
+        "Submission Failed",
+        "Something went wrong while sending your message. Please try again or email us directly.",
+      );
+    }
   });
 });

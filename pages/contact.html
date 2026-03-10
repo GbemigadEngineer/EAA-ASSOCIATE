@@ -9,6 +9,7 @@
       content="Get in touch with EAA Associates Ltd for environmental advisory, consultation requests, and partnership inquiries."
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
     <link rel="stylesheet" href="../css/contact.css" />
   </head>
   <body>
@@ -301,8 +302,13 @@
               <div class="contact-detail-block">
                 <h4>Email</h4>
                 <p>
-                  <a href="mailto:info@eaaassociate.com"
-                    >info@eaaassociate.com</a
+                  <a
+                    href="/cdn-cgi/l/email-protection#91f8fff7fed1f4f0f0f0e2e2fef2f8f0e5f4bff2fefc"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="6a03040c052a0f0b0b0b19190509030b1e0f44090507"
+                      >[email&#160;protected]</span
+                    ></a
                   >
                 </p>
               </div>
@@ -513,11 +519,6 @@
                 <button type="submit" class="btn btn-submit" id="submitBtn">
                   Send Message
                 </button>
-
-                <div class="form-success" id="formSuccess" aria-live="polite">
-                  ✓ Your message has been sent! We'll get back to you within 1–2
-                  business days.
-                </div>
               </form>
             </div>
           </div>
@@ -587,19 +588,6 @@
               />
               <button class="newsletter-submit" type="submit">Submit</button>
             </form>
-            <div
-              class="form-success newsletter-success"
-              style="
-                display: none;
-                margin-top: 12px;
-                color: #3daf6c;
-                font-family: &quot;Montserrat&quot;, sans-serif;
-                font-size: 14px;
-                font-weight: 600;
-              "
-            >
-              ✓ Thank you! You've been subscribed.
-            </div>
           </div>
         </div>
 
@@ -735,6 +723,11 @@
       </div>
     </footer>
 
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="../js/modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
     <script>
@@ -775,17 +768,26 @@
         newsletterForm.addEventListener("submit", async (e) => {
           e.preventDefault();
           const formData = new FormData(newsletterForm);
+          let ok = false;
           try {
-            await fetch("/", {
+            const res = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(formData).toString(),
             });
+            ok = res.ok;
           } catch (_) {}
-          newsletterForm.style.display = "none";
-          const success = newsletterForm.nextElementSibling;
-          if (success && success.classList.contains("newsletter-success")) {
-            success.style.display = "block";
+          if (ok) {
+            newsletterForm.reset();
+            EAAModal.success(
+              "Subscribed!",
+              "Thank you! You have been added to our mailing list and will receive our latest updates.",
+            );
+          } else {
+            EAAModal.error(
+              "Subscription Failed",
+              "Something went wrong. Please try again or contact us directly.",
+            );
           }
         });
       }
@@ -797,12 +799,14 @@
         if (!query) return;
         const input = document.getElementById("navSearchInput");
         input.placeholder = "Search...";
-        // On inner pages, redirect to index with hash search isn't feasible;
-        // just clear and indicate
-        input.placeholder = "Try searching on the home page";
-        setTimeout(() => {
-          input.placeholder = "Search...";
-        }, 2500);
+        // scroll to matching section
+        const sections = document.querySelectorAll("section[id], div[id]");
+        for (const sec of sections) {
+          if (sec.textContent.toLowerCase().includes(query.toLowerCase())) {
+            sec.scrollIntoView({ behavior: "smooth", block: "start" });
+            break;
+          }
+        }
       }
     </script>
   </body>

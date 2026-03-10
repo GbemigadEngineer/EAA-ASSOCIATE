@@ -9,6 +9,7 @@
       content="Schedule a strategic environmental consultation with EAA Associates Ltd. Submit your project details and our team will respond within 1–2 business days."
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
     <link rel="stylesheet" href="../css/consultation.css" />
   </head>
   <body>
@@ -553,15 +554,6 @@
                 >
                   Submit Consultation Request
                 </button>
-
-                <div
-                  class="cform-success"
-                  id="consultSuccess"
-                  aria-live="polite"
-                >
-                  ✓ Your consultation request has been submitted! We'll review
-                  your project details and respond within 1–2 business days.
-                </div>
               </form>
             </div>
           </div>
@@ -577,12 +569,10 @@
         <!-- CTA Row -->
         <div class="footer-cta fade-up">
           <div class="footer-cta-left">
-            <h2>
-              Strengthen environmental governance within your organization
-            </h2>
+            <h2>Ready to Strengthen Your Environmental Strategy?</h2>
             <p>
-              Our team is prepared to support your institution with structured
-              advisory and implementation services.
+              Partner with EAA Associates to develop resilient, compliant, and
+              sustainable environmental solutions.
             </p>
             <div class="cta-buttons">
               <a href="contact.html" class="btn btn-dark-outline"
@@ -617,19 +607,6 @@
               />
               <button class="newsletter-submit" type="submit">Submit</button>
             </form>
-            <div
-              class="form-success newsletter-success"
-              style="
-                display: none;
-                margin-top: 12px;
-                color: #3daf6c;
-                font-family: &quot;Montserrat&quot;, sans-serif;
-                font-size: 14px;
-                font-weight: 600;
-              "
-            >
-              ✓ Thank you! You've been subscribed.
-            </div>
           </div>
         </div>
 
@@ -765,6 +742,7 @@
       </div>
     </footer>
 
+    <script src="../js/modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/consultation.js"></script>
     <script>
@@ -805,17 +783,26 @@
         newsletterForm.addEventListener("submit", async (e) => {
           e.preventDefault();
           const formData = new FormData(newsletterForm);
+          let ok = false;
           try {
-            await fetch("/", {
+            const res = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(formData).toString(),
             });
+            ok = res.ok;
           } catch (_) {}
-          newsletterForm.style.display = "none";
-          const success = newsletterForm.nextElementSibling;
-          if (success && success.classList.contains("newsletter-success")) {
-            success.style.display = "block";
+          if (ok) {
+            newsletterForm.reset();
+            EAAModal.success(
+              "Subscribed!",
+              "Thank you! You have been added to our mailing list and will receive our latest updates.",
+            );
+          } else {
+            EAAModal.error(
+              "Subscription Failed",
+              "Something went wrong. Please try again or contact us directly.",
+            );
           }
         });
       }

@@ -9,6 +9,7 @@
       content="EAA Associates Ltd provides environmental impact assessment, climate risk advisory, biodiversity conservation, and regulatory compliance services."
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/modal.css" />
   </head>
   <body>
     <!-- ════════════════════════════════════════
@@ -1325,6 +1326,7 @@
       </div>
     </footer>
 
+    <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
     <script>
       /* ── DROPDOWN MENUS ── */
@@ -1368,25 +1370,36 @@
       if (newsletterForm) {
         newsletterForm.addEventListener("submit", async (e) => {
           e.preventDefault();
+          const emailInput = newsletterForm.querySelector(".newsletter-input");
+          const email = emailInput ? emailInput.value.trim() : "";
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            EAAModal.error(
+              "Invalid Email",
+              "Please enter a valid email address to subscribe.",
+            );
+            return;
+          }
           const formData = new FormData(newsletterForm);
+          let ok = false;
           try {
-            await fetch("/", {
+            const res = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: new URLSearchParams(formData).toString(),
             });
-            newsletterForm.style.display = "none";
-            const success = newsletterForm.nextElementSibling;
-            if (success && success.classList.contains("form-success")) {
-              success.style.display = "block";
-            }
-          } catch (err) {
-            // Fallback: show success anyway (Netlify will have caught it)
-            newsletterForm.style.display = "none";
-            const success = newsletterForm.nextElementSibling;
-            if (success && success.classList.contains("form-success")) {
-              success.style.display = "block";
-            }
+            ok = res.ok;
+          } catch (_) {}
+          if (ok) {
+            newsletterForm.reset();
+            EAAModal.success(
+              "Subscribed!",
+              "Thank you! You have been added to our mailing list and will receive our latest updates.",
+            );
+          } else {
+            EAAModal.error(
+              "Subscription Failed",
+              "Something went wrong. Please try again or contact us directly.",
+            );
           }
         });
       }

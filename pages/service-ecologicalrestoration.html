@@ -1,323 +1,594 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ecological Restoration – EAA Associates Ltd</title>
-  <meta name="description" content="EAA Associates Ltd provides structured ecological restoration services aimed at rehabilitating degraded landscapes, restoring biodiversity, and strengthening ecosystem functionality." />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/service-detail.css" />
-</head>
-<body>
-
-  <!-- ══════════════════════════════════════
-       NAVIGATION
-  ══════════════════════════════════════ -->
-  <header>
-    <nav class="navbar-top" role="navigation" aria-label="Main navigation">
-      <div class="container">
-        <a href="../index.html" class="nav-logo" aria-label="EAA Associates Home">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="22" stroke="#1B4332" stroke-width="2" fill="#F4F6F1"/>
-            <ellipse cx="24" cy="24" rx="10" ry="22" stroke="#1B4332" stroke-width="1.5" fill="none"/>
-            <path d="M2 24 Q14 20 24 24 Q34 28 46 24" stroke="#1B4332" stroke-width="1.5" fill="none"/>
-            <path d="M5 15 Q16 12 24 15 Q32 18 43 15" stroke="#1B4332" stroke-width="1" fill="none"/>
-            <path d="M5 33 Q16 30 24 33 Q32 36 43 33" stroke="#1B4332" stroke-width="1" fill="none"/>
-            <path d="M20 4 Q16 14 16 24 Q16 34 20 44" stroke="#3DAF6C" stroke-width="1.5" fill="none"/>
-            <text x="8" y="47" font-size="6" font-family="Montserrat,sans-serif" font-weight="700" fill="#1B4332">EAA</text>
-          </svg>
-          <span class="nav-logo-text">Environmental<br>Action Alliance</span>
-        </a>
-
-        <ul class="nav-menu" role="list">
-          <li><a href="../index.html">Home</a></li>
-          <li class="has-dropdown"><a href="../about.html">About <span class="chevron">▾</span></a></li>
-          <li class="has-dropdown"><a href="../services.html" class="nav-link-active">Services <span class="chevron">▾</span></a></li>
-          <li><a href="#">Industries</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Insights</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../consultation.html" class="btn btn-dark">Book Consultation</a></li>
-        </ul>
-
-        <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-
-    <div class="nav-bar-secondary">
-      <div class="container">
-        <ul class="nav-secondary-links" role="list">
-          <li><a href="#">English <span>▾</span></a></li>
-          <li><a href="#">Blogs &amp; News</a></li>
-          <li><a href="#">Impact</a></li>
-          <li><a href="#">Solution</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Partner</a></li>
-          <li><a href="#">Our Work</a></li>
-          <li><a href="#">Take Action <span>▾</span></a></li>
-        </ul>
-        <button class="nav-search" aria-label="Search">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-          Search
-        </button>
-      </div>
-    </div>
-
-    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile menu">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../services.html">Services</a>
-      <a href="#">Industries</a>
-      <a href="#">Projects</a>
-      <a href="#">Insights</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../consultation.html" class="btn btn-dark" style="margin-top:8px;width:100%;justify-content:center;">Book Consultation</a>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- HERO — reforestation team planting -->
-    <section class="sd-hero" aria-label="Ecological Restoration hero">
-      <img
-        class="sd-hero-img"
-        src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1600&q=80"
-        alt="Team planting trees on a hillside — ecological restoration"
-        loading="eager"
-      />
-      <div class="sd-hero-overlay"></div>
-    </section>
-
-    <!-- OVERVIEW -->
-    <section class="sd-overview" aria-labelledby="sd-heading">
-      <div class="container">
-        <div class="sd-overview-grid">
-          <div class="sd-overview-left fade-up">
-            <h1 id="sd-heading">Ecological Restoration</h1>
-          </div>
-          <div class="sd-overview-right fade-up" style="transition-delay:0.1s;">
-            <p>Ecological degradation presents long-term environmental, economic, and social risks. EAA Associates Ltd provides structured ecological restoration services aimed at rehabilitating degraded landscapes, restoring biodiversity, and strengthening ecosystem functionality.</p>
-            <p>Our restoration initiatives are guided by scientific assessment, sustainability planning, and long-term monitoring strategies. We focus not only on environmental recovery but also on resilience and measurable ecological improvement.</p>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecological Restoration – EAA Associates Ltd</title>
+    <meta
+      name="description"
+      content="EAA Associates Ltd provides structured ecological restoration services aimed at rehabilitating degraded landscapes."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/service-detail.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <a
+            href="../index.html"
+            class="nav-logo"
+            aria-label="EAA Associates Home"
+          >
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA Associates logo"
+              class="nav-logo-img"
+            />
+          </a>
+          <ul class="nav-menu" role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li class="has-dropdown">
+              <a href="about.html" class="nav-link-label">About</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open About menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#who-we-are">Who We Are</a></li>
+                <li>
+                  <a href="../index.html#how-we-work-anchor">How We Work</a>
+                </li>
+                <li>
+                  <a href="../index.html#industries">Industries We Serve</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link-label nav-link-active"
+                >Services</a
+              >
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Services menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="eia.html">Environmental Impact Assessment</a></li>
+                <li>
+                  <a href="climate-adaptation.html"
+                    >Climate Risk &amp; Climate Proofing</a
+                  >
+                </li>
+                <li>
+                  <a href="sustainability-esg.html"
+                    >ESG &amp; Sustainability Advisory</a
+                  >
+                </li>
+                <li>
+                  <a href="ecological-restoration.html"
+                    >Ecological Restoration</a
+                  >
+                </li>
+                <li>
+                  <a href="environmental-compliance.html"
+                    >Environmental Compliance</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="../index.html#industries">Industries</a></li>
+            <li><a href="../index.html#selected-projects">Projects</a></li>
+            <li><a href="../index.html#insights">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="consultation.html" class="btn btn-dark nav-cta"
+            >Book Consultation</a
+          >
+          <button
+            class="nav-hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
         </div>
-      </div>
-    </section>
-
-    <!-- SCOPE + METHODOLOGY -->
-    <section class="sd-details" aria-label="Scope and methodology">
-      <div class="container">
-        <div class="sd-details-grid">
-
-          <div class="sd-detail-block fade-up">
-            <h2>Scope of Work</h2>
-            <ul class="sd-plain-list">
-              <li>Forest and land rehabilitation planning</li>
-              <li>Biodiversity recovery frameworks</li>
-              <li>Soil restoration strategies</li>
-              <li>Native species reintroduction</li>
-              <li>Watershed restoration</li>
-              <li>Monitoring and evaluation systems</li>
-              <li>Long-term sustainability advisory</li>
-            </ul>
-          </div>
-
-          <div class="sd-detail-block fade-up" style="transition-delay:0.12s;">
-            <h2>Our Methodology</h2>
-            <ol class="sd-numbered-list">
-              <li>Environmental Condition Assessment</li>
-              <li>Restoration Planning &amp; Strategy Development</li>
-              <li>Implementation Oversight</li>
-              <li>Biodiversity Integration</li>
-              <li>Monitoring &amp; Performance Evaluation</li>
-            </ol>
-            <p class="sd-detail-close">Our work prioritizes ecosystem stability and measurable environmental outcomes.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WHO + WHY -->
-    <section class="sd-who-why" aria-label="Who this service is for and why EAA">
-      <div class="container">
-        <div class="sd-details-grid">
-
-          <div class="sd-detail-block fade-up">
-            <h2>Who This Service Is For</h2>
-            <ul class="sd-plain-list">
-              <li>Government conservation agencies</li>
-              <li>Forestry departments</li>
-              <li>NGOs and environmental organizations</li>
-              <li>Land developers</li>
-              <li>Agricultural stakeholders</li>
-            </ul>
-          </div>
-
-          <div class="sd-detail-block fade-up" style="transition-delay:0.12s;">
-            <h2>Why Work With EAA</h2>
-            <ul class="sd-plain-list">
-              <li>Proven large-scale restoration experience</li>
-              <li>Biodiversity-focused planning</li>
-              <li>Integration of regulatory compliance</li>
-              <li>Long-term monitoring systems</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SELECTED PROJECTS -->
-    <section class="sd-projects" aria-labelledby="sd-projects-heading">
-      <div class="container">
-        <h2 id="sd-projects-heading" class="sd-projects-title fade-up">Selected Projects</h2>
-        <div class="sd-projects-grid fade-up">
-
-          <article class="sd-project-card">
-            <div class="sd-project-img">
-              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
-                alt="Butterfly Garden & Conservation Initiative" loading="lazy" />
-              <div class="sd-project-overlay">
-                <h3>Butterfly Garden &amp; Conservation Initiative</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Emerald Forest, Africa</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="sd-project-card">
-            <div class="sd-project-img">
-              <img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
-                alt="Eco-Friendly Flood Prevention Design" loading="lazy" />
-              <div class="sd-project-overlay">
-                <h3>Eco-Friendly Flood Prevention Design</h3>
-                <p>Industry: Urban Infrastructure</p>
-                <p>Location: Ijelu-Lekki General Hospital</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="sd-project-card">
-            <div class="sd-project-img">
-              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
-                alt="Ecological Restoration – 300 Acres" loading="lazy" />
-              <div class="sd-project-overlay">
-                <h3>Ecological Restoration – 300 Acres</h3>
-                <p>Industry: Conservation Initiative</p>
-                <p>Location: Osun State, Nigeria</p>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ══════════════════════════════════════
-       UNIFIED DARK FOOTER
-  ══════════════════════════════════════ -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-
-      <div class="sf-cta-row">
-        <div class="sf-cta-left">
-          <h2>Restore ecosystems responsibly and sustainably.</h2>
-          <p>Our team is prepared to support your institution with structured advisory and implementation services.</p>
-          <div class="sf-cta-btns">
-            <a href="../contact.html" class="sf-btn-solid">Contact Our Team</a>
-            <a href="../consultation.html" class="sf-btn-outline">Request Consultation</a>
-            <a href="../index.html#faq" class="sf-btn-green">FAQ</a>
-          </div>
-        </div>
-        <div class="sf-cta-right">
-          <h3>Stay Informed</h3>
-          <form class="sf-newsletter" id="newsletterForm" novalidate>
-            <input type="email" placeholder="Enter Email" aria-label="Email address" required />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-
-      <hr class="sf-divider" />
-
-      <div class="sf-links-grid">
-        <div class="sf-brand">
-          <svg width="88" height="88" viewBox="0 0 100 100" fill="none" aria-label="EAA Associates logo">
-            <circle cx="50" cy="50" r="46" stroke="#3DAF6C" stroke-width="2.5" fill="rgba(255,255,255,0.05)"/>
-            <ellipse cx="50" cy="50" rx="20" ry="46" stroke="#3DAF6C" stroke-width="1.5" fill="none"/>
-            <path d="M4 50 Q26 44 50 50 Q74 56 96 50" stroke="#3DAF6C" stroke-width="1.5" fill="none"/>
-            <path d="M10 32 Q30 27 50 32 Q70 37 90 32" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
-            <path d="M10 68 Q30 63 50 68 Q70 73 90 68" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
-            <path fill="#3DAF6C" d="M38 22 Q34 36 34 50 Q34 64 38 78 Q42 64 42 50 Q42 36 38 22Z"/>
-            <text x="20" y="94" font-size="10" font-family="Montserrat,sans-serif" font-weight="800" fill="#fff">EAA</text>
-          </svg>
-        </div>
-
-        <div class="sf-col">
-          <h4>About</h4>
-          <ul>
-            <li><a href="../about.html">Who We Are?</a></li>
-            <li><a href="../about.html#leadership-heading">Leadership</a></li>
-            <li><a href="#">Impacts</a></li>
+      </nav>
+      <div
+        class="nav-bar-secondary"
+        role="navigation"
+        aria-label="Secondary navigation"
+      >
+        <div class="container">
+          <ul class="nav-secondary-links" role="list">
+            <li>
+              <a href="#">English <span>▾</span></a>
+            </li>
+            <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+            <li><a href="../index.html#impact-section">Impact</a></li>
+            <li><a href="services.html">Solution</a></li>
             <li><a href="#">Careers</a></li>
+            <li><a href="#">Partner</a></li>
+            <li><a href="../index.html#selected-projects">Our Work</a></li>
+            <li>
+              <a href="consultation.html">Take Action <span>▾</span></a>
+            </li>
           </ul>
-        </div>
-
-        <div class="sf-col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Climate and Resilience</a></li>
-            <li><a href="#">Environmental Compliance</a></li>
-            <li><a href="#">Biodiversity</a></li>
-            <li><a href="#">Sustainable Infrastructure</a></li>
-          </ul>
-        </div>
-
-        <div class="sf-col">
-          <h4>Industries</h4>
-          <ul>
-            <li><a href="#">Government</a></li>
-            <li><a href="#">NGOs</a></li>
-            <li><a href="#">Corporate Developers</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <div class="sf-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="../contact.html">Address</a></li>
-            <li><a href="../contact.html">phone</a></li>
-            <li><a href="../contact.html">Email</a></li>
-          </ul>
-          <div class="sf-socials">
-            <a href="#" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="Twitter / X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </a>
+          <div class="nav-search-wrap">
+            <form
+              class="nav-search-form"
+              role="search"
+              onsubmit="handleNavSearch(event)"
+            >
+              <input
+                class="nav-search-input"
+                type="search"
+                id="navSearchInput"
+                placeholder="Search..."
+                aria-label="Search site"
+                autocomplete="off"
+              />
+              <button
+                class="nav-search-btn"
+                type="submit"
+                aria-label="Submit search"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="sf-copyright">
-        <p>© 2026 EAA Associates Ltd</p>
+      <div
+        class="mobile-drawer"
+        id="mobileDrawer"
+        role="dialog"
+        aria-label="Mobile menu"
+      >
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="../index.html#industries">Industries</a>
+        <a href="../index.html#selected-projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="consultation.html"
+          class="btn btn-dark"
+          style="margin-top: 8px; width: 100%; justify-content: center"
+          >Book Consultation</a
+        >
       </div>
+    </header>
 
-    </div>
-  </footer>
+    <main>
+      <section class="sd-hero" aria-label="Ecological Restoration hero">
+        <img
+          class="sd-hero-img"
+          src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=1600&q=80"
+          alt="Team planting trees on a hillside — ecological restoration"
+          loading="eager"
+        />
+        <div class="sd-hero-overlay"></div>
+      </section>
 
-  <script src="../js/main.js"></script>
-</body>
+      <section class="sd-overview" aria-labelledby="sd-heading">
+        <div class="container">
+          <div class="sd-overview-grid">
+            <div class="sd-overview-left fade-up">
+              <h1 id="sd-heading">Ecological Restoration</h1>
+            </div>
+            <div
+              class="sd-overview-right fade-up"
+              style="transition-delay: 0.1s"
+            >
+              <p>
+                Ecological degradation presents long-term environmental,
+                economic, and social risks. EAA Associates Ltd provides
+                structured ecological restoration services aimed at
+                rehabilitating degraded landscapes, restoring biodiversity, and
+                strengthening ecosystem functionality.
+              </p>
+              <p>
+                Our restoration initiatives are guided by scientific assessment,
+                sustainability planning, and long-term monitoring strategies. We
+                focus not only on environmental recovery but also on resilience
+                and measurable ecological improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-details" aria-label="Scope and methodology">
+        <div class="container">
+          <div class="sd-details-grid">
+            <div class="sd-detail-block fade-up">
+              <h2>Scope of Work</h2>
+              <ul class="sd-plain-list">
+                <li>Forest and land rehabilitation planning</li>
+                <li>Biodiversity recovery frameworks</li>
+                <li>Soil restoration strategies</li>
+                <li>Native species reintroduction</li>
+                <li>Watershed restoration</li>
+                <li>Monitoring and evaluation systems</li>
+                <li>Long-term sustainability advisory</li>
+              </ul>
+            </div>
+            <div
+              class="sd-detail-block fade-up"
+              style="transition-delay: 0.12s"
+            >
+              <h2>Our Methodology</h2>
+              <ol class="sd-numbered-list">
+                <li>Environmental Condition Assessment</li>
+                <li>Restoration Planning &amp; Strategy Development</li>
+                <li>Implementation Oversight</li>
+                <li>Biodiversity Integration</li>
+                <li>Monitoring &amp; Performance Evaluation</li>
+              </ol>
+              <p class="sd-detail-close">
+                Our work prioritizes ecosystem stability and measurable
+                environmental outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="sd-who-why"
+        aria-label="Who this service is for and why EAA"
+      >
+        <div class="container">
+          <div class="sd-details-grid">
+            <div class="sd-detail-block fade-up">
+              <h2>Who This Service Is For</h2>
+              <ul class="sd-plain-list">
+                <li>Government conservation agencies</li>
+                <li>Forestry departments</li>
+                <li>NGOs and environmental organizations</li>
+                <li>Land developers</li>
+                <li>Agricultural stakeholders</li>
+              </ul>
+            </div>
+            <div
+              class="sd-detail-block fade-up"
+              style="transition-delay: 0.12s"
+            >
+              <h2>Why Work With EAA</h2>
+              <ul class="sd-plain-list">
+                <li>Proven large-scale restoration experience</li>
+                <li>Biodiversity-focused planning</li>
+                <li>Integration of regulatory compliance</li>
+                <li>Long-term monitoring systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sd-projects" aria-labelledby="sd-projects-heading">
+        <div class="container">
+          <h2 id="sd-projects-heading" class="sd-projects-title fade-up">
+            Selected Projects
+          </h2>
+          <div class="sd-projects-grid fade-up">
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                  alt="Butterfly Garden & Conservation Initiative"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Butterfly Garden &amp; Conservation Initiative</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Emerald Forest, Africa</p>
+                </div>
+              </div>
+            </article>
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
+                  alt="Eco-Friendly Flood Prevention Design"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Eco-Friendly Flood Prevention Design</h3>
+                  <p>Industry: Urban Infrastructure</p>
+                  <p>Location: Ibeju-Lekki General Hospital</p>
+                </div>
+              </div>
+            </article>
+            <article class="sd-project-card">
+              <div class="sd-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
+                  alt="Ecological Restoration – 300 Acres"
+                  loading="lazy"
+                />
+                <div class="sd-project-overlay">
+                  <h3>Ecological Restoration – 300 Acres</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Osun State, Nigeria</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-cta fade-up">
+          <div class="footer-cta-left">
+            <h2>Restore ecosystems responsibly and sustainably.</h2>
+            <p>
+              Our team is prepared to support your institution with structured
+              advisory and implementation services.
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-dark-outline"
+                >Contact Our Team</a
+              >
+              <a href="consultation.html" class="btn btn-outline-white"
+                >Request Consultation</a
+              >
+              <a href="../index.html#faq" class="btn btn-green">FAQ</a>
+            </div>
+          </div>
+          <div class="footer-cta-right">
+            <h3>Stay Informed</h3>
+            <form
+              class="newsletter-form"
+              id="newsletterForm"
+              name="newsletter"
+              method="POST"
+              netlify
+              data-netlify="true"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="newsletter" />
+              <input
+                class="newsletter-input"
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                aria-label="Email address"
+                required
+              />
+              <button class="newsletter-submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <hr class="sf-divider" />
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA Associates logo"
+              class="footer-logo-img"
+            />
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+              <li><a href="../index.html#who-we-are">Who We Are?</a></li>
+              <li><a href="about.html#leadership-heading">Leadership</a></li>
+              <li><a href="#">Impacts</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li>
+                <a href="climate-adaptation.html">Climate and Resilience</a>
+              </li>
+              <li>
+                <a href="environmental-compliance.html"
+                  >Environmental Compliance</a
+                >
+              </li>
+              <li><a href="ecological-restoration.html">Biodiversity</a></li>
+              <li>
+                <a href="sustainability-esg.html">Sustainable Infrastructure</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Industries</h4>
+            <ul>
+              <li><a href="../index.html#industries">Government</a></li>
+              <li><a href="../index.html#industries">NGOs</a></li>
+              <li>
+                <a href="../index.html#industries">Corporate Developers</a>
+              </li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="contact.html">Address</a></li>
+              <li><a href="contact.html">Phone</a></li>
+              <li><a href="contact.html">Email</a></li>
+            </ul>
+            <div class="footer-socials" aria-label="Social media links">
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  />
+                  <circle
+                    cx="4"
+                    cy="4"
+                    r="2"
+                    fill="currentColor"
+                    stroke="none"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Twitter / X"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M18 6L6 18M6 6l12 12" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026
+            <a
+              href="https://techsonunicore.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-credit-link"
+              >Techson Unicore</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document.querySelectorAll(".has-dropdown").forEach((item) => {
+        const chevronBtn = item.querySelector(".nav-chevron-btn");
+        if (!chevronBtn) return;
+        chevronBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = item.classList.contains("dropdown-open");
+          document.querySelectorAll(".has-dropdown").forEach((d) => {
+            d.classList.remove("dropdown-open");
+            d.querySelector(".nav-chevron-btn")?.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          });
+          if (!isOpen) {
+            item.classList.add("dropdown-open");
+            chevronBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".has-dropdown").forEach((d) => {
+          d.classList.remove("dropdown-open");
+          d.querySelector(".nav-chevron-btn")?.setAttribute(
+            "aria-expanded",
+            "false",
+          );
+        });
+      });
+      const newsletterForm = document.getElementById("newsletterForm");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const emailInput = newsletterForm.querySelector(".newsletter-input");
+          const email = emailInput ? emailInput.value.trim() : "";
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            EAAModal.error(
+              "Invalid Email",
+              "Please enter a valid email address to subscribe.",
+            );
+            return;
+          }
+          let ok = false;
+          try {
+            const res = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(
+                new FormData(newsletterForm),
+              ).toString(),
+            });
+            ok = res.ok;
+          } catch (_) {}
+          if (ok) {
+            newsletterForm.reset();
+            EAAModal.success(
+              "Subscribed!",
+              "Thank you! You have been added to our mailing list.",
+            );
+          } else {
+            EAAModal.error(
+              "Subscription Failed",
+              "Something went wrong. Please try again.",
+            );
+          }
+        });
+      }
+      function handleNavSearch(e) {
+        e.preventDefault();
+        const query = document.getElementById("navSearchInput").value.trim();
+        if (!query) return;
+        const sections = document.querySelectorAll("section[id], article[id]");
+        for (const sec of sections) {
+          if (sec.textContent.toLowerCase().includes(query.toLowerCase())) {
+            sec.scrollIntoView({ behavior: "smooth", block: "start" });
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
