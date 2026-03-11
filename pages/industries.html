@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industries We Serve – EAA Associates Ltd</title>
+    <meta
+      name="description"
+      content="EAA Associates Ltd delivers structured environmental advisory and compliance solutions across diverse sectors and development landscapes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/industries.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <a
+            href="../index.html"
+            class="nav-logo"
+            aria-label="EAA Associates Home"
+          >
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA Associates logo"
+              class="nav-logo-img"
+            />
+          </a>
+          <ul class="nav-menu" role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li class="has-dropdown">
+              <a href="about.html" class="nav-link-label">About</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open About menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#who-we-are">Who We Are</a></li>
+                <li>
+                  <a href="../index.html#how-we-work-anchor">How We Work</a>
+                </li>
+                <li>
+                  <a href="../index.html#industries">Industries We Serve</a>
+                </li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link-label">Services</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Services menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="eia.html">Environmental Impact Assessment</a></li>
+                <li>
+                  <a href="climate-adaptation.html"
+                    >Climate Risk &amp; Climate Proofing</a
+                  >
+                </li>
+                <li>
+                  <a href="sustainability-esg.html"
+                    >ESG &amp; Sustainability Advisory</a
+                  >
+                </li>
+                <li>
+                  <a href="ecological-restoration.html"
+                    >Ecological Restoration</a
+                  >
+                </li>
+                <li>
+                  <a href="environmental-compliance.html"
+                    >Environmental Compliance</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="industries.html" class="nav-link-active">Industries</a>
+            </li>
+            <li><a href="../index.html#selected-projects">Projects</a></li>
+            <li><a href="../index.html#insights">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="consultation.html" class="btn btn-dark nav-cta"
+            >Book Consultation</a
+          >
+          <button
+            class="nav-hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        class="nav-bar-secondary"
+        role="navigation"
+        aria-label="Secondary navigation"
+      >
+        <div class="container">
+          <ul class="nav-secondary-links" role="list">
+            <li>
+              <a href="#">English <span>▾</span></a>
+            </li>
+            <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+            <li><a href="../index.html#impact-section">Impact</a></li>
+            <li><a href="services.html">Solution</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Partner</a></li>
+            <li><a href="../index.html#selected-projects">Our Work</a></li>
+            <li>
+              <a href="consultation.html">Take Action <span>▾</span></a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap">
+            <form
+              class="nav-search-form"
+              role="search"
+              onsubmit="handleNavSearch(event)"
+            >
+              <input
+                class="nav-search-input"
+                type="search"
+                id="navSearchInput"
+                placeholder="Search..."
+                aria-label="Search site"
+                autocomplete="off"
+              />
+              <button
+                class="nav-search-btn"
+                type="submit"
+                aria-label="Submit search"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mobile-drawer"
+        id="mobileDrawer"
+        role="dialog"
+        aria-label="Mobile menu"
+      >
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="../index.html#selected-projects">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="consultation.html"
+          class="btn btn-dark"
+          style="margin-top: 8px; width: 100%; justify-content: center"
+          >Book Consultation</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- ── HERO ── -->
+      <section class="ind-hero" aria-labelledby="ind-hero-heading">
+        <div class="container ind-hero-inner">
+          <h1 id="ind-hero-heading">Industries We Serve</h1>
+          <p>
+            Delivering structured environmental advisory and compliance
+            solutions across diverse sectors and development landscapes.
+          </p>
+          <div class="ind-hero-btns">
+            <a href="consultation.html" class="btn-ind-solid"
+              >Request Consultation</a
+            >
+            <a href="services.html" class="btn-ind-green">Explore services</a>
+          </div>
+        </div>
+        <div class="ind-hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=1600&q=80"
+            alt="Oil pump jack at sunset — industries we serve"
+            loading="eager"
+          />
+        </div>
+      </section>
+
+      <!-- ── OVERVIEW ── -->
+      <section class="ind-overview" aria-label="Industries overview">
+        <div class="container">
+          <div class="ind-overview-inner fade-up">
+            <p>
+              Environmental risk, sustainability obligations, and regulatory
+              requirements vary significantly across sectors. At EAA Associates
+              Ltd, we provide industry-specific environmental advisory solutions
+              tailored to the operational realities, compliance frameworks, and
+              sustainability goals of each sector we serve.
+            </p>
+            <p>
+              Our team understands that environmental strategy must align with
+              sector demands — from infrastructure development and industrial
+              operations to public institutions and conservation initiatives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SECTOR BLOCKS ── -->
+      <section class="ind-sectors" aria-label="Industry sectors">
+        <div class="container">
+          <!-- 1. Infrastructure & Urban Development — text left, img right -->
+          <div class="ind-sector fade-up" id="sector-infrastructure">
+            <div class="ind-sector-text">
+              <h2>Infrastructure &amp; Urban Development</h2>
+              <p>
+                Large-scale infrastructure projects require structured
+                environmental oversight to meet regulatory standards while
+                ensuring long-term resilience.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Road and transportation development</li>
+                <li>Public facility construction</li>
+                <li>Urban expansion projects</li>
+                <li>Residential and commercial real estate</li>
+                <li>Healthcare and educational infrastructure</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Environmental Impact Assessments</li>
+                <li>Climate resilience integration</li>
+                <li>Regulatory documentation</li>
+                <li>Environmental management planning</li>
+              </ul>
+            </div>
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
+                alt="Aerial view of urban construction — infrastructure development"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- 2. Energy, Oil & Gas — img left, text right -->
+          <div class="ind-sector reverse fade-up" id="sector-energy">
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=900&q=80"
+                alt="Oil pump silhouette at sunset — energy sector"
+                loading="lazy"
+              />
+            </div>
+            <div class="ind-sector-text">
+              <h2>Energy, Oil &amp; Gas</h2>
+              <p>
+                Energy operations carry significant environmental responsibility
+                and regulatory scrutiny. We support energy developers and
+                operators with structured compliance and sustainability advisory
+                services.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Oil and gas operations</li>
+                <li>Renewable energy projects</li>
+                <li>Power generation facilities</li>
+                <li>Transmission and distribution infrastructure</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>EIA and compliance documentation</li>
+                <li>Environmental risk mitigation</li>
+                <li>Restoration advisory</li>
+                <li>ESG reporting and sustainability integration</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. Government & Public Institutions — text left, img right -->
+          <div class="ind-sector fade-up" id="sector-government">
+            <div class="ind-sector-text">
+              <h2>Government &amp; Public Institutions</h2>
+              <p>
+                Public sector projects demand strict adherence to environmental
+                regulations and transparent sustainability frameworks.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Federal and state ministries</li>
+                <li>Environmental protection agencies</li>
+                <li>Municipal authorities</li>
+                <li>Public infrastructure departments</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Regulatory advisory</li>
+                <li>Environmental policy alignment</li>
+                <li>Compliance audits</li>
+                <li>Climate adaptation planning</li>
+              </ul>
+            </div>
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80"
+                alt="Government building — public institutions"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- 4. Agriculture & Forestry — img left, text right -->
+          <div class="ind-sector reverse fade-up" id="sector-agriculture">
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80"
+                alt="Agricultural fields at sunrise — agriculture and forestry"
+                loading="lazy"
+              />
+            </div>
+            <div class="ind-sector-text">
+              <h2>Agriculture &amp; Forestry</h2>
+              <p>
+                Sustainable land management and biodiversity conservation are
+                critical in agricultural and forestry operations.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Large-scale farming operations</li>
+                <li>Forestry and timber enterprises</li>
+                <li>Agro-processing facilities</li>
+                <li>Conservation and land trust organisations</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Ecological restoration strategy and planning</li>
+                <li>Climate adaptation program advisory</li>
+                <li>Environmental compliance and regulatory guidance</li>
+                <li>Sustainability framework development</li>
+                <li>Environmental monitoring and evaluation systems</li>
+                <li>ESG and impact reporting support</li>
+                <li>Environmental Impact Assessments for funded projects</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 5. Industrial & Manufacturing — text left, img right -->
+          <div class="ind-sector fade-up" id="sector-industrial">
+            <div class="ind-sector-text">
+              <h2>Industrial &amp; Manufacturing</h2>
+              <p>
+                Industrial operations must align with environmental regulations
+                while maintaining operational efficiency.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Manufacturing plants</li>
+                <li>Processing facilities</li>
+                <li>Industrial parks</li>
+                <li>Large-scale production operations</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Environmental compliance audits</li>
+                <li>Risk mitigation planning</li>
+                <li>Regulatory documentation</li>
+                <li>ESG advisory</li>
+              </ul>
+            </div>
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=900&q=80"
+                alt="Aerial view of industrial facility — manufacturing"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <!-- 6. Healthcare & Medical Infrastructure — img left, text right -->
+          <div class="ind-sector reverse fade-up" id="sector-healthcare">
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80"
+                alt="Hospital corridor — healthcare infrastructure"
+                loading="lazy"
+              />
+            </div>
+            <div class="ind-sector-text">
+              <h2>Healthcare &amp; Medical Infrastructure</h2>
+              <p>
+                Healthcare facilities require strict environmental oversight due
+                to public safety sensitivity, regulatory compliance standards,
+                and long-term operational sustainability demands. At EAA
+                Associates Ltd, we provide structured environmental advisory
+                services tailored to healthcare environments, ensuring
+                facilities operate responsibly while meeting statutory
+                environmental requirements.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Hospitals and medical centers</li>
+                <li>Diagnostic and laboratory facilities</li>
+                <li>Public health infrastructure projects</li>
+                <li>Pharmaceutical and medical production facilities</li>
+                <li>Healthcare expansion and redevelopment projects</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Medical facility compliance advisory</li>
+                <li>Waste management and environmental risk planning</li>
+                <li>
+                  Climate resilience integration for critical infrastructure
+                </li>
+                <li>
+                  Sustainability and ESG alignment for health institutions
+                </li>
+                <li>
+                  Environmental Impact Assessments for healthcare construction
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 7. Non-Governmental Organisations — text left, img right -->
+          <div class="ind-sector fade-up" id="sector-ngo">
+            <div class="ind-sector-text">
+              <h2>Non-Governmental Organisations (NGOs)</h2>
+              <p>
+                NGOs and development organisations working in environmental,
+                humanitarian, and social development spaces require credible
+                environmental frameworks to support funded programmes and donor
+                reporting obligations.
+              </p>
+              <h3>We Support:</h3>
+              <ul class="ind-sector-list">
+                <li>Environmental and conservation NGOs</li>
+                <li>International development organisations</li>
+                <li>Community development programmes</li>
+                <li>Donor-funded project implementers</li>
+              </ul>
+              <h3>Our Services in This Sector:</h3>
+              <ul class="ind-sector-list">
+                <li>Environmental safeguard documentation</li>
+                <li>ESG and sustainability framework development</li>
+                <li>Impact assessment and reporting</li>
+                <li>Ecological restoration advisory</li>
+                <li>Environmental compliance for field projects</li>
+              </ul>
+            </div>
+            <div class="ind-sector-img">
+              <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80"
+                alt="Community volunteers — NGO sector"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── WHY INDUSTRY EXPERTISE MATTERS ── -->
+      <section class="ind-why fade-up" aria-labelledby="ind-why-heading">
+        <div class="container">
+          <div class="ind-why-inner">
+            <h2 id="ind-why-heading">Why Industry Expertise Matters</h2>
+            <p>
+              Each sector presents unique environmental risks, regulatory
+              requirements, and operational realities. Our structured,
+              sector-specific advisory approach ensures that environmental
+              strategy is not generic — but aligned with industry dynamics and
+              compliance obligations.
+            </p>
+            <p>
+              We combine technical expertise with practical sector insight to
+              support sustainable and responsible development.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SELECTED PROJECTS ── -->
+      <section class="ind-projects" aria-labelledby="ind-projects-heading">
+        <div class="container">
+          <h2 id="ind-projects-heading" class="ind-projects-title fade-up">
+            Selected Projects
+          </h2>
+          <div class="ind-projects-grid fade-up">
+            <article class="ind-project-card">
+              <div class="ind-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80"
+                  alt="Butterfly Garden & Conservation Initiative"
+                  loading="lazy"
+                />
+                <div class="ind-project-overlay">
+                  <h3>Butterfly Garden &amp; Conservation Initiative</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Emerald Forest, Africa</p>
+                </div>
+              </div>
+            </article>
+            <article class="ind-project-card">
+              <div class="ind-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=700&q=80"
+                  alt="Eco-Friendly Flood Prevention Design"
+                  loading="lazy"
+                />
+                <div class="ind-project-overlay">
+                  <h3>Eco-Friendly Flood Prevention Design</h3>
+                  <p>Industry: Health</p>
+                  <p>Location: Ibeju-Lekki General Hospital</p>
+                </div>
+              </div>
+            </article>
+            <article class="ind-project-card">
+              <div class="ind-project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80"
+                  alt="Ecological Restoration – 300 Acres"
+                  loading="lazy"
+                />
+                <div class="ind-project-overlay">
+                  <h3>Ecological Restoration – 300 Acres</h3>
+                  <p>Industry: Conservation Initiative</p>
+                  <p>Location: Osun State, Nigeria</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-cta fade-up">
+          <div class="footer-cta-left">
+            <h2>Partner With Us Across Your Sector</h2>
+            <p>
+              Partner with EAA Associates to develop resilient, compliant, and
+              sustainable environmental solutions.
+            </p>
+            <div class="cta-buttons">
+              <a href="contact.html" class="btn btn-dark-outline"
+                >Contact Our Team</a
+              >
+              <a href="consultation.html" class="btn btn-outline-white"
+                >Request Consultation</a
+              >
+              <a href="../index.html#faq" class="btn btn-green">FAQ</a>
+            </div>
+          </div>
+          <div class="footer-cta-right">
+            <h3>Stay Informed</h3>
+            <form
+              class="newsletter-form"
+              id="newsletterForm"
+              name="newsletter"
+              method="POST"
+              netlify
+              data-netlify="true"
+              novalidate
+            >
+              <input type="hidden" name="form-name" value="newsletter" />
+              <input
+                class="newsletter-input"
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                aria-label="Email address"
+                required
+              />
+              <button class="newsletter-submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <hr class="sf-divider" />
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA Associates logo"
+              class="footer-logo-img"
+            />
+          </div>
+          <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+              <li><a href="../index.html#who-we-are">Who We Are?</a></li>
+              <li><a href="about.html#leadership-heading">Leadership</a></li>
+              <li><a href="#">Impacts</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li>
+                <a href="climate-adaptation.html">Climate and Resilience</a>
+              </li>
+              <li>
+                <a href="environmental-compliance.html"
+                  >Environmental Compliance</a
+                >
+              </li>
+              <li><a href="ecological-restoration.html">Biodiversity</a></li>
+              <li>
+                <a href="sustainability-esg.html">Sustainable Infrastructure</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Industries</h4>
+            <ul>
+              <li>
+                <a href="industries.html#sector-government">Government</a>
+              </li>
+              <li><a href="industries.html#sector-ngo">NGOs</a></li>
+              <li>
+                <a href="industries.html#sector-industrial"
+                  >Corporate Developers</a
+                >
+              </li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="contact.html">Address</a></li>
+              <li><a href="contact.html">Phone</a></li>
+              <li><a href="contact.html">Email</a></li>
+            </ul>
+            <div class="footer-socials" aria-label="Social media links">
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  />
+                  <circle
+                    cx="4"
+                    cy="4"
+                    r="2"
+                    fill="currentColor"
+                    stroke="none"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Twitter / X"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M18 6L6 18M6 6l12 12" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026
+            <a
+              href="https://techsonunicore.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-credit-link"
+              >Techson Unicore</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document.querySelectorAll(".has-dropdown").forEach((item) => {
+        const chevronBtn = item.querySelector(".nav-chevron-btn");
+        if (!chevronBtn) return;
+        chevronBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = item.classList.contains("dropdown-open");
+          document.querySelectorAll(".has-dropdown").forEach((d) => {
+            d.classList.remove("dropdown-open");
+            d.querySelector(".nav-chevron-btn")?.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          });
+          if (!isOpen) {
+            item.classList.add("dropdown-open");
+            chevronBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".has-dropdown").forEach((d) => {
+          d.classList.remove("dropdown-open");
+          d.querySelector(".nav-chevron-btn")?.setAttribute(
+            "aria-expanded",
+            "false",
+          );
+        });
+      });
+      const newsletterForm = document.getElementById("newsletterForm");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const emailInput = newsletterForm.querySelector(".newsletter-input");
+          const email = emailInput ? emailInput.value.trim() : "";
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            EAAModal.error(
+              "Invalid Email",
+              "Please enter a valid email address to subscribe.",
+            );
+            return;
+          }
+          let ok = false;
+          try {
+            const res = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(
+                new FormData(newsletterForm),
+              ).toString(),
+            });
+            ok = res.ok;
+          } catch (_) {}
+          if (ok) {
+            newsletterForm.reset();
+            EAAModal.success(
+              "Subscribed!",
+              "Thank you! You have been added to our mailing list.",
+            );
+          } else {
+            EAAModal.error(
+              "Subscription Failed",
+              "Something went wrong. Please try again.",
+            );
+          }
+        });
+      }
+      function handleNavSearch(e) {
+        e.preventDefault();
+        const query = document.getElementById("navSearchInput").value.trim();
+        if (!query) return;
+        const sections = document.querySelectorAll(
+          "section[id], article[id], div[id]",
+        );
+        for (const sec of sections) {
+          if (sec.textContent.toLowerCase().includes(query.toLowerCase())) {
+            sec.scrollIntoView({ behavior: "smooth", block: "start" });
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

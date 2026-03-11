@@ -26,7 +26,7 @@ function filterProjects() {
   el.addEventListener("input", filterProjects),
 );
 
-// Load More (static demo — toggles hidden row)
+// Load More (static demo — hides button)
 document.getElementById("loadMoreBtn").addEventListener("click", function () {
   this.style.display = "none";
 });
