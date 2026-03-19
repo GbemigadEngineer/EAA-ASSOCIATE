@@ -16,7 +16,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.eaaassociates.org/" />
 
-    <!-- Open Graph (how site looks on WhatsApp, LinkedIn, Facebook) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.eaaassociates.org/" />
     <meta
@@ -82,31 +82,36 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/modal.css" />
   </head>
   <body>
     <!-- ════════════════════════════════════════
-       NAVIGATION — TOP BAR
-  ════════════════════════════════════════ -->
+         NAVIGATION — TOP BAR
+    ════════════════════════════════════════ -->
     <header>
       <nav class="navbar-top" role="navigation" aria-label="Main navigation">
         <div class="container">
-          <!-- Logo -->
+          <!-- FIX 1: Logo — bigger, company name clearly visible -->
           <a href="#" class="nav-logo" aria-label="EAA Associates Home">
             <img
-              src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              src="images/companyLogo.jpeg"
+              alt="EAA Associates Ltd logo"
               class="nav-logo-img"
             />
+            <div class="nav-logo-text-wrap">
+              <span class="nav-logo-name">EAA Associates Ltd</span>
+              <span class="nav-logo-tagline"
+                >Environmental &amp; Climate Advisory</span
+              >
+            </div>
           </a>
 
           <!-- Desktop menu -->
           <ul class="nav-menu" role="list">
             <li><a href="#" aria-current="page">Home</a></li>
-
-            <!-- About dropdown: clicking label goes to #who-we-are; chevron opens dropdown -->
             <li class="has-dropdown">
-              <a href="../pages/about.html" class="nav-link-label">About</a>
+              <a href="pages/about.html" class="nav-link-label">About</a>
               <button
                 class="nav-chevron-btn"
                 aria-expanded="false"
@@ -120,12 +125,8 @@
                 <li><a href="#industries">Industries We Serve</a></li>
               </ul>
             </li>
-
-            <!-- Services dropdown: clicking label goes to #our-services; chevron opens dropdown -->
             <li class="has-dropdown">
-              <a href="../pages/services.html" class="nav-link-label"
-                >Services</a
-              >
+              <a href="pages/services.html" class="nav-link-label">Services</a>
               <button
                 class="nav-chevron-btn"
                 aria-expanded="false"
@@ -151,23 +152,19 @@
                 </li>
                 <li>
                   <a href="pages/service-climate.html"
-                    >Enviroment Compliance &amp; Regulatory Advisory</a
+                    >Environment Compliance &amp; Regulatory Advisory</a
                   >
                 </li>
                 <li>
-                  <a href="../pages/services.html#reforestation"
-                    >Reforestation</a
-                  >
+                  <a href="pages/services.html#reforestation">Reforestation</a>
                 </li>
                 <li>
-                  <a href="../pages/services.html#renewable"
+                  <a href="pages/services.html#renewable"
                     >Renewable Energy &amp; Solar Solutions</a
                   >
                 </li>
                 <li>
-                  <a href="../pages/services.html#landscape"
-                    >Landscape Design</a
-                  >
+                  <a href="pages/services.html#landscape">Landscape Design</a>
                 </li>
                 <li>
                   <a href="pages/service-ecologicalrestoration.html"
@@ -176,19 +173,16 @@
                 </li>
               </ul>
             </li>
-
             <li><a href="pages/industries.html">Industries</a></li>
             <li><a href="pages/projects.html">Projects</a></li>
             <li><a href="#insights">Insights</a></li>
-            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
           </ul>
 
-          <!-- CTA button pinned to the right with controlled sizing -->
-          <a href="../pages/consultation.html" class="btn btn-dark nav-cta"
+          <a href="pages/consultation.html" class="btn btn-dark nav-cta"
             >Book Consultation</a
           >
 
-          <!-- Mobile hamburger -->
           <button
             class="nav-hamburger"
             id="hamburger"
@@ -200,7 +194,7 @@
         </div>
       </nav>
 
-      <!-- Secondary dark green bar — FIX 1: spacious layout with search bar -->
+      <!-- Secondary dark green bar -->
       <div
         class="nav-bar-secondary"
         role="navigation"
@@ -221,7 +215,6 @@
               <a href="#cta">Take Action <span>▾</span></a>
             </li>
           </ul>
-          <!-- Search bar -->
           <div class="nav-search-wrap">
             <form
               class="nav-search-form"
@@ -272,9 +265,9 @@
         <a href="#industries">Industries</a>
         <a href="#selected-projects">Projects</a>
         <a href="#insights">Insights</a>
-        <a href="#faq">Contact</a>
+        <a href="pages/contact.html">Contact</a>
         <a
-          href="#cta"
+          href="pages/consultation.html"
           class="btn btn-dark"
           style="margin-top: 8px; width: 100%; justify-content: center"
           >Book Consultation</a
@@ -284,35 +277,50 @@
 
     <main>
       <!-- ════════════════════════════════════════
-         HERO SECTION
-    ════════════════════════════════════════ -->
+           FIX 2 + 3 + 4: HERO — full bg image, company name,
+           value proposition, mobile-friendly
+      ════════════════════════════════════════ -->
       <section class="hero" aria-labelledby="hero-heading">
+        <!-- Full-bleed background image — visible on ALL screens including mobile -->
+        <div class="hero-bg" aria-hidden="true">
+          <img
+            src="images/download (19).jfif"
+            alt=""
+            class="hero-bg-img"
+            loading="eager"
+          />
+          <div class="hero-bg-overlay"></div>
+        </div>
+
         <div class="container">
           <div class="hero-content fade-up">
+            <!-- FIX 2: Company name prominent in hero -->
+            <p class="hero-brand">EAA Associates Ltd</p>
             <p class="hero-label">Environmental &amp; Climate Advisory</p>
             <h1 id="hero-heading">
               Delivering Environmental Intelligence for Sustainable Development
             </h1>
-            <p>
-              We provide environmental impact assessment, climate risk advisory,
-              biodiversity conservation, and regulatory compliance services for
-              governments, institutions, and infrastructure developers.
+            <!-- FIX 4: Clear value proposition -->
+            <p class="hero-value-prop">
+              Providing science-based environmental and climate advisory
+              services that support governments, development institutions, and
+              private sector organizations in delivering sustainable projects
+              across Africa.
             </p>
             <div class="hero-buttons">
-              <a href="../pages/consultation.html" class="btn btn-dark"
+              <a href="pages/consultation.html" class="btn btn-hero-primary"
                 >Request Consultation</a
               >
-              <!-- FIX 2: Download Company Profile links to actual PDF -->
               <a
                 href="assets/EAA PROFILE (1)-pages-deleted (1)_compressed (1)(1).pdf"
-                class="btn btn-green"
+                class="btn btn-hero-outline"
                 download="EAA-Associates-Company-Profile.pdf"
                 >Download Company Profile</a
               >
             </div>
           </div>
 
-          <!-- Right: 2-column image grid -->
+          <!-- Image grid — desktop only, hidden on mobile (bg image handles it) -->
           <div
             class="hero-images fade-up"
             style="transition-delay: 0.15s"
@@ -321,19 +329,19 @@
             <img
               class="hero-img-main"
               src="images/download (19).jfif"
-              alt="Sustainable urban development with green spaces"
+              alt=""
               loading="eager"
             />
             <img
               class="hero-img-top"
               src="images/Explore the Most Beautiful Natural Attractions Worldwide.jfif"
-              alt="Misty mountain forest"
+              alt=""
               loading="eager"
             />
             <img
               class="hero-img-bottom"
               src="images/Come il Cambiamento Climatico Influenza l’Agricoltura.jfif"
-              alt="Climate change contrast — tree"
+              alt=""
               loading="eager"
             />
           </div>
@@ -341,8 +349,93 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         TRUSTED BY
-    ════════════════════════════════════════ -->
+           FIX 5: CORE SERVICES SUMMARY STRIP
+      ════════════════════════════════════════ -->
+      <section class="core-services" aria-label="Core services">
+        <div class="container">
+          <div class="core-services-grid fade-up">
+            <div class="core-service-item">
+              <div class="core-service-icon" aria-hidden="true">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3>Environmental Impact Assessment</h3>
+                <p>
+                  Structured EIAs aligned with national regulations and
+                  international sustainability standards.
+                </p>
+              </div>
+            </div>
+
+            <div class="core-service-divider" aria-hidden="true"></div>
+
+            <div class="core-service-item">
+              <div class="core-service-icon" aria-hidden="true">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3>Climate Risk &amp; ESG Strategy</h3>
+                <p>
+                  Science-based climate adaptation, risk modelling, and ESG
+                  governance for resilient institutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="core-service-divider" aria-hidden="true"></div>
+
+            <div class="core-service-item">
+              <div class="core-service-icon" aria-hidden="true">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3>Ecological Restoration &amp; Sustainability</h3>
+                <p>
+                  Rehabilitation of degraded landscapes, biodiversity recovery,
+                  and long-term sustainability frameworks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════
+           FIX 6: TRUSTED BY — relevant partner logos
+      ════════════════════════════════════════ -->
       <section class="trusted-by fade-up" aria-label="Trusted by partners">
         <div class="container">
           <h2>TRUSTED BY</h2>
@@ -350,38 +443,336 @@
             Working with public institutions, development agencies, and private
             sector partners.
           </p>
+          <div class="logo-strip">
+            <!-- UNICEF — confirmed partner -->
+            <div class="logo-strip-item" title="UNICEF">
+              <svg
+                width="90"
+                height="44"
+                viewBox="0 0 90 44"
+                aria-label="UNICEF"
+                role="img"
+              >
+                <rect
+                  width="90"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="52%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="13"
+                  font-weight="800"
+                  fill="#1CABE2"
+                >
+                  UNICEF
+                </text>
+              </svg>
+            </div>
+
+            <!-- UBA — United Bank for Africa -->
+            <div class="logo-strip-item" title="United Bank for Africa">
+              <svg
+                width="80"
+                height="44"
+                viewBox="0 0 80 44"
+                aria-label="UBA — United Bank for Africa"
+                role="img"
+              >
+                <rect
+                  width="80"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="14"
+                  font-weight="800"
+                  fill="#E30613"
+                >
+                  UBA
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6.5"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  United Bank for Africa
+                </text>
+              </svg>
+            </div>
+
+            <!-- NESREA — National Environment Reg. Agency (Nigeria) -->
+            <div class="logo-strip-item" title="NESREA">
+              <svg
+                width="100"
+                height="44"
+                viewBox="0 0 100 44"
+                aria-label="NESREA"
+                role="img"
+              >
+                <rect
+                  width="100"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="12"
+                  font-weight="800"
+                  fill="#1B4332"
+                >
+                  NESREA
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  Federal Ministry — Nigeria
+                </text>
+              </svg>
+            </div>
+
+            <!-- IUCN -->
+            <div class="logo-strip-item" title="IUCN">
+              <svg
+                width="72"
+                height="44"
+                viewBox="0 0 72 44"
+                aria-label="IUCN"
+                role="img"
+              >
+                <rect
+                  width="72"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="15"
+                  font-weight="800"
+                  fill="#E07B00"
+                >
+                  IUCN
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  Conservation Union
+                </text>
+              </svg>
+            </div>
+
+            <!-- Lagos State Government -->
+            <div class="logo-strip-item" title="Lagos State Government">
+              <svg
+                width="110"
+                height="44"
+                viewBox="0 0 110 44"
+                aria-label="Lagos State Government"
+                role="img"
+              >
+                <rect
+                  width="110"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="8.5"
+                  font-weight="800"
+                  fill="#006400"
+                >
+                  LAGOS STATE GOVT
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  Nigeria
+                </text>
+              </svg>
+            </div>
+
+            <!-- GIZ -->
+            <div class="logo-strip-item" title="GIZ">
+              <svg
+                width="62"
+                height="44"
+                viewBox="0 0 62 44"
+                aria-label="GIZ"
+                role="img"
+              >
+                <rect
+                  width="62"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="17"
+                  font-weight="800"
+                  fill="#009B77"
+                >
+                  GIZ
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  Germany
+                </text>
+              </svg>
+            </div>
+
+            <!-- African Union -->
+            <div class="logo-strip-item" title="African Union">
+              <svg
+                width="108"
+                height="44"
+                viewBox="0 0 108 44"
+                aria-label="African Union"
+                role="img"
+              >
+                <rect
+                  width="108"
+                  height="44"
+                  rx="4"
+                  fill="#f7f7f7"
+                  stroke="#e0e0e0"
+                  stroke-width="1"
+                />
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="8.5"
+                  font-weight="800"
+                  fill="#006EB5"
+                >
+                  AFRICAN UNION
+                </text>
+                <text
+                  x="50%"
+                  y="72%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  font-family="Montserrat,sans-serif"
+                  font-size="6"
+                  font-weight="600"
+                  fill="#888"
+                >
+                  AU Commission
+                </text>
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- ════════════════════════════════════════
-         WHO WE ARE
-    ════════════════════════════════════════ -->
+           FIX 7: WHO WE ARE — relevant regional imagery
+      ════════════════════════════════════════ -->
       <section class="who-we-are" id="who-we-are" aria-labelledby="who-heading">
         <div class="container">
-          <!-- Left: mosaic of images -->
+          <!-- Left: mosaic of images — field teams, environmental work -->
           <div class="who-images fade-up">
             <img
               class="who-img-large"
               src="images/download (22).jfif"
-              alt="Field team planting trees"
+              alt="EAA field team conducting environmental assessment"
               loading="lazy"
             />
             <img
               class="who-img-sm1"
               src="images/download (21).jfif"
-              alt="Close-up of hands in soil"
+              alt="Environmental professional reviewing soil samples"
               loading="lazy"
             />
             <img
               class="who-img-sm2"
               src="images/rainforest restoration 🌱 las cruces.jfif"
-              alt="Community environmental work"
+              alt="Reforestation and ecological restoration fieldwork"
               loading="lazy"
             />
           </div>
 
           <!-- Right: content -->
           <div class="who-content fade-up" style="transition-delay: 0.15s">
+            <p class="who-company-name">EAA Associates Ltd</p>
             <h2 id="who-heading">WHO WE ARE</h2>
             <p>
               We are a professional environmental consultancy providing
@@ -404,8 +795,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         OUR EXPERTISE / GOAL / OBJECTIVE
-    ════════════════════════════════════════ -->
+           EXPERTISE / GOAL / OBJECTIVE
+      ════════════════════════════════════════ -->
       <section
         class="expertise-section"
         aria-label="Expertise, Goal and Objective"
@@ -438,8 +829,9 @@
           </div>
 
           <div class="expertise-grid-2 fade-up" style="transition-delay: 0.1s">
+            <!-- FIX 8: Grammar fix — "How We Help Clients" -->
             <div class="expertise-col-2">
-              <h3>How We Help Client</h3>
+              <h3>How We Help Clients</h3>
               <p>
                 We provide structured environmental and climate advisory
                 services that help institutions manage risk, ensure regulatory
@@ -458,8 +850,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         OUR SERVICES
-    ════════════════════════════════════════ -->
+           OUR SERVICES
+      ════════════════════════════════════════ -->
       <section
         class="our-services"
         id="our-services"
@@ -493,14 +885,13 @@
                   decision-making.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Environmental Impact Assessment"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
@@ -516,18 +907,17 @@
                   heatwaves, and environmental shocks.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Climate Risk"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
-                src="images//GIS and Renewable Energy_ Optimizing the Use of Natural Resources.jfif"
+                src="images/GIS and Renewable Energy_ Optimizing the Use of Natural Resources.jfif"
                 alt="ESG and Sustainability Advisory"
                 loading="lazy"
               />
@@ -540,14 +930,13 @@
                   performance.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore ESG Advisory"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
@@ -563,7 +952,7 @@
                   performance and ESG credibility.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Carbon Auditing"
                   >Explore</a
@@ -592,14 +981,13 @@
                   long-term environmental resilience.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Reforestation"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
@@ -615,14 +1003,13 @@
                   access and sustainable growth.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Renewable Energy"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
@@ -631,7 +1018,7 @@
                 loading="lazy"
               />
               <div class="service-card-body">
-                <h3>Land Scape Design</h3>
+                <h3>Landscape Design</h3>
                 <p>
                   We deliver strategic landscape design solutions that integrate
                   infrastructure with the natural environment, reduce visual and
@@ -639,14 +1026,13 @@
                   spaces.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Landscape Design"
                   >Explore</a
                 >
               </div>
             </article>
-
             <article class="service-card">
               <img
                 class="service-card-img"
@@ -662,7 +1048,7 @@
                   promote sustainable land use.
                 </p>
                 <a
-                  href="../pages/services.html"
+                  href="pages/services.html"
                   class="btn-explore"
                   aria-label="Explore Ecological Restoration"
                   >Explore</a
@@ -674,8 +1060,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         HOW WE WORK
-    ════════════════════════════════════════ -->
+           HOW WE WORK
+      ════════════════════════════════════════ -->
       <section
         class="how-we-work"
         id="how-we-work-anchor"
@@ -686,11 +1072,9 @@
             <h2 id="process-heading">How We Work</h2>
             <p>A structured approach to environmental and climate advisory.</p>
           </div>
-
           <div class="process-layout">
             <div class="process-list fade-up">
               <h3>The Process</h3>
-
               <div class="process-item">
                 <h4>01 — Assessment &amp; Scoping</h4>
                 <p>
@@ -699,7 +1083,6 @@
                   requirements, and sustainability objectives.
                 </p>
               </div>
-
               <div class="process-item">
                 <h4>02 — Analysis &amp; Strategy Development</h4>
                 <p>
@@ -708,7 +1091,6 @@
                   mitigation and sustainability strategies.
                 </p>
               </div>
-
               <div class="process-item">
                 <h4>03 — Implementation Support</h4>
                 <p>
@@ -717,7 +1099,6 @@
                   implementation aligned with regulatory standards.
                 </p>
               </div>
-
               <div class="process-item">
                 <h4>04 — Monitoring &amp; Reporting</h4>
                 <p>
@@ -727,7 +1108,6 @@
                 </p>
               </div>
             </div>
-
             <div class="process-image fade-up" style="transition-delay: 0.15s">
               <img
                 src="images/download (23).jfif"
@@ -740,50 +1120,46 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         IMPACT STATS
-    ════════════════════════════════════════ -->
+           IMPACT STATS
+      ════════════════════════════════════════ -->
       <section
         class="impact-section"
         id="impact-section"
         aria-labelledby="impact-heading"
       >
         <div class="container">
-          <!-- Left: stats grid -->
           <div class="impact-stats fade-up">
             <div class="stat-box">
-              <span class="num">500+</span>
-              <span class="lbl">Jobs Created</span>
+              <span class="num">500+</span><span class="lbl">Jobs Created</span>
             </div>
             <div class="stat-box">
-              <span class="num">2000+</span>
-              <span class="lbl">Workers Trained</span>
+              <span class="num">2000+</span
+              ><span class="lbl">Workers Trained</span>
             </div>
             <div class="stat-box">
-              <span class="num">10+</span>
-              <span class="lbl">Climate Risk Assessment</span>
+              <span class="num">10+</span
+              ><span class="lbl">Climate Risk Assessment</span>
             </div>
             <div class="stat-box">
-              <span class="num">300+</span>
-              <span class="lbl">Acres Restored</span>
+              <span class="num">300+</span
+              ><span class="lbl">Acres Restored</span>
             </div>
             <div class="stat-box" style="grid-column: 1">
-              <span class="num">40+</span>
-              <span class="lbl">Projects</span>
+              <span class="num">40+</span><span class="lbl">Projects</span>
             </div>
             <div class="stat-box">
-              <span class="num">15+</span>
-              <span class="lbl">Environmental Impact Assessment</span>
+              <span class="num">15+</span
+              ><span class="lbl">Environmental Impact Assessment</span>
             </div>
             <div class="stat-box" style="grid-column: 2">
-              <span class="num">1st</span>
-              <span class="lbl"
+              <span class="num">1st</span
+              ><span class="lbl"
                 >Indoor Butterfly Garden Initiative in Africa</span
               >
             </div>
           </div>
-
-          <!-- Right: content -->
           <div class="impact-content fade-up" style="transition-delay: 0.15s">
+            <p class="impact-company-name">EAA Associates Ltd</p>
             <h2>Delivering Measurable Environmental Impact</h2>
             <p>
               At EAA Associates Ltd, impact is defined by structured outcomes
@@ -804,8 +1180,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         SELECTED PROJECTS
-    ════════════════════════════════════════ -->
+           SELECTED PROJECTS
+      ════════════════════════════════════════ -->
       <section
         class="selected-projects"
         id="selected-projects"
@@ -821,14 +1197,11 @@
               environmental restoration, climate resilience, and sustainable
               infrastructure advisory."
             </blockquote>
-            <!-- FIX 3: View All Projects links to projects page -->
-            <a href="../pages/projects.html" class="btn btn-dark"
+            <a href="pages/projects.html" class="btn btn-dark"
               >View All Projects</a
             >
           </div>
-
           <h3 class="projects-grid-label fade-up">Selected Projects</h3>
-
           <div class="projects-grid fade-up" style="transition-delay: 0.1s">
             <article class="project-card">
               <img
@@ -842,7 +1215,6 @@
                 <p class="industry">Industry: Conservation Initiative</p>
               </div>
             </article>
-
             <article class="project-card">
               <img
                 class="project-card-img"
@@ -855,7 +1227,6 @@
                 <p class="industry">Industry: Health</p>
               </div>
             </article>
-
             <article class="project-card">
               <img
                 class="project-card-img"
@@ -873,8 +1244,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         INDUSTRIES WE SERVE
-    ════════════════════════════════════════ -->
+           INDUSTRIES WE SERVE
+      ════════════════════════════════════════ -->
       <section
         class="industries"
         id="industries"
@@ -889,7 +1260,6 @@
               environmental advisory and implementation services.
             </p>
           </div>
-
           <div class="industries-layout">
             <div class="industries-image fade-up">
               <img
@@ -898,7 +1268,6 @@
                 loading="lazy"
               />
             </div>
-
             <div
               class="industries-list fade-up"
               style="transition-delay: 0.15s"
@@ -946,13 +1315,13 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         WHY CHOOSE EAA
-    ════════════════════════════════════════ -->
+           FIX 8: WHY CHOOSE EAA — grammar fix
+      ════════════════════════════════════════ -->
       <section class="why-eaa" aria-labelledby="why-heading">
         <div class="container">
           <div class="why-eaa-left fade-up">
-            <h2 id="why-heading">Why Organization Choose EAA</h2>
-            <!-- World map SVG placeholder -->
+            <!-- FIX 8: "Why Organizations Choose EAA" -->
+            <h2 id="why-heading">Why Organizations Choose EAA</h2>
             <svg
               class="world-map-bg"
               viewBox="0 0 900 500"
@@ -1003,6 +1372,10 @@
             </svg>
           </div>
           <div class="why-eaa-right fade-up" style="transition-delay: 0.15s">
+            <p class="why-company-intro">
+              <strong>EAA Associates Ltd</strong> is your trusted environmental
+              advisory partner across Africa.
+            </p>
             <p>
               Organisations choose EAA Associates Ltd because we combine
               regulatory expertise, field experience, and data-driven
@@ -1033,8 +1406,8 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         INSIGHTS & RESOURCES
-    ════════════════════════════════════════ -->
+           INSIGHTS & RESOURCES
+      ════════════════════════════════════════ -->
       <section
         class="insights"
         id="insights"
@@ -1049,9 +1422,7 @@
               decision-making across sectors.
             </p>
           </div>
-
           <div class="insights-layout">
-            <!-- Left: article list -->
             <div class="insights-list fade-up">
               <div class="insight-item">
                 <p class="insight-tag">Climate</p>
@@ -1068,7 +1439,6 @@
                   <span class="insight-date">07 March 2025</span>
                 </div>
               </div>
-
               <div class="insight-item">
                 <p class="insight-tag">Project Case Study</p>
                 <h3>Project Case Study</h3>
@@ -1085,8 +1455,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Right: featured + restoration -->
             <div
               class="insights-featured fade-up"
               style="transition-delay: 0.15s"
@@ -1103,7 +1471,6 @@
                 compliance strategies affecting public and private sector
                 projects.
               </p>
-              <!-- FIX 4: Explore Insight links to insights page -->
               <a href="pages/about.html" class="btn-insight-explore"
                 >Explore Insight →</a
               >
@@ -1113,14 +1480,13 @@
       </section>
 
       <!-- ════════════════════════════════════════
-         FAQ
-    ════════════════════════════════════════ -->
+           FAQ
+      ════════════════════════════════════════ -->
       <section class="faq-section" id="faq" aria-labelledby="faq-heading">
         <div class="container">
           <div class="section-header fade-up">
             <h2 id="faq-heading">FAQ</h2>
           </div>
-
           <div class="faq-list fade-up">
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
@@ -1137,7 +1503,6 @@
                 Design, and Ecological Restoration.
               </div>
             </div>
-
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
                 Do I need an Environmental Impact Assessment (EIA) for my
@@ -1152,7 +1517,6 @@
                 compliance.
               </div>
             </div>
-
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
                 Which industries do you work with?
@@ -1164,7 +1528,6 @@
                 Gas &amp; Energy, and Agriculture &amp; Forestry sectors.
               </div>
             </div>
-
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
                 How does EAA ensure regulatory compliance for projects?
@@ -1177,7 +1540,6 @@
                 lifecycle — from scoping through to monitoring and reporting.
               </div>
             </div>
-
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
                 How can I request a consultation or start a project with EAA?
@@ -1193,14 +1555,120 @@
           </div>
         </div>
       </section>
+
+      <!-- ════════════════════════════════════════
+           FIX 2: CONTACT INFO STRIP
+      ════════════════════════════════════════ -->
+      <section class="contact-strip" aria-label="Contact information">
+        <div class="container">
+          <div class="contact-strip-grid fade-up">
+            <div class="contact-strip-item">
+              <div class="contact-strip-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Office Address</h4>
+                <p>
+                  4, Methodist Church Street,<br />By Salvation Road, Awuse
+                  Estate,<br />Opebi, Ikeja, Lagos.
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-strip-divider" aria-hidden="true"></div>
+
+            <div class="contact-strip-item">
+              <div class="contact-strip-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Email Us</h4>
+                <p>
+                  <a href="mailto:info@eaaassociates.org"
+                    >info@eaaassociates.org</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-strip-divider" aria-hidden="true"></div>
+
+            <div class="contact-strip-item">
+              <div class="contact-strip-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+2348120561552">+234 812 056 1552</a></p>
+              </div>
+            </div>
+
+            <div class="contact-strip-divider" aria-hidden="true"></div>
+
+            <div class="contact-strip-item">
+              <div class="contact-strip-icon" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </div>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Mon – Fri: 8am – 5pm WAT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ════════════════════════════════════════
-       FOOTER — FIX 5: CTA is INSIDE the footer, background is black (#111111)
-  ════════════════════════════════════════ -->
+         FOOTER — CTA inside, black background
+    ════════════════════════════════════════ -->
     <footer class="footer" id="cta" role="contentinfo">
       <div class="container">
-        <!-- CTA Row — inside footer -->
+        <!-- CTA Row -->
         <div class="footer-cta fade-up">
           <div class="footer-cta-left">
             <h2>
@@ -1211,16 +1679,15 @@
               advisory and implementation services.
             </p>
             <div class="cta-buttons">
-              <a href="../pages/contact.html" class="btn btn-dark-outline"
+              <a href="pages/contact.html" class="btn btn-dark-outline"
                 >Contact Our Team</a
               >
-              <a href="../pages/consultation.html" class="btn btn-outline-white"
+              <a href="pages/consultation.html" class="btn btn-outline-white"
                 >Request Consultation</a
               >
               <a href="#faq" class="btn btn-green">FAQ</a>
             </div>
           </div>
-
           <div class="footer-cta-right">
             <h3>Stay Informed</h3>
             <form
@@ -1263,16 +1730,13 @@
 
         <!-- Footer links grid -->
         <div class="footer-grid">
-          <!-- Brand / Logo -->
           <div class="footer-brand">
             <img
-              src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              src="images/companyLogo.jpeg"
+              alt="EAA Associates Ltd logo"
               class="footer-logo-img"
             />
           </div>
-
-          <!-- About -->
           <div class="footer-col">
             <h4>About</h4>
             <ul>
@@ -1282,8 +1746,6 @@
               <li><a href="#">Careers</a></li>
             </ul>
           </div>
-
-          <!-- Services -->
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
@@ -1293,8 +1755,6 @@
               <li><a href="#our-services">Sustainable Infrastructure</a></li>
             </ul>
           </div>
-
-          <!-- Industries -->
           <div class="footer-col">
             <h4>Industries</h4>
             <ul>
@@ -1305,8 +1765,6 @@
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>
-
-          <!-- Contact -->
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
@@ -1398,11 +1856,9 @@
         const chevronBtn = item.querySelector(".nav-chevron-btn");
         const dropdown = item.querySelector(".dropdown-menu");
         if (!chevronBtn || !dropdown) return;
-
         chevronBtn.addEventListener("click", (e) => {
           e.stopPropagation();
           const isOpen = item.classList.contains("dropdown-open");
-          // Close all
           document.querySelectorAll(".has-dropdown").forEach((d) => {
             d.classList.remove("dropdown-open");
             d.querySelector(".nav-chevron-btn")?.setAttribute(
@@ -1410,15 +1866,12 @@
               "false",
             );
           });
-          // Toggle clicked
           if (!isOpen) {
             item.classList.add("dropdown-open");
             chevronBtn.setAttribute("aria-expanded", "true");
           }
         });
       });
-
-      // Close dropdowns when clicking outside
       document.addEventListener("click", () => {
         document.querySelectorAll(".has-dropdown").forEach((d) => {
           d.classList.remove("dropdown-open");
