@@ -8,7 +8,6 @@
       name="description"
       content="Learn about EAA Associates Ltd – our mission, vision, core values, approach, leadership, and our journey as an environmental advisory firm."
     />
-    <!-- Favicon — paste here ↓ -->
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link
       rel="icon"
@@ -42,30 +41,37 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/modal.css" />
     <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
-    <!-- ════════════════════════════════════════
-       NAVIGATION — TOP BAR
-  ════════════════════════════════════════ -->
     <header>
       <nav class="navbar-top" role="navigation" aria-label="Main navigation">
         <div class="container">
-          <!-- Logo -->
-          <a href="#" class="nav-logo" aria-label="EAA Associates Home">
+          <a
+            href="../index.html"
+            class="nav-logo"
+            aria-label="EAA Associates Home"
+          >
             <img
               src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              alt="EAA Associates Ltd logo"
               class="nav-logo-img"
             />
+            <div class="nav-logo-text-wrap">
+              <span class="nav-logo-name">EAA Associates Ltd</span>
+              <span class="nav-logo-tagline"
+                >Environmental &amp; Climate Advisory</span
+              >
+            </div>
           </a>
 
-          <!-- Desktop menu -->
           <ul class="nav-menu" role="list">
-            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
 
-            <!-- About dropdown: clicking label goes to #who-we-are; chevron opens dropdown -->
             <li class="has-dropdown">
-              <a href="about.html" class="nav-link-label">About</a>
+              <a href="about.html" class="nav-link-label nav-link-active"
+                >About</a
+              >
               <button
                 class="nav-chevron-btn"
                 aria-expanded="false"
@@ -74,13 +80,20 @@
                 ▾
               </button>
               <ul class="dropdown-menu" role="list">
-                <li><a href="#who-we-are">Who We Are</a></li>
-                <li><a href="#how-we-work-anchor">How We Work</a></li>
-                <li><a href="#industries">Industries We Serve</a></li>
+                <li><a href="about.html#who-we-are">Who We Are</a></li>
+                <li><a href="about.html#how-we-work-anchor">How We Work</a></li>
+                <li>
+                  <a href="about.html#industries-heading"
+                    >Industries We Serve</a
+                  >
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a href="impact.html">Our Impact</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="partners.html">Partners</a></li>
               </ul>
             </li>
 
-            <!-- Services dropdown: clicking label goes to #our-services; chevron opens dropdown -->
             <li class="has-dropdown">
               <a href="services.html" class="nav-link-label">Services</a>
               <button
@@ -106,40 +119,55 @@
                 </li>
                 <li>
                   <a href="service-climate.html"
-                    >Enviroment Compliance &amp; Regulatory Advisory</a
+                    >Environmental Compliance &amp; Regulatory Advisory</a
                   >
                 </li>
-                <li>
-                  <a href="services.html#reforestation">Reforestation</a>
-                </li>
+                <li><a href="services.html#reforestation">Reforestation</a></li>
                 <li>
                   <a href="services.html#renewable"
                     >Renewable Energy &amp; Solar Solutions</a
                   >
                 </li>
-                <li>
-                  <a href="services.html#landscape">Landscape Design</a>
-                </li>
+                <li><a href="services.html#landscape">Landscape Design</a></li>
                 <li>
                   <a href="service-ecologicalrestoration.html"
                     >Ecological Restoration</a
                   >
                 </li>
+                <li class="dropdown-divider"></li>
+                <li><a href="solutions.html">Our Solutions</a></li>
               </ul>
             </li>
 
             <li><a href="industries.html">Industries</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="#insights">Insights</a></li>
+
+            <li class="has-dropdown">
+              <a href="../index.html#insights" class="nav-link-label"
+                >Insights</a
+              >
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Insights menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+                <li><a href="works.html">Our Work</a></li>
+              </ul>
+            </li>
+
             <li><a href="contact.html">Contact</a></li>
           </ul>
 
-          <!-- CTA button pinned to the right with controlled sizing -->
+          
+
           <a href="consultation.html" class="btn btn-dark nav-cta"
             >Book Consultation</a
           >
 
-          <!-- Mobile hamburger -->
           <button
             class="nav-hamburger"
             id="hamburger"
@@ -151,97 +179,36 @@
         </div>
       </nav>
 
-      <!-- Secondary dark green bar — FIX 1: spacious layout with search bar -->
-      <div
-        class="nav-bar-secondary"
-        role="navigation"
-        aria-label="Secondary navigation"
-      >
-        <div class="container">
-          <ul class="nav-secondary-links" role="list">
-            <li>
-              <a href="#">English <span>▾</span></a>
-            </li>
-            <li><a href="#insights">Blogs &amp; News</a></li>
-            <li><a href="impact.html">Impact</a></li>
-            <li><a href="solutions.html">Solution</a></li>
-            <li><a href="career.html">Careers</a></li>
-            <li><a href="partners.html">Partner</a></li>
-            <li><a href="works.html">Our Work</a></li>
-            <li>
-              <a href="#cta">Take Action <span>▾</span></a>
-            </li>
-          </ul>
-          <!-- Search bar -->
-          <div class="nav-search-wrap">
-            <form
-              class="nav-search-form"
-              role="search"
-              onsubmit="handleNavSearch(event)"
-            >
-              <input
-                class="nav-search-input"
-                type="search"
-                id="navSearchInput"
-                placeholder="Search..."
-                aria-label="Search site"
-                autocomplete="off"
-              />
-              <button
-                class="nav-search-btn"
-                type="submit"
-                aria-label="Submit search"
-              >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile drawer -->
       <div
         class="mobile-drawer"
         id="mobileDrawer"
         role="dialog"
         aria-label="Mobile menu"
       >
-        <a href="#">Home</a>
-        <a href="#who-we-are">About</a>
-        <a href="#our-services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#selected-projects">Projects</a>
-        <a href="#insights">Insights</a>
-        <a href="#faq">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="impact.html">Impact</a>
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
         <a
-          href="#cta"
+          href="consultation.html"
           class="btn btn-dark"
           style="margin-top: 8px; width: 100%; justify-content: center"
           >Book Consultation</a
         >
       </div>
     </header>
+
     <main>
-      <!-- ══════════════════════════════════════
-         SECTION 1 — ABOUT HERO
-      ══════════════════════════════════════ -->
       <section class="about-hero" aria-labelledby="about-main-heading">
         <div class="container">
           <h1 id="about-main-heading" class="about-hero-title fade-up">
             ABOUT EAA ASSOCIATES LTD
           </h1>
-
           <div class="about-intro-grid fade-up">
             <div class="about-intro-content">
               <h2>
@@ -261,7 +228,6 @@
                 <a href="consultation.html" class="btn btn-dark"
                   >Request Consultation</a
                 >
-                <!-- FIXED: → projects page -->
                 <a href="projects.html" class="btn btn-green"
                   >View Our Projects</a
                 >
@@ -278,13 +244,13 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 2 — WHO WE ARE
-      ══════════════════════════════════════ -->
-      <section class="who-section" aria-labelledby="who-heading">
+      <section
+        class="who-section"
+        id="who-we-are"
+        aria-labelledby="who-heading"
+      >
         <div class="container">
           <h2 id="who-heading" class="who-title fade-up">WHO WE ARE?</h2>
-
           <div class="who-body fade-up">
             <p>
               EAA Associates Ltd is a professional environmental consultancy
@@ -317,7 +283,6 @@
               responsible environmental action.
             </p>
           </div>
-
           <div class="who-image fade-up">
             <img
               src="../images/pexels-tomfisk-1081912.jpg"
@@ -328,9 +293,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 3 — OUR JOURNEY
-      ══════════════════════════════════════ -->
       <section class="journey-section" aria-labelledby="journey-heading">
         <div class="container">
           <h2 id="journey-heading" class="journey-title fade-up">
@@ -357,9 +319,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 4 — MISSION / VISION + CORE VALUES
-      ══════════════════════════════════════ -->
       <section
         class="mission-values-section"
         aria-label="Mission, Vision and Core Values"
@@ -384,7 +343,6 @@
                 </p>
               </div>
             </div>
-
             <div class="core-values fade-up" style="transition-delay: 0.15s">
               <h2 class="core-values-title">Our Core Values</h2>
               <div class="value-item">
@@ -427,10 +385,11 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 5 — OUR APPROACH
-      ══════════════════════════════════════ -->
-      <section class="approach-section" aria-labelledby="approach-heading">
+      <section
+        class="approach-section"
+        id="how-we-work-anchor"
+        aria-labelledby="approach-heading"
+      >
         <div class="container">
           <div class="approach-grid">
             <div class="approach-content fade-up">
@@ -438,7 +397,6 @@
               <p class="approach-intro">
                 Every project we undertake follows a disciplined framework:
               </p>
-
               <div class="approach-step">
                 <span class="step-num">1.</span>
                 <div>
@@ -478,13 +436,11 @@
                   </p>
                 </div>
               </div>
-
               <p class="approach-close">
                 This structured methodology ensures clarity, compliance, and
                 measurable results.
               </p>
             </div>
-
             <div class="approach-image fade-up" style="transition-delay: 0.15s">
               <img
                 src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=800&q=80"
@@ -496,9 +452,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 6 — EXPERIENCE & IMPACT SNAPSHOT
-      ══════════════════════════════════════ -->
       <section class="impact-snapshot" aria-labelledby="snapshot-heading">
         <div class="container">
           <div class="snapshot-grid">
@@ -509,7 +462,6 @@
                 loading="lazy"
               />
             </div>
-
             <div
               class="snapshot-content fade-up"
               style="transition-delay: 0.15s"
@@ -527,7 +479,6 @@
                 <li>Biodiversity conservation initiatives</li>
                 <li>Climate and sustainability strategy engagement</li>
               </ul>
-              <!-- FIXED: → projects page -->
               <a href="projects.html" class="btn btn-green snapshot-btn"
                 >View Our Projects</a
               >
@@ -536,10 +487,11 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 7 — INDUSTRIES WE SERVE
-      ══════════════════════════════════════ -->
-      <section class="about-industries" aria-labelledby="industries-heading">
+      <section
+        class="about-industries"
+        id="industries-heading"
+        aria-labelledby="industries-heading"
+      >
         <div class="container">
           <div class="about-industries-grid">
             <div class="about-industries-content fade-up">
@@ -555,12 +507,10 @@
                 <li>Agriculture &amp; Forestry</li>
                 <li>NGOs &amp; Development Agencies</li>
               </ol>
-              <!-- FIXED: → industries page -->
               <a href="industries.html" class="btn btn-green industries-btn"
                 >Explore Industries</a
               >
             </div>
-
             <div
               class="about-industries-image fade-up"
               style="transition-delay: 0.15s"
@@ -575,9 +525,6 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 8 — GOVERNANCE & COMPLIANCE
-      ══════════════════════════════════════ -->
       <section class="governance-section" aria-labelledby="governance-heading">
         <div class="container">
           <h2 id="governance-heading" class="governance-title fade-up">
@@ -594,15 +541,13 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 9 — LEADERSHIP
-      ══════════════════════════════════════ -->
-      <section class="leadership-section" aria-labelledby="leadership-heading">
+      <section
+        class="leadership-section"
+        id="leadership-heading"
+        aria-labelledby="leadership-heading"
+      >
         <div class="container">
-          <h2 id="leadership-heading" class="leadership-title fade-up">
-            Leadership
-          </h2>
-
+          <h2 class="leadership-title fade-up">Leadership</h2>
           <div class="leadership-grid fade-up">
             <div class="leader-photo">
               <img
@@ -611,7 +556,6 @@
                 loading="lazy"
               />
             </div>
-
             <div class="leader-info">
               <p class="leader-role">Chief Executive Officer</p>
               <h3 class="leader-name">DR. BOBADOYE AYODOTUN</h3>
@@ -621,7 +565,6 @@
                 sustainability strategy. Leads strategic planning, stakeholder
                 engagement, and institutional advisory services across sectors.
               </p>
-              <!-- FIXED: scrolls to #team section on this page -->
               <a href="#team" class="btn btn-green leader-btn"
                 >Meet Our Company Team</a
               >
@@ -630,15 +573,11 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════
-         SECTION 10 — MEET OUR COMPANY TEAM
-      ══════════════════════════════════════ -->
       <section class="team-section" id="team" aria-labelledby="team-heading">
         <div class="container">
           <h2 id="team-heading" class="team-title fade-up">
             Meet Our Company Team
           </h2>
-
           <div class="team-grid fade-up">
             <article class="team-card">
               <div class="team-card-img-wrap">
@@ -653,7 +592,6 @@
                 <h3 class="team-name">DR. BOBADOYE AYODOTUN</h3>
               </div>
             </article>
-
             <article class="team-card">
               <div class="team-card-img-wrap">
                 <img
@@ -667,7 +605,6 @@
                 <h3 class="team-name">DR. BOBADOYE BRIDGET</h3>
               </div>
             </article>
-
             <article class="team-card">
               <div class="team-card-img-wrap">
                 <img
@@ -681,7 +618,6 @@
                 <h3 class="team-name">DR. OJO OPEYEMI</h3>
               </div>
             </article>
-
             <article class="team-card">
               <div class="team-card-img-wrap">
                 <img
@@ -696,7 +632,6 @@
               </div>
             </article>
           </div>
-
           <p class="team-body fade-up">
             Our team brings together environmental expertise, regulatory
             knowledge, and practical field experience to deliver structured and
@@ -706,18 +641,10 @@
           </p>
         </div>
       </section>
-
-      <!-- ══════════════════════════════════════
-         CTA + NEWSLETTER (shared — content unchanged)
-      ══════════════════════════════════════ -->
     </main>
 
-    <!-- ══════════════════════════════════════
-       FOOTER (shared)
-    ══════════════════════════════════════ -->
     <footer class="footer" role="contentinfo">
       <div class="container">
-        <!-- CTA Row -->
         <div class="footer-cta fade-up">
           <div class="footer-cta-left">
             <h2>Ready to Strengthen Your Environmental Strategy?</h2>
@@ -735,7 +662,6 @@
               <a href="../index.html#faq" class="btn btn-green">FAQ</a>
             </div>
           </div>
-
           <div class="footer-cta-right">
             <h3>Stay Informed</h3>
             <form
@@ -760,56 +686,55 @@
             </form>
           </div>
         </div>
-
         <hr class="sf-divider" />
-
-        <!-- Footer links grid -->
         <div class="footer-grid">
           <div class="footer-brand">
             <img
               src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              alt="EAA Associates Ltd logo"
               class="footer-logo-img"
             />
           </div>
-
           <div class="footer-col">
             <h4>About</h4>
             <ul>
-              <li><a href="../index.html#who-we-are">Who We Are?</a></li>
-              <li><a href="#leadership-heading">Leadership</a></li>
-              <li><a href="#">Impacts</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="about.html#who-we-are">Who We Are?</a></li>
+              <li><a href="about.html#leadership-heading">Leadership</a></li>
+              <li><a href="impact.html">Impacts</a></li>
+              <li><a href="career.html">Careers</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
-              <li><a href="#">Climate and Resilience</a></li>
-              <li><a href="#">Environmental Compliance</a></li>
-              <li><a href="#">Biodiversity</a></li>
-              <li><a href="#">Sustainable Infrastructure</a></li>
+              <li><a href="service-climate.html">Climate and Resilience</a></li>
+              <li><a href="service-eia.html">Environmental Compliance</a></li>
+              <li>
+                <a href="service-ecologicalrestoration.html">Biodiversity</a>
+              </li>
+              <li>
+                <a href="service-sustainability.html"
+                  >Sustainable Infrastructure</a
+                >
+              </li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Industries</h4>
             <ul>
-              <li><a href="#">Government</a></li>
-              <li><a href="#">NGOs</a></li>
-              <li><a href="#">Corporate Developers</a></li>
+              <li><a href="industries.html">Government</a></li>
+              <li><a href="industries.html">NGOs</a></li>
+              <li><a href="industries.html">Corporate Developers</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="#">Address</a></li>
-              <li><a href="#">Phone</a></li>
-              <li><a href="#">Email</a></li>
+              <li><a href="contact.html">Address</a></li>
+              <li><a href="contact.html">Phone</a></li>
+              <li><a href="contact.html">Email</a></li>
             </ul>
             <div class="footer-socials" aria-label="Social media links">
               <a href="#" aria-label="Instagram">
@@ -871,7 +796,6 @@
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>
             © 2026
@@ -950,12 +874,12 @@
             newsletterForm.reset();
             EAAModal.success(
               "Subscribed!",
-              "Thank you! You have been added to our mailing list and will receive our latest updates.",
+              "Thank you! You have been added to our mailing list.",
             );
           } else {
             EAAModal.error(
               "Subscription Failed",
-              "Something went wrong. Please try again or contact us directly.",
+              "Something went wrong. Please try again.",
             );
           }
         });
@@ -964,11 +888,15 @@
       /* ── NAV SEARCH ── */
       function handleNavSearch(e) {
         e.preventDefault();
-        const input = document.getElementById("navSearchInput");
-        input.placeholder = "Try searching on the home page";
-        setTimeout(() => {
-          input.placeholder = "Search...";
-        }, 2500);
+        const query = document.getElementById("navSearchInput").value.trim();
+        if (!query) return;
+        const sections = document.querySelectorAll("section[id], div[id]");
+        for (const sec of sections) {
+          if (sec.textContent.toLowerCase().includes(query.toLowerCase())) {
+            sec.scrollIntoView({ behavior: "smooth", block: "start" });
+            break;
+          }
+        }
       }
     </script>
   </body>

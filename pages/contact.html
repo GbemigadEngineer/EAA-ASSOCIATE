@@ -8,7 +8,6 @@
       name="description"
       content="Get in touch with EAA Associates Ltd for environmental advisory, consultation requests, and partnership inquiries."
     />
-    <!-- Favicon — paste here ↓ -->
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
     <link
       rel="icon"
@@ -42,28 +41,31 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/modal.css" />
     <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/home.css" />
   </head>
   <body>
-    <!-- ════════════════════════════════════════
-       NAVIGATION — TOP BAR
-  ════════════════════════════════════════ -->
     <header>
       <nav class="navbar-top" role="navigation" aria-label="Main navigation">
         <div class="container">
-          <!-- Logo -->
-          <a href="#" class="nav-logo" aria-label="EAA Associates Home">
+          <a
+            href="../index.html"
+            class="nav-logo"
+            aria-label="EAA Associates Home"
+          >
             <img
               src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              alt="EAA Associates Ltd logo"
               class="nav-logo-img"
             />
+            <div class="nav-logo-text-wrap">
+              <span class="nav-logo-name">EAA Associates Ltd</span>
+              <span class="nav-logo-tagline"
+                >Environmental &amp; Climate Advisory</span
+              >
+            </div>
           </a>
-
-          <!-- Desktop menu -->
           <ul class="nav-menu" role="list">
-            <li><a href="../index.html" aria-current="page">Home</a></li>
-
-            <!-- About dropdown: clicking label goes to #who-we-are; chevron opens dropdown -->
+            <li><a href="../index.html">Home</a></li>
             <li class="has-dropdown">
               <a href="about.html" class="nav-link-label">About</a>
               <button
@@ -74,13 +76,19 @@
                 ▾
               </button>
               <ul class="dropdown-menu" role="list">
-                <li><a href="#who-we-are">Who We Are</a></li>
-                <li><a href="#how-we-work-anchor">How We Work</a></li>
-                <li><a href="#industries">Industries We Serve</a></li>
+                <li><a href="about.html#who-we-are">Who We Are</a></li>
+                <li><a href="about.html#how-we-work-anchor">How We Work</a></li>
+                <li>
+                  <a href="about.html#industries-heading"
+                    >Industries We Serve</a
+                  >
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a href="impact.html">Our Impact</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="partners.html">Partners</a></li>
               </ul>
             </li>
-
-            <!-- Services dropdown: clicking label goes to #our-services; chevron opens dropdown -->
             <li class="has-dropdown">
               <a href="services.html" class="nav-link-label">Services</a>
               <button
@@ -106,40 +114,49 @@
                 </li>
                 <li>
                   <a href="service-climate.html"
-                    >Enviroment Compliance &amp; Regulatory Advisory</a
+                    >Environmental Compliance &amp; Regulatory Advisory</a
                   >
                 </li>
-                <li>
-                  <a href="services.html#reforestation">Reforestation</a>
-                </li>
+                <li><a href="services.html#reforestation">Reforestation</a></li>
                 <li>
                   <a href="services.html#renewable"
                     >Renewable Energy &amp; Solar Solutions</a
                   >
                 </li>
-                <li>
-                  <a href="services.html#landscape">Landscape Design</a>
-                </li>
+                <li><a href="services.html#landscape">Landscape Design</a></li>
                 <li>
                   <a href="service-ecologicalrestoration.html"
                     >Ecological Restoration</a
                   >
                 </li>
+                <li class="dropdown-divider"></li>
+                <li><a href="solutions.html">Our Solutions</a></li>
               </ul>
             </li>
-
             <li><a href="industries.html">Industries</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="#insights">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="has-dropdown">
+              <a href="../index.html#insights" class="nav-link-label"
+                >Insights</a
+              >
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Insights menu"
+              >
+                ▾
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+                <li><a href="works.html">Our Work</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html" class="nav-link-active">Contact</a></li>
           </ul>
 
-          <!-- CTA button pinned to the right with controlled sizing -->
           <a href="consultation.html" class="btn btn-dark nav-cta"
             >Book Consultation</a
           >
-
-          <!-- Mobile hamburger -->
           <button
             class="nav-hamburger"
             id="hamburger"
@@ -150,92 +167,31 @@
           </button>
         </div>
       </nav>
-
-      <!-- Secondary dark green bar — FIX 1: spacious layout with search bar -->
-      <div
-        class="nav-bar-secondary"
-        role="navigation"
-        aria-label="Secondary navigation"
-      >
-        <div class="container">
-          <ul class="nav-secondary-links" role="list">
-            <li>
-              <a href="#">English <span>▾</span></a>
-            </li>
-            <li><a href="#insights">Blogs &amp; News</a></li>
-            <li><a href="impact.html">Impact</a></li>
-            <li><a href="solutions.html">Solution</a></li>
-            <li><a href="career.html">Careers</a></li>
-            <li><a href="partners.html">Partner</a></li>
-            <li><a href="works.html">Our Work</a></li>
-            <li>
-              <a href="#cta">Take Action <span>▾</span></a>
-            </li>
-          </ul>
-          <!-- Search bar -->
-          <div class="nav-search-wrap">
-            <form
-              class="nav-search-form"
-              role="search"
-              onsubmit="handleNavSearch(event)"
-            >
-              <input
-                class="nav-search-input"
-                type="search"
-                id="navSearchInput"
-                placeholder="Search..."
-                aria-label="Search site"
-                autocomplete="off"
-              />
-              <button
-                class="nav-search-btn"
-                type="submit"
-                aria-label="Submit search"
-              >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile drawer -->
       <div
         class="mobile-drawer"
         id="mobileDrawer"
         role="dialog"
         aria-label="Mobile menu"
       >
-        <a href="#">Home</a>
-        <a href="#who-we-are">About</a>
-        <a href="#our-services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#selected-projects">Projects</a>
-        <a href="#insights">Insights</a>
-        <a href="#faq">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="impact.html">Impact</a>
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
         <a
-          href="#cta"
+          href="consultation.html"
           class="btn btn-dark"
           style="margin-top: 8px; width: 100%; justify-content: center"
           >Book Consultation</a
         >
       </div>
     </header>
+
     <main>
-      <!-- ════════════════════════════════════════
-         HERO — full-width landscape image
-    ════════════════════════════════════════ -->
       <section class="contact-hero" aria-label="Contact page hero">
         <img
           class="contact-hero-img"
@@ -246,9 +202,6 @@
         <div class="contact-hero-overlay"></div>
       </section>
 
-      <!-- ════════════════════════════════════════
-         CONTACT INTRO
-    ════════════════════════════════════════ -->
       <section class="contact-intro fade-up" aria-labelledby="contact-heading">
         <div class="container">
           <h1 id="contact-heading">Contact Us</h1>
@@ -264,15 +217,11 @@
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════
-         HOW CAN WE ASSIST
-    ════════════════════════════════════════ -->
       <section class="assist-section" aria-labelledby="assist-heading">
         <div class="container">
           <h2 id="assist-heading" class="assist-heading fade-up">
             How Can We Assist You?
           </h2>
-
           <div class="assist-grid fade-up">
             <div class="assist-card">
               <h3>General Inquiry</h3>
@@ -284,7 +233,6 @@
                 >Contact Us →</a
               >
             </div>
-
             <div class="assist-card">
               <h3>Request Consultation</h3>
               <p>
@@ -295,7 +243,6 @@
                 >Book Consultation →</a
               >
             </div>
-
             <div class="assist-card">
               <h3>Media &amp; Partnerships</h3>
               <p>For press, collaborations, or institutional partnerships.</p>
@@ -307,9 +254,6 @@
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════
-         CONTACT INFO + FORM
-    ════════════════════════════════════════ -->
       <section
         class="contact-main-section"
         id="contact-form-section"
@@ -317,10 +261,8 @@
       >
         <div class="container">
           <div class="contact-main-grid">
-            <!-- LEFT: Contact Information -->
             <div class="contact-info fade-up">
               <h2 class="contact-info-title">Our Contact Information</h2>
-
               <div class="contact-detail-block">
                 <h4>Office Address</h4>
                 <p>
@@ -328,37 +270,28 @@
                   Estate,<br />Opebi, Ikeja, Lagos.
                 </p>
               </div>
-
               <div class="contact-detail-block">
                 <h4>Phone</h4>
-                <p>+234 812 056 1552</p>
+                <p><a href="tel:+2348120561552">+234 812 056 1552</a></p>
               </div>
-
               <div class="contact-detail-block">
                 <h4>Email</h4>
                 <p>
-                  <a
-                    href="/cdn-cgi/l/email-protection#91f8fff7fed1f4f0f0f0e2e2fef2f8f0e5f4bff2fefc"
-                    ><span
-                      class="__cf_email__"
-                      data-cfemail="6a03040c052a0f0b0b0b19190509030b1e0f44090507"
-                      >[email&#160;protected]</span
-                    ></a
+                  <a href="mailto:info@eaaassociates.org"
+                    >info@eaaassociates.org</a
                   >
                 </p>
               </div>
-
               <div class="contact-detail-block">
                 <h4>Business Hours</h4>
                 <p>Mon–Fri : &nbsp;&nbsp;&nbsp; 9:00am – 5:00pm</p>
               </div>
-
               <div class="contact-detail-block">
                 <h4>Follow Us:</h4>
                 <p class="social-handle">@eaaassociates_ltd</p>
                 <div class="contact-socials">
-                  <a href="#" aria-label="Instagram" class="social-icon">
-                    <svg
+                  <a href="#" aria-label="Instagram" class="social-icon"
+                    ><svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
@@ -375,11 +308,10 @@
                         r="1"
                         fill="currentColor"
                         stroke="none"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#" aria-label="LinkedIn" class="social-icon">
-                    <svg
+                      /></svg
+                  ></a>
+                  <a href="#" aria-label="LinkedIn" class="social-icon"
+                    ><svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
@@ -397,11 +329,10 @@
                         r="2"
                         fill="currentColor"
                         stroke="none"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#" aria-label="Twitter / X" class="social-icon">
-                    <svg
+                      /></svg
+                  ></a>
+                  <a href="#" aria-label="Twitter / X" class="social-icon"
+                    ><svg
                       width="20"
                       height="20"
                       viewBox="0 0 24 24"
@@ -410,12 +341,10 @@
                       stroke-width="2"
                       aria-hidden="true"
                     >
-                      <path d="M18 6L6 18M6 6l12 12" />
-                    </svg>
-                  </a>
+                      <path d="M18 6L6 18M6 6l12 12" /></svg
+                  ></a>
                 </div>
               </div>
-
               <div class="faq-cta-box">
                 <h3>Have Questions?</h3>
                 <p>
@@ -429,7 +358,6 @@
               </div>
             </div>
 
-            <!-- RIGHT: Contact Form — Netlify -->
             <div
               class="contact-form-wrap fade-up"
               style="transition-delay: 0.15s"
@@ -439,7 +367,6 @@
                 Complete the form below and our team will respond within 1–2
                 business days.
               </p>
-
               <form
                 id="contactForm"
                 class="contact-form"
@@ -450,7 +377,6 @@
                 novalidate
               >
                 <input type="hidden" name="form-name" value="contact" />
-
                 <div class="form-group">
                   <label for="fullName">Full Name</label>
                   <input
@@ -465,7 +391,6 @@
                     >Please enter your full name.</span
                   >
                 </div>
-
                 <div class="form-group">
                   <label for="orgName">Organisation Name</label>
                   <input
@@ -475,7 +400,6 @@
                     placeholder="Enter Organisation Name"
                   />
                 </div>
-
                 <div class="form-group">
                   <label for="emailAddr">Email Address</label>
                   <input
@@ -490,7 +414,6 @@
                     >Please enter a valid email address.</span
                   >
                 </div>
-
                 <div class="form-group">
                   <label for="phoneNum">Phone Number</label>
                   <input
@@ -500,7 +423,6 @@
                     placeholder="Enter Phone Number"
                   />
                 </div>
-
                 <div class="form-group">
                   <label for="inquiryType">Inquiry Type</label>
                   <div class="select-wrap">
@@ -517,7 +439,6 @@
                     <span class="select-chevron" aria-hidden="true">▾</span>
                   </div>
                 </div>
-
                 <div class="form-group">
                   <label for="message">Message</label>
                   <textarea
@@ -532,7 +453,6 @@
                     >Please enter your message.</span
                   >
                 </div>
-
                 <div class="form-checkbox">
                   <input
                     type="checkbox"
@@ -550,7 +470,6 @@
                   role="alert"
                   id="privacyError"
                 ></span>
-
                 <button type="submit" class="btn btn-submit" id="submitBtn">
                   Send Message
                 </button>
@@ -560,9 +479,6 @@
         </div>
       </section>
 
-      <!-- ════════════════════════════════════════
-         GOOGLE MAP EMBED
-    ════════════════════════════════════════ -->
       <section class="map-section" aria-label="Office location map">
         <iframe
           class="map-iframe"
@@ -575,12 +491,8 @@
       </section>
     </main>
 
-    <!-- ════════════════════════════════════════
-       FOOTER (matches index.html exactly)
-  ════════════════════════════════════════ -->
     <footer class="footer" id="site-footer" role="contentinfo">
       <div class="container">
-        <!-- CTA Row -->
         <div class="footer-cta fade-up">
           <div class="footer-cta-left">
             <h2>
@@ -600,7 +512,6 @@
               <a href="../index.html#faq" class="btn btn-green">FAQ</a>
             </div>
           </div>
-
           <div class="footer-cta-right">
             <h3>Stay Informed</h3>
             <form
@@ -625,66 +536,59 @@
             </form>
           </div>
         </div>
-
         <hr class="sf-divider" />
-
-        <!-- Footer links grid -->
         <div class="footer-grid">
           <div class="footer-brand">
             <img
               src="../images/companyLogo.jpeg"
-              alt="EAA – Environment Afforestation Agroforestry logo"
+              alt="EAA Associates Ltd logo"
               class="footer-logo-img"
             />
           </div>
-
           <div class="footer-col">
             <h4>About</h4>
             <ul>
-              <li><a href="../index.html#who-we-are">Who We Are?</a></li>
-              <li><a href="#">Leadership</a></li>
-              <li><a href="../index.html#impact-section">Impacts</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="about.html#who-we-are">Who We Are?</a></li>
+              <li><a href="about.html#leadership-heading">Leadership</a></li>
+              <li><a href="impact.html">Impacts</a></li>
+              <li><a href="career.html">Careers</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Services</h4>
             <ul>
+              <li><a href="service-climate.html">Climate and Resilience</a></li>
+              <li><a href="service-eia.html">Environmental Compliance</a></li>
               <li>
-                <a href="services.html#climate-risk">Climate and Resilience</a>
+                <a href="service-ecologicalrestoration.html">Biodiversity</a>
               </li>
-              <li><a href="services.html#eia">Environmental Compliance</a></li>
-              <li><a href="services.html#ecological">Biodiversity</a></li>
               <li>
-                <a href="services.html#landscape">Sustainable Infrastructure</a>
+                <a href="service-sustainability.html"
+                  >Sustainable Infrastructure</a
+                >
               </li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Industries</h4>
             <ul>
-              <li><a href="../index.html#industries">Government</a></li>
-              <li><a href="../index.html#industries">NGOs</a></li>
-              <li>
-                <a href="../index.html#industries">Corporate Developers</a>
-              </li>
+              <li><a href="industries.html">Government</a></li>
+              <li><a href="industries.html">NGOs</a></li>
+              <li><a href="industries.html">Corporate Developers</a></li>
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="#">Address</a></li>
-              <li><a href="#">Phone</a></li>
-              <li><a href="#">Email</a></li>
+              <li><a href="contact.html">Address</a></li>
+              <li><a href="contact.html">Phone</a></li>
+              <li><a href="contact.html">Email</a></li>
             </ul>
             <div class="footer-socials" aria-label="Social media links">
-              <a href="#" aria-label="Instagram">
-                <svg
+              <a href="#" aria-label="Instagram"
+                ><svg
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -701,11 +605,10 @@
                     r="1"
                     fill="currentColor"
                     stroke="none"
-                  />
-                </svg>
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <svg
+                  /></svg
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><svg
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -723,11 +626,10 @@
                     r="2"
                     fill="currentColor"
                     stroke="none"
-                  />
-                </svg>
-              </a>
-              <a href="#" aria-label="Twitter / X">
-                <svg
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Twitter / X"
+                ><svg
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
@@ -736,13 +638,11 @@
                   stroke-width="2"
                   aria-hidden="true"
                 >
-                  <path d="M18 6L6 18M6 6l12 12" />
-                </svg>
-              </a>
+                  <path d="M18 6L6 18M6 6l12 12" /></svg
+              ></a>
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>
             © 2026
@@ -758,15 +658,10 @@
       </div>
     </footer>
 
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="../js/modal.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
     <script>
-      /* ── DROPDOWN MENUS ── */
       document.querySelectorAll(".has-dropdown").forEach((item) => {
         const chevronBtn = item.querySelector(".nav-chevron-btn");
         const dropdown = item.querySelector(".dropdown-menu");
@@ -796,45 +691,33 @@
           );
         });
       });
-
-      /* ── NETLIFY NEWSLETTER FORM ── */
       const newsletterForm = document.getElementById("newsletterForm");
       if (newsletterForm) {
         newsletterForm.addEventListener("submit", async (e) => {
           e.preventDefault();
-          const formData = new FormData(newsletterForm);
           let ok = false;
           try {
             const res = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
+              body: new URLSearchParams(
+                new FormData(newsletterForm),
+              ).toString(),
             });
             ok = res.ok;
           } catch (_) {}
           if (ok) {
             newsletterForm.reset();
-            EAAModal.success(
-              "Subscribed!",
-              "Thank you! You have been added to our mailing list and will receive our latest updates.",
-            );
+            EAAModal.success("Subscribed!", "Thank you!");
           } else {
-            EAAModal.error(
-              "Subscription Failed",
-              "Something went wrong. Please try again or contact us directly.",
-            );
+            EAAModal.error("Subscription Failed", "Something went wrong.");
           }
         });
       }
-
-      /* ── NAV SEARCH ── */
       function handleNavSearch(e) {
         e.preventDefault();
         const query = document.getElementById("navSearchInput").value.trim();
         if (!query) return;
-        const input = document.getElementById("navSearchInput");
-        input.placeholder = "Search...";
-        // scroll to matching section
         const sections = document.querySelectorAll("section[id], div[id]");
         for (const sec of sections) {
           if (sec.textContent.toLowerCase().includes(query.toLowerCase())) {

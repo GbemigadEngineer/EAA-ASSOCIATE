@@ -4,7 +4,7 @@
    ============================================= */
 
 /* ─────────────────────────────────────────────
-   FIX 1: LOGO — bigger, company name visible
+   LOGO — bigger, company name visible
 ───────────────────────────────────────────── */
 .nav-logo-img {
   width: 64px;
@@ -13,7 +13,6 @@
   border-radius: 6px;
   flex-shrink: 0;
 }
-/* Override style.css margin-right on logo so nav items have room */
 .nav-logo {
   margin-right: 24px !important;
 }
@@ -40,17 +39,20 @@
   letter-spacing: 1px;
   white-space: nowrap;
 }
-/* Taller navbar to fit 64px logo with padding */
+
+/* Taller navbar to fit 64px logo */
 .navbar-top {
   height: 84px;
 }
-/* Tighter gap between nav items so CTA fits */
+
+/* Tighter gap so everything fits */
 .nav-menu {
-  gap: 20px !important;
+  gap: 16px !important;
 }
-/* Keep CTA compact */
+
+/* Compact CTA */
 .nav-cta {
-  margin-left: 20px !important;
+  margin-left: 12px !important;
   padding: 10px 18px !important;
   font-size: 13px !important;
   white-space: nowrap;
@@ -58,19 +60,16 @@
 }
 
 /* ─────────────────────────────────────────────
-   FIX 2 + 3: HERO — full bg image, visible
-   on ALL screen sizes including mobile
+   HERO — full bg image on all screen sizes
 ───────────────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 620px;
   display: flex;
   align-items: center;
-  background: #0b2516; /* fallback while image loads */
+  background: #0b2516;
   overflow: hidden;
 }
-
-/* Full-bleed background image */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -83,7 +82,6 @@
   object-position: center 30%;
   display: block;
 }
-/* Dark gradient overlay — stronger on left where text sits */
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
@@ -95,7 +93,6 @@
     rgba(8, 28, 15, 0.25) 100%
   );
 }
-
 .hero .container {
   position: relative;
   z-index: 1;
@@ -106,15 +103,13 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
-
-/* FIX 2: Company name as first element in hero — clearly visible */
 .hero-brand {
   font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: #6ee89a; /* bright mint — pops clearly against dark overlay */
+  color: #6ee89a;
   border-left: 3px solid #6ee89a;
   padding: 0 0 0 12px;
   margin-bottom: 16px;
@@ -126,7 +121,7 @@
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85); /* bright white */
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 18px;
   display: block;
 }
@@ -137,8 +132,6 @@
   line-height: 1.18;
   margin-bottom: 20px;
 }
-
-/* FIX 4: Value proposition paragraph */
 .hero-value-prop {
   font-family: "Lato", sans-serif;
   font-size: 17px;
@@ -147,13 +140,11 @@
   margin-bottom: 36px;
   max-width: 500px;
 }
-
 .hero-buttons {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
 }
-/* Hero-specific button styles over dark bg */
 .btn-hero-primary {
   display: inline-flex;
   align-items: center;
@@ -174,7 +165,6 @@
 .btn-hero-primary:hover {
   background: #2d9a58;
 }
-
 .btn-hero-outline {
   display: inline-flex;
   align-items: center;
@@ -198,8 +188,6 @@
   background: rgba(255, 255, 255, 0.12);
   border-color: #fff;
 }
-
-/* Hero image grid — desktop only */
 .hero-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -222,9 +210,8 @@
 }
 
 /* ─────────────────────────────────────────────
-   COMPANY NAME PROMINENCE — repeated across sections
+   COMPANY NAME PROMINENCE
 ───────────────────────────────────────────── */
-/* WHO WE ARE — green label above heading */
 .who-company-name {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
@@ -245,8 +232,6 @@
   background: var(--green-light);
   flex-shrink: 0;
 }
-
-/* IMPACT SECTION — white label above heading (on dark green bg) */
 .impact-company-name {
   font-family: "Montserrat", sans-serif;
   font-size: 11px;
@@ -267,8 +252,6 @@
   background: var(--green-light);
   flex-shrink: 0;
 }
-
-/* WHY EAA — intro line with company name bolded */
 .why-company-intro {
   font-size: 17px;
   font-weight: 400;
@@ -282,8 +265,11 @@
   color: var(--green-dark);
   font-weight: 800;
 }
-/* 3 panels between hero and Trusted By */
-───────────────────────────────────────────── */ .core-services {
+
+/* ─────────────────────────────────────────────
+   CORE SERVICES STRIP
+───────────────────────────────────────────── */
+.core-services {
   background: #fff;
   border-bottom: 1px solid var(--border);
 }
@@ -331,7 +317,7 @@
 }
 
 /* ─────────────────────────────────────────────
-   FIX 6: TRUSTED BY — styled logo badges
+   TRUSTED BY
 ───────────────────────────────────────────── */
 .trusted-by {
   background: #fff;
@@ -372,8 +358,7 @@
 }
 
 /* ─────────────────────────────────────────────
-   FIX 2: CONTACT INFO STRIP
-   Before footer — dark green background
+   CONTACT INFO STRIP
 ───────────────────────────────────────────── */
 .contact-strip {
   background: var(--green-dark);
@@ -385,7 +370,7 @@
 }
 .contact-strip-item {
   display: flex;
-  align-items: flex-start; /* top-align for multi-line address */
+  align-items: flex-start;
   gap: 14px;
   padding: 28px 24px;
 }
@@ -399,7 +384,7 @@
   justify-content: center;
   color: var(--green-light);
   flex-shrink: 0;
-  margin-top: 2px; /* optical alignment with first line of text */
+  margin-top: 2px;
 }
 .contact-strip-item h4 {
   font-family: "Montserrat", sans-serif;
@@ -445,7 +430,6 @@
 }
 
 @media (max-width: 900px) {
-  /* Hero: hide image grid, bg image takes over on mobile */
   .hero .container {
     grid-template-columns: 1fr;
   }
@@ -462,8 +446,6 @@
     font-size: 15px;
     max-width: 100%;
   }
-
-  /* Core services: stack vertically */
   .core-services-grid {
     grid-template-columns: 1fr;
   }
@@ -475,12 +457,9 @@
   .core-service-item {
     padding: 24px 20px;
   }
-
-  /* Contact strip: 2-col grid */
   .contact-strip-grid {
     grid-template-columns: 1fr 1fr;
   }
-  /* hide vertical dividers, replace with border-bottom */
   .contact-strip-divider {
     display: none;
   }

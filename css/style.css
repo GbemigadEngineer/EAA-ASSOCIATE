@@ -100,7 +100,6 @@ h6 {
 .btn-dark:hover {
   background: #0f2b1f;
 }
-
 .btn-green {
   background: var(--green-bright);
   color: #fff;
@@ -108,7 +107,6 @@ h6 {
 .btn-green:hover {
   background: #2d9e56;
 }
-
 .btn-outline {
   background: transparent;
   color: var(--green-dark);
@@ -118,7 +116,6 @@ h6 {
   background: var(--green-dark);
   color: #fff;
 }
-
 .btn-outline-white {
   background: transparent;
   color: #fff;
@@ -127,8 +124,6 @@ h6 {
 .btn-outline-white:hover {
   background: rgba(255, 255, 255, 0.15);
 }
-
-/* FIX 5: dark-outline button for footer CTA on black bg */
 .btn-dark-outline {
   background: transparent;
   color: #fff;
@@ -140,10 +135,8 @@ h6 {
 }
 
 /* =============================================
-   NAVIGATION — FIXED
+   NAVIGATION — SINGLE BAR
    ============================================= */
-
-/* ── TOP BAR ── */
 .navbar-top {
   position: sticky;
   top: 0;
@@ -159,13 +152,13 @@ h6 {
   gap: 0;
 }
 
-/* Logo — fixed width so nav and CTA have predictable space */
+/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  margin-right: 48px; /* generous white space between logo and nav */
+  margin-right: 48px;
 }
 .nav-logo img {
   width: 48px;
@@ -187,7 +180,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 28px;
-  flex: 1; /* takes remaining space between logo and CTA */
+  flex: 1;
 }
 .nav-menu li {
   display: flex;
@@ -257,7 +250,7 @@ h6 {
   position: absolute;
   top: calc(100% + 12px);
   left: 0;
-  min-width: 240px;
+  min-width: 260px;
   background: #fff;
   border: 1px solid var(--border);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -285,90 +278,56 @@ h6 {
   color: var(--green-mid);
 }
 
-/* CTA button — compact, right-aligned with white space on both sides */
-.nav-cta {
-  flex-shrink: 0;
-  margin-left: 40px; /* white space between last nav item and CTA */
-  padding: 10px 22px; /* smaller than default .btn padding */
-  font-size: 13px;
+/* Visual divider inside dropdown — separates sections */
+.dropdown-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 6px 12px;
+  pointer-events: none;
 }
 
-/* ── SECONDARY BAR ── */
-.nav-bar-secondary {
-  background: var(--green-bar);
-  height: 48px;
-}
-.nav-bar-secondary .container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.nav-secondary-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-shrink: 0;
-}
-.nav-secondary-links a {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-.nav-secondary-links a:hover {
-  color: #fff;
-}
-
-/* Search bar — compact width */
+/* Search bar — hidden/removed; keeping selector in case re-enabled */
 .nav-search-wrap {
-  flex-shrink: 0;
+  display: none;
 }
 .nav-search-form {
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--off-white);
+  border: 1px solid var(--border);
   transition:
     background 0.2s,
     border-color 0.2s;
 }
 .nav-search-form:focus-within {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: #fff;
+  border-color: var(--green-mid);
 }
 .nav-search-input {
-  width: 130px; /* reduced from 200px */
-  height: 30px;
+  width: 120px;
+  height: 36px;
   padding: 0 10px;
   background: transparent;
   border: none;
   outline: none;
   font-family: "Lato", sans-serif;
-  font-size: 12px;
-  color: #fff;
+  font-size: 13px;
+  color: var(--text-dark);
   transition: width 0.3s ease;
 }
 .nav-search-input::placeholder {
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--text-light);
 }
 .nav-search-input:focus {
   width: 180px;
 }
 .nav-search-btn {
-  width: 32px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   background: transparent;
   border: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
+  border-left: 1px solid var(--border);
+  color: var(--text-light);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -378,8 +337,17 @@ h6 {
     background 0.2s;
 }
 .nav-search-btn:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  color: var(--green-mid);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* CTA button — margin-left: auto pushes it to the far right */
+.nav-cta {
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 10px 22px;
+  font-size: 13px;
 }
 
 /* Mobile hamburger */
@@ -392,6 +360,7 @@ h6 {
   cursor: pointer;
   padding: 4px;
   flex-shrink: 0;
+  margin-left: 12px;
 }
 .nav-hamburger span {
   display: block;
@@ -493,8 +462,6 @@ h6 {
   gap: 16px;
   flex-wrap: wrap;
 }
-
-/* Hero image grid: 1 tall left + 2 stacked right */
 .hero-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -555,14 +522,6 @@ h6 {
 .logo-strip-item:hover {
   opacity: 1;
   filter: grayscale(0);
-}
-.logo-strip-item span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-dark);
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 /* =============================================
@@ -649,14 +608,6 @@ h6 {
   line-height: 1.8;
   color: var(--text-mid);
 }
-.expertise-divider {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 48px 0;
-  grid-column: 1 / -1;
-}
-
-/* Second row */
 .expertise-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -781,7 +732,6 @@ h6 {
 .how-we-work .section-header h2 {
   color: var(--text-dark);
 }
-
 .process-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1230,14 +1180,12 @@ h6 {
 }
 
 /* =============================================
-   FOOTER — FIX 5: Black background, CTA inside footer
+   FOOTER
    ============================================= */
 .footer {
-  background: var(--footer-bg); /* #111111 */
+  background: var(--footer-bg);
   padding: 72px 0 32px;
 }
-
-/* CTA Row — inside footer at the top */
 .footer-cta {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1263,7 +1211,6 @@ h6 {
   gap: 12px;
   flex-wrap: wrap;
 }
-
 .footer-cta-right {
   display: flex;
   flex-direction: column;
@@ -1312,15 +1259,11 @@ h6 {
 .newsletter-submit:hover {
   background: #b8933c;
 }
-
-/* Divider */
 .sf-divider {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   margin: 0 0 56px;
 }
-
-/* Footer links grid */
 .footer-grid {
   display: grid;
   grid-template-columns: 160px 1fr 1fr 1fr 1fr;
@@ -1420,23 +1363,17 @@ h6 {
   .footer-brand {
     grid-column: 1 / -1;
   }
-  .nav-secondary-links {
-    gap: 20px;
-  }
-  .nav-search-input {
-    width: 100px;
-  }
-  .nav-search-input:focus {
-    width: 140px;
-  }
   .nav-menu {
-    gap: 20px;
+    gap: 16px;
   }
   .nav-logo {
-    margin-right: 28px;
+    margin-right: 24px;
   }
-  .nav-cta {
-    margin-left: 24px;
+  .nav-search-input {
+    width: 90px;
+  }
+  .nav-search-input:focus {
+    width: 130px;
   }
 }
 
@@ -1452,7 +1389,6 @@ h6 {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
   .hero-images {
     display: none;
   }
@@ -1484,24 +1420,14 @@ h6 {
   .nav-cta {
     display: none;
   }
+  .nav-search-wrap {
+    display: none; /* hidden on mobile; accessible via hamburger menu */
+  }
   .nav-hamburger {
     display: flex;
   }
   .mobile-drawer {
     display: flex;
-  }
-  .nav-bar-secondary .container {
-    overflow-x: auto;
-    gap: 16px;
-  }
-  .nav-secondary-links {
-    gap: 14px;
-  }
-  .nav-search-input {
-    width: 90px;
-  }
-  .nav-search-input:focus {
-    width: 120px;
   }
 }
 
@@ -1535,14 +1461,5 @@ h6 {
   }
   .newsletter-submit {
     width: 100%;
-  }
-  .nav-secondary-links {
-    gap: 10px;
-  }
-  .nav-search-input {
-    width: 80px;
-  }
-  .nav-search-input:focus {
-    width: 100px;
   }
 }
