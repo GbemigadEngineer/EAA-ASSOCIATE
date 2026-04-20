@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Lagos State Healthcare Transformative Initiative – EAA Associates Ltd
+    </title>
+    <meta
+      name="description"
+      content="EAA Associates Ltd provided environmental advisory for the Lagos State Healthcare Transformative Initiative, integrating climate resilience and eco-friendly design into public health infrastructure."
+    />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/project-detail-v2.css" />
+
+    <style>
+      /* ── GALLERY ── */
+      .pd-gallery {
+        margin-top: 56px;
+      }
+      .pd-gallery-heading {
+        font-family: "Montserrat", sans-serif;
+        font-size: 26px;
+        font-weight: 800;
+        color: #1b4332;
+        margin-bottom: 8px;
+      }
+      .pd-gallery-subheading {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 28px;
+      }
+      /* Masonry-style grid */
+      .pd-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .pd-gallery-thumb {
+        position: relative;
+        overflow: hidden;
+        cursor: zoom-in;
+        background: #e0e0e0;
+      }
+      .pd-gallery-thumb:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .pd-gallery-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        min-height: 180px;
+        transition: transform 0.4s ease;
+      }
+      .pd-gallery-thumb:hover img {
+        transform: scale(1.06);
+      }
+      .pd-gallery-thumb-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(11, 37, 22, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+      .pd-gallery-thumb:hover .pd-gallery-thumb-overlay {
+        background: rgba(11, 37, 22, 0.45);
+      }
+      .pd-gallery-thumb-overlay svg {
+        opacity: 0;
+        color: #fff;
+        transition: opacity 0.3s;
+        transform: scale(0.8);
+        transition:
+          opacity 0.3s,
+          transform 0.3s;
+      }
+      .pd-gallery-thumb:hover .pd-gallery-thumb-overlay svg {
+        opacity: 1;
+        transform: scale(1);
+      }
+      /* Show More button */
+      .pd-gallery-more-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 20px auto 0;
+        height: 48px;
+        padding: 0 32px;
+        background: transparent;
+        border: 1.5px solid #1b4332;
+        color: #1b4332;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.25s,
+          color 0.25s;
+        letter-spacing: 0.3px;
+      }
+      .pd-gallery-more-btn:hover {
+        background: #1b4332;
+        color: #fff;
+      }
+      /* Hidden extras */
+      .pd-gallery-thumb.gallery-hidden {
+        display: none;
+      }
+
+      /* ── LIGHTBOX ── */
+      .lb-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.94);
+        z-index: 9999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-backdrop.lb-open {
+        display: flex;
+      }
+      .lb-main {
+        position: relative;
+        max-width: 90vw;
+        max-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .lb-img {
+        max-width: 90vw;
+        max-height: 78vh;
+        object-fit: contain;
+        display: block;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+        transition: opacity 0.2s;
+      }
+      .lb-close {
+        position: fixed;
+        top: 20px;
+        right: 28px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 1;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+        z-index: 10001;
+      }
+      .lb-close:hover {
+        opacity: 1;
+      }
+      .lb-arrow {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 22px;
+        transition: background 0.2s;
+        z-index: 10001;
+      }
+      .lb-arrow:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .lb-prev {
+        left: 20px;
+      }
+      .lb-next {
+        right: 20px;
+      }
+      .lb-caption {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 16px;
+        max-width: 600px;
+        padding: 0 24px;
+      }
+      .lb-counter {
+        color: rgba(255, 255, 255, 0.4);
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 8px;
+        letter-spacing: 1px;
+      }
+      /* Responsive */
+      @media (max-width: 768px) {
+        .pd-gallery-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .pd-gallery-thumb:first-child {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+        .lb-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 480px) {
+        .pd-gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        .pd-gallery-thumb:first-child {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+          <a
+            href="../index.html"
+            class="nav-logo"
+            aria-label="EAA Associates Home"
+          >
+            <img
+              src="../images/companyLogo.jpeg"
+              alt="EAA Associates Ltd logo"
+              class="nav-logo-img"
+            />
+            <div class="nav-logo-text-wrap">
+              <span class="nav-logo-name">EAA Associates Ltd</span>
+              <span class="nav-logo-tagline"
+                >Environmental &amp; Climate Advisory</span
+              >
+            </div>
+          </a>
+          <ul class="nav-menu" role="list">
+            <li><a href="../index.html">Home</a></li>
+            <li class="has-dropdown">
+              <a href="about.html" class="nav-link-label">About</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open About menu"
+              >
+                &#9662;
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="about.html#who-we-are">Who We Are</a></li>
+                <li><a href="about.html#how-we-work-anchor">How We Work</a></li>
+                <li>
+                  <a href="about.html#industries-heading"
+                    >Industries We Serve</a
+                  >
+                </li>
+                 <li><a href="team.html">Leadership Team</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a href="impact.html">Our Impact</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="partners.html">Partners</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="services.html" class="nav-link-label">Services</a>
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Services menu"
+              >
+                &#9662;
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li>
+                  <a href="service-eia.html">Environmental Impact Assessment</a>
+                </li>
+                <li>
+                  <a href="service-climate.html"
+                    >Climate Risk &amp; Climate Proofing</a
+                  >
+                </li>
+                <li>
+                  <a href="service-sustainability.html"
+                    >ESG &amp; Sustainability Advisory</a
+                  >
+                </li>
+                <li>
+                  <a href="service-climate.html"
+                    >Environmental Compliance &amp; Regulatory Advisory</a
+                  >
+                </li>
+                <li><a href="services.html#reforestation">Reforestation</a></li>
+                <li>
+                  <a href="services.html#renewable"
+                    >Renewable Energy &amp; Solar Solutions</a
+                  >
+                </li>
+                <li><a href="services.html#landscape">Landscape Design</a></li>
+                <li>
+                  <a href="service-ecologicalrestoration.html"
+                    >Ecological Restoration</a
+                  >
+                </li>
+                <li class="dropdown-divider"></li>
+                <li><a href="solutions.html">Our Solutions</a></li>
+              </ul>
+            </li>
+            <li><a href="industries.html">Industries</a></li>
+            <li>
+              <a href="projects.html" class="nav-link-active">Projects</a>
+            </li>
+            <li class="has-dropdown">
+              <a href="../index.html#insights" class="nav-link-label"
+                >Insights</a
+              >
+              <button
+                class="nav-chevron-btn"
+                aria-expanded="false"
+                aria-label="Open Insights menu"
+              >
+                &#9662;
+              </button>
+              <ul class="dropdown-menu" role="list">
+                <li><a href="../index.html#insights">Blogs &amp; News</a></li>
+                <li><a href="works.html">Our Work</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <a href="consultation.html" class="btn btn-dark nav-cta"
+            >Book Consultation</a
+          >
+          <button
+            class="nav-hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+      <div
+        class="mobile-drawer"
+        id="mobileDrawer"
+        role="dialog"
+        aria-label="Mobile menu"
+      >
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="projects.html">Projects</a>
+        <a href="../index.html#insights">Insights</a>
+        <a href="impact.html">Impact</a>
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="consultation.html"
+          class="btn btn-dark"
+          style="margin-top: 8px; width: 100%; justify-content: center"
+          >Book Consultation</a
+        >
+      </div>
+    </header>
+    <!-- LIGHTBOX -->
+    <div
+      class="lb-backdrop"
+      id="lb-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image viewer"
+    >
+      <button class="lb-close" id="lb-close" aria-label="Close image viewer">
+        &#10005;
+      </button>
+      <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Previous image">
+        &#8249;
+      </button>
+      <div class="lb-main">
+        <img class="lb-img" id="lb-img" src="" alt="" />
+      </div>
+      <button class="lb-arrow lb-next" id="lb-next" aria-label="Next image">
+        &#8250;
+      </button>
+      <p class="lb-caption" id="lb-caption"></p>
+      <p class="lb-counter" id="lb-counter"></p>
+    </div>
+    <main>
+      <section class="pd-hero" aria-label="Project hero">
+        <img
+          class="pd-hero-img"
+          src="../images/pexels-magda-ehlers-pexels-14562092.jpg"
+          alt="Lagos State Healthcare Transformative Initiative"
+          loading="eager"
+        />
+        <div class="pd-hero-overlay"></div>
+        <div class="pd-hero-content">
+          <div class="container">
+            <p class="pd-breadcrumb">
+              <a href="../index.html">Home</a><span>›</span
+              ><a href="projects.html">Projects</a><span>›</span>Lagos
+              Healthcare Initiative
+            </p>
+            <h1 class="pd-hero-title">
+              Lagos State Healthcare Transformative Initiative
+            </h1>
+            <div class="pd-hero-tags">
+              <span class="pd-tag">Healthcare</span>
+              <span class="pd-tag">Public Infrastructure</span>
+              <span class="pd-tag">Climate Resilience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pd-meta-bar">
+        <div class="container">
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Client</span
+            ><span class="pd-meta-value">Lagos State Government</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Location</span
+            ><span class="pd-meta-value">Lagos State, Nigeria</span>
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Industry</span
+            ><span class="pd-meta-value"
+              >Health &amp; Public Infrastructure</span
+            >
+          </div>
+          <div class="pd-meta-item">
+            <span class="pd-meta-label">Status</span
+            ><span class="pd-meta-value">Completed</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="pd-body">
+        <div class="container">
+          <div class="pd-main">
+            <h2>Project Overview</h2>
+            <p>
+              EAA Associates Ltd provided comprehensive environmental advisory
+              services for the Lagos State Healthcare Transformative Initiative
+              — a large-scale programme aimed at upgrading and expanding public
+              health infrastructure across Lagos State, Nigeria's most densely
+              populated urban region.
+            </p>
+            <p>
+              The initiative involved environmental planning, impact assessment,
+              and sustainability integration for multiple healthcare facilities,
+              ensuring that each project was aligned with regulatory compliance
+              requirements, climate resilience standards, and long-term
+              ecological sustainability.
+            </p>
+
+            <h2>Scope of Advisory Services</h2>
+            <ul>
+              <li>
+                Environmental Impact Assessment (EIA) for new and upgraded
+                healthcare facilities
+              </li>
+              <li>
+                Flood risk evaluation and eco-friendly drainage design advisory
+              </li>
+              <li>
+                Green infrastructure integration for hospital site planning
+              </li>
+              <li>
+                Waste management framework development for medical facilities
+              </li>
+              <li>
+                Climate-resilient site design to protect infrastructure from
+                extreme weather events
+              </li>
+              <li>Biodiversity screening and landscape integration planning</li>
+            </ul>
+
+            <h2>Environmental Challenges Addressed</h2>
+            <p>
+              The Lagos healthcare infrastructure programme presented a series
+              of complex environmental challenges. Sites were located in
+              flood-prone peri-urban and coastal zones, requiring detailed
+              hydrological assessments and bespoke drainage solutions that
+              minimised ecological disruption while protecting built structures
+              from inundation.
+            </p>
+            <p>
+              EAA's team integrated climate modelling data with site-specific
+              vulnerability assessments to develop flood mitigation strategies
+              that were both cost-effective and compliant with Lagos State's
+              Environmental Management Framework.
+            </p>
+
+            <h2>Regulatory Compliance</h2>
+            <p>
+              All environmental documentation was aligned with NESREA
+              guidelines, the Lagos State Environmental Protection Agency
+              (LASEPA) requirements, and applicable international environmental
+              management standards. EAA produced structured Environmental
+              Management Plans (EMPs) for each facility.
+            </p>
+
+            <h2>Key Outcomes</h2>
+            <ul>
+              <li>
+                Full EIA documentation and regulatory approvals secured for all
+                facilities
+              </li>
+              <li>
+                Eco-friendly flood prevention systems designed and implemented
+              </li>
+              <li>
+                Compliance with NESREA and LASEPA frameworks maintained
+                throughout
+              </li>
+              <li>
+                Reduced environmental footprint across Lagos public health
+                infrastructure
+              </li>
+              <li>
+                Long-term environmental monitoring framework delivered to Lagos
+                State
+              </li>
+            </ul>
+
+            <div class="pd-gallery">
+              <h2 class="pd-gallery-heading">Project Gallery</h2>
+              <p class="pd-gallery-subheading">
+                Click any image to view full screen &nbsp;·&nbsp; Use arrow keys
+                to navigate
+              </p>
+              <div class="pd-gallery-grid">
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Lagos State healthcare facility — environmental site planning"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0078.jpg"
+                    alt="Lagos State healthcare facility — environmental site planning"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Flood-resilient site design for Lagos healthcare infrastructure"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0040.jpg"
+                    alt="Flood-resilient site design for Lagos healthcare infrastructure"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Environmental site assessment process"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0041.jpg"
+                    alt="Environmental site assessment process"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Aerial view of Lagos peri-urban landscape — site context"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0063.jpg"
+                    alt="Aerial view of Lagos peri-urban landscape — site context"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Climate risk and environmental impact analysis"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0085.jpg"
+                    alt="Climate risk and environmental impact analysis"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: EAA field team conducting environmental baseline survey"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0031.jpg"
+                    alt="EAA field team conducting environmental baseline survey"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb gallery-hidden"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: Ecological habitat assessment adjacent to healthcare site"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0059.jpg"
+                    alt="Ecological habitat assessment adjacent to healthcare site"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="pd-gallery-thumb gallery-hidden"
+                  tabindex="0"
+                  role="button"
+                  aria-label="View: GIS mapping for environmental planning and site analysis"
+                >
+                  <img
+                    src="../images/lagos transformative/IMG-20260420-WA0076.jpg"
+                    alt="GIS mapping for environmental planning and site analysis"
+                    loading="lazy"
+                  />
+                  <div class="pd-gallery-thumb-overlay" aria-hidden="true">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <button class="pd-gallery-more-btn" id="galleryMoreBtn">
+                Show All Photos
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <aside class="pd-sidebar" aria-label="Project details">
+            <div class="pd-sidebar-card">
+              <h3>Project Details</h3>
+              <div class="pd-sidebar-stat">
+                <span class="pd-sidebar-stat-label">Client</span
+                ><span class="pd-sidebar-stat-value">Lagos State Govt</span>
+              </div>
+              <div class="pd-sidebar-stat">
+                <span class="pd-sidebar-stat-label">Location</span
+                ><span class="pd-sidebar-stat-value">Lagos State</span>
+              </div>
+              <div class="pd-sidebar-stat">
+                <span class="pd-sidebar-stat-label">Industry</span
+                ><span class="pd-sidebar-stat-value">Healthcare</span>
+              </div>
+              <div class="pd-sidebar-stat">
+                <span class="pd-sidebar-stat-label">Status</span
+                ><span class="pd-sidebar-stat-value">Completed</span>
+              </div>
+            </div>
+            <div class="pd-sidebar-card">
+              <h3>Need Environmental Advisory for Infrastructure?</h3>
+              <p>
+                Our team has deep experience in public sector environmental
+                planning, EIA, and climate resilience strategy for healthcare
+                and civic infrastructure.
+              </p>
+              <a href="consultation.html" class="btn btn-dark"
+                >Request Consultation</a
+              >
+            </div>
+            <div class="pd-sidebar-card pd-sidebar-related">
+              <h3>Related Projects</h3>
+              <a href="project-butterfly-garden.html" class="pd-related-link">
+                <img
+                  src="../images/pexels-cindyg-675313.jpg"
+                  alt="Butterfly Garden"
+                />
+                <span>Butterfly Garden &amp; Conservation Initiative</span>
+              </a>
+              <a
+                href="project-lagos-health-adaptation.html"
+                class="pd-related-link"
+              >
+                <img
+                  src="../images/pexels-luisdelrio-15286.jpg"
+                  alt="Lagos Health Adaptation Plan"
+                />
+                <span>Lagos State Health Adaptation Plan</span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <nav class="pd-nav-strip" aria-label="Project navigation">
+        <div class="container">
+          <a href="project-lagos-health-adaptation.html" class="pd-nav-btn">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            <div>
+              <span class="pd-nav-label">Previous</span>Lagos Health Adaptation
+              Plan
+            </div>
+          </a>
+          <a href="projects.html" class="pd-nav-all">← All Projects</a>
+          <a href="project-butterfly-garden.html" class="pd-nav-btn">
+            <div style="text-align: right">
+              <span class="pd-nav-label">Next</span>Butterfly Garden Initiative
+            </div>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <script src="../js/modal.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document.querySelectorAll(".has-dropdown").forEach((item) => {
+        const chevronBtn = item.querySelector(".nav-chevron-btn");
+        if (!chevronBtn) return;
+        chevronBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = item.classList.contains("dropdown-open");
+          document.querySelectorAll(".has-dropdown").forEach((d) => {
+            d.classList.remove("dropdown-open");
+            d.querySelector(".nav-chevron-btn")?.setAttribute(
+              "aria-expanded",
+              "false",
+            );
+          });
+          if (!isOpen) {
+            item.classList.add("dropdown-open");
+            chevronBtn.setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+      document.addEventListener("click", () => {
+        document.querySelectorAll(".has-dropdown").forEach((d) => {
+          d.classList.remove("dropdown-open");
+          d.querySelector(".nav-chevron-btn")?.setAttribute(
+            "aria-expanded",
+            "false",
+          );
+        });
+      });
+
+      /* ── LIGHTBOX ── */
+      (function () {
+        const backdrop = document.getElementById("lb-backdrop");
+        const lbImg = document.getElementById("lb-img");
+        const lbCap = document.getElementById("lb-caption");
+        const lbCount = document.getElementById("lb-counter");
+        const thumbs = Array.from(
+          document.querySelectorAll(".pd-gallery-thumb"),
+        );
+        let current = 0;
+
+        function open(idx) {
+          current = idx;
+          const th = thumbs[idx];
+          const img = th.querySelector("img");
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lbCap.textContent = img.alt;
+          lbCount.textContent = idx + 1 + " / " + thumbs.length;
+          backdrop.classList.add("lb-open");
+          document.body.style.overflow = "hidden";
+        }
+        function close() {
+          backdrop.classList.remove("lb-open");
+          document.body.style.overflow = "";
+          lbImg.src = "";
+        }
+        function prev() {
+          open((current - 1 + thumbs.length) % thumbs.length);
+        }
+        function next() {
+          open((current + 1) % thumbs.length);
+        }
+
+        thumbs.forEach((th, i) => th.addEventListener("click", () => open(i)));
+        document.getElementById("lb-close").addEventListener("click", close);
+        document.getElementById("lb-prev").addEventListener("click", prev);
+        document.getElementById("lb-next").addEventListener("click", next);
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) close();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (!backdrop.classList.contains("lb-open")) return;
+          if (e.key === "ArrowLeft") prev();
+          if (e.key === "ArrowRight") next();
+          if (e.key === "Escape") close();
+        });
+
+        /* Show More */
+        const moreBtn = document.getElementById("galleryMoreBtn");
+        if (moreBtn) {
+          moreBtn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".gallery-hidden")
+              .forEach((el) => el.classList.remove("gallery-hidden"));
+            moreBtn.style.display = "none";
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
