@@ -1,69 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.eaaassociates.org/</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/about.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/services.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/industries.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/projects.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/contact.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/consultation.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/service-eia.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/service-climate.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/service-sustainability.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/service-ecologicalrestoration.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/impact.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/solutions.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/career.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/partners.html</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.eaaassociates.org/pages/works.html</loc>
-    <priority>0.5</priority>
-  </url>
-</urlset>
-```
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
+<url>
+  <loc>https://www.eaaassociates.org/</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/about</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/team</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/impact</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/career</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/partners</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/services</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/service-eia</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/service-climate</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/service-sustainability</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/service-ecologicalrestoration</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/solutions</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/projects</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/works</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/contact</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/consultation</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/assets/EAA%20PROFILE%20(1)-pages-deleted%20(1)_compressed%20(1)(1).pdf</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/project-butterfly-garden</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/project-lagos-healthcare</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/project-lagos-health-adaptation</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/industries</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/assets/Dr.%20Ayodotun%20Bobadoye%20CV%20pdf.pdf</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.eaaassociates.org/pages/service-compliance</loc>
+  <lastmod>2026-05-25T10:40:35+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
