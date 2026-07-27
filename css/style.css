@@ -15,6 +15,8 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 body {
   font-family: "Lato", sans-serif;
@@ -22,6 +24,9 @@ body {
   line-height: 1.7;
   color: #1a1a1a;
   background: #fff;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
 }
 img {
   display: block;
@@ -87,10 +92,7 @@ h6 {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition:
-    background 0.25s,
-    color 0.25s,
-    border-color 0.25s;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
   white-space: nowrap;
 }
 .btn-dark {
@@ -225,9 +227,7 @@ h6 {
   color: var(--text-dark);
   padding: 2px 4px;
   line-height: 1;
-  transition:
-    color 0.2s,
-    transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
   display: flex;
   align-items: center;
 }
@@ -268,9 +268,7 @@ h6 {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-dark);
-  transition:
-    background 0.15s,
-    color 0.15s;
+  transition: background 0.15s, color 0.15s;
   white-space: nowrap;
 }
 .dropdown-menu li a:hover {
@@ -295,9 +293,7 @@ h6 {
   align-items: center;
   background: var(--off-white);
   border: 1px solid var(--border);
-  transition:
-    background 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 .nav-search-form:focus-within {
   background: #fff;
@@ -332,9 +328,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    color 0.2s,
-    background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 .nav-search-btn:hover {
   color: var(--green-mid);
@@ -367,9 +361,7 @@ h6 {
   width: 22px;
   height: 2px;
   background: var(--text-dark);
-  transition:
-    transform 0.3s,
-    opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 .nav-hamburger.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
@@ -515,9 +507,7 @@ h6 {
   justify-content: center;
   opacity: 0.55;
   filter: grayscale(1);
-  transition:
-    opacity 0.2s,
-    filter 0.2s;
+  transition: opacity 0.2s, filter 0.2s;
 }
 .logo-strip-item:hover {
   opacity: 1;
@@ -708,9 +698,7 @@ h6 {
   color: var(--text-dark);
   background: transparent;
   cursor: pointer;
-  transition:
-    background 0.25s,
-    color 0.25s;
+  transition: background 0.25s, color 0.25s;
   width: 100%;
 }
 .btn-explore:hover {
@@ -1052,10 +1040,7 @@ h6 {
   color: var(--text-dark);
   background: transparent;
   cursor: pointer;
-  transition:
-    background 0.25s,
-    color 0.25s,
-    border-color 0.25s;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
 .btn-read:hover {
   background: var(--green-dark);
@@ -1312,10 +1297,7 @@ h6 {
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .footer-socials a:hover {
   background: var(--green-light);
@@ -1338,9 +1320,7 @@ h6 {
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
+  transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .fade-up.visible {
   opacity: 1;
@@ -1425,6 +1405,7 @@ h6 {
   }
   .nav-hamburger {
     display: flex;
+    margin-left: auto;
   }
   .mobile-drawer {
     display: flex;
